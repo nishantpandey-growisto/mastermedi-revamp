@@ -443,7 +443,33 @@ table { border-collapse: collapse; }
 .wf-footer-bottom small { font-size: 10px; }
 .wf-payment-icons { color: #777; }
 
-/* Mobile Notes */
+/* Mobile Wireframe */
+.mobile-wireframe-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.mobile-frame {
+  max-width: 375px;
+  width: 100%;
+  border-radius: 24px !important;
+  box-shadow: var(--shadow-xl), 0 0 0 8px #222, 0 0 0 10px #444;
+  position: relative;
+}
+.mobile-frame::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #555;
+  border-radius: 4px;
+  margin: 0 auto;
+  position: relative;
+  top: -2px;
+  z-index: 1;
+}
+
+/* Mobile Notes (kept for backward compat) */
 .mobile-notes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .mobile-note { padding: 16px; border: 1px solid var(--color-border); border-radius: var(--radius-md); }
 .mobile-note h4 { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
