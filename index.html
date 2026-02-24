@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MasterMedi — Discovery & Alignment | Growisto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       PASSWORD OVERLAY
+       ============================================================ -->
+  <div class="password-overlay" id="passwordOverlay">
+    <div class="password-card">
+      <div class="password-logos">
+        <span class="password-brand">Growisto</span>
+        <span class="password-divider">&times;</span>
+        <span class="password-brand">MasterMedi</span>
+      </div>
+      <h2 class="password-subtitle">Discovery & Alignment</h2>
+      <p class="password-desc">This presentation contains analysis prepared for MasterMedi by Growisto.</p>
+      <form id="passwordForm">
+        <div class="password-input-group">
+          <input type="password" id="passwordInput" class="password-input" placeholder="Enter access code" autocomplete="off">
+        </div>
+        <button type="submit" class="password-submit">Access Presentation</button>
+        <p class="password-error" id="errorMsg">Incorrect access code. Please try again.</p>
+      </form>
+      <p class="text-muted text-small mt-24">Prepared by Growisto | February 2026</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MOBILE HEADER
+       ============================================================ -->
+  <div class="mobile-header" id="mobileHeader">
+    <div class="hamburger" id="hamburger" onclick="toggleSidebar()">
+      <span></span><span></span><span></span>
+    </div>
+    <span class="mobile-title">MasterMedi &mdash; Discovery</span>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+  <!-- ============================================================
+       SIDEBAR NAVIGATION
+       ============================================================ -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-brand">
+        <span class="sidebar-growisto">Growisto</span>
+        <span class="sidebar-divider">&times;</span>
+        <span class="sidebar-client-name">MasterMedi</span>
+      </div>
+      <div class="sidebar-project">Discovery & Alignment Call</div>
+    </div>
+    <div class="sidebar-nav">
+
+      <div class="nav-item active" data-tab="agenda">
+        <div class="nav-item-header" onclick="switchTab('agenda')">
+          <span class="nav-icon">&#128203;</span>
+          <span class="nav-label">Agenda</span>
+        </div>
+      </div>
+
+      <div class="nav-item" data-tab="process">
+        <div class="nav-item-header" onclick="switchTab('process')">
+          <span class="nav-icon">&#128640;</span>
+          <span class="nav-label">Our Process</span>
+        </div>
+      </div>
+
+      <div class="nav-item" data-tab="challenges">
+        <div class="nav-item-header" onclick="switchTab('challenges')">
+          <span class="nav-icon">&#9888;</span>
+          <span class="nav-label">Current Challenges</span>
+        </div>
+      </div>
+
+      <div class="nav-item" data-tab="features">
+        <div class="nav-item-header" onclick="switchTab('features')">
+          <span class="nav-icon">&#9889;</span>
+          <span class="nav-label">Features & Themes</span>
+        </div>
+      </div>
+
+      <div class="nav-item" data-tab="plan">
+        <div class="nav-item-header" onclick="switchTab('plan')">
+          <span class="nav-icon">&#128197;</span>
+          <span class="nav-label">Plan of Action</span>
+        </div>
+      </div>
+
+      <div class="nav-item" data-tab="mockup">
+        <div class="nav-item-header" onclick="switchTab('mockup')">
+          <span class="nav-icon">&#128421;</span>
+          <span class="nav-label">Homepage Wireframe</span>
+        </div>
+      </div>
+
+      <div class="nav-item" data-tab="nextsteps">
+        <div class="nav-item-header" onclick="switchTab('nextsteps')">
+          <span class="nav-icon">&#128640;</span>
+          <span class="nav-label">Next Steps</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="sidebar-footer">
+      <p>Prepared by <strong>Growisto</strong></p>
+      <p class="text-small text-muted">February 2026</p>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ============================================================
+         TAB 1: AGENDA
+         ============================================================ -->
+    <section class="tab-content active" id="tab-agenda">
+
+      <!-- Hero -->
+      <div class="agenda-hero">
+        <div class="agenda-hero-content">
+          <p class="agenda-hero-eyebrow">Growisto &times; MasterMedi</p>
+          <h1>Discovery & Alignment Call</h1>
+          <p class="agenda-hero-sub">A comprehensive Shopify revamp plan to grow your 20-25 monthly orders into a high-converting, globally-ready oral care brand.</p>
+        </div>
+      </div>
+
+      <!-- Journey Track -->
+      <div class="section-card">
+        <h2 class="section-title">Our Engagement Journey</h2>
+        <p class="section-subtitle">Where we are and what&rsquo;s coming next</p>
+        <div class="journey-track">
+          <div class="journey-step current">
+            <div class="journey-node"><span class="journey-num">1</span></div>
+            <div class="journey-label">Discovery Call</div>
+            <div class="journey-detail">Align on challenges, show initial plan</div>
+            <span class="journey-badge">You are here</span>
+          </div>
+          <div class="journey-connector upcoming"></div>
+          <div class="journey-step upcoming-step">
+            <div class="journey-node"><span class="journey-num">2</span></div>
+            <div class="journey-label">Deep Audit</div>
+            <div class="journey-detail">Shopify + GA4 data analysis, CRO audit</div>
+          </div>
+          <div class="journey-connector upcoming"></div>
+          <div class="journey-step upcoming-step">
+            <div class="journey-node"><span class="journey-num">3</span></div>
+            <div class="journey-label">Feature & Theme Planning</div>
+            <div class="journey-detail">Complete feature list, theme evaluation</div>
+          </div>
+          <div class="journey-connector upcoming"></div>
+          <div class="journey-step upcoming-step">
+            <div class="journey-node"><span class="journey-num">4</span></div>
+            <div class="journey-label">Plan Walkthrough</div>
+            <div class="journey-detail">Full revamp plan presentation</div>
+          </div>
+          <div class="journey-connector upcoming"></div>
+          <div class="journey-step upcoming-step">
+            <div class="journey-node"><span class="journey-num">5</span></div>
+            <div class="journey-label">UI Mockups</div>
+            <div class="journey-detail">Visual mockups with your products</div>
+          </div>
+          <div class="journey-connector upcoming"></div>
+          <div class="journey-step upcoming-step">
+            <div class="journey-node"><span class="journey-num">6</span></div>
+            <div class="journey-label">Agreement & Build</div>
+            <div class="journey-detail">Scope lock, development, launch</div>
+          </div>
+        </div>
+        <div class="callout info mt-16">
+          Today is <strong>Step 1</strong> &mdash; we&rsquo;ll walk through our initial analysis, share our process, and align on what we need from you to deliver a complete revamp plan.
+        </div>
+      </div>
+
+      <!-- Call Flow -->
+      <div class="section-card">
+        <h2 class="section-title">Today&rsquo;s Call Flow</h2>
+        <p class="section-subtitle">What we&rsquo;ll cover in today&rsquo;s session</p>
+        <div class="toc-grid">
+          <div class="toc-card highlight" onclick="switchTab('process')">
+            <div class="toc-number">1</div>
+            <div class="toc-body">
+              <h3>Set Agenda</h3>
+              <p>What we&rsquo;ll cover today and what the outcome will be</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card" onclick="switchTab('process')">
+            <div class="toc-number">2</div>
+            <div class="toc-body">
+              <h3>Our Shopify Revamp Process</h3>
+              <p>Walkthrough of our proven 6-step process for Shopify store revamps</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card" onclick="switchTab('challenges')">
+            <div class="toc-number">3</div>
+            <div class="toc-body">
+              <h3>Align on Challenges</h3>
+              <p>Current store issues &mdash; some we found, some you know &mdash; let&rsquo;s align</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card" onclick="switchTab('features')">
+            <div class="toc-number">4</div>
+            <div class="toc-body">
+              <h3>Feature & Theme Recommendations</h3>
+              <p>Initial feature list and theme direction based on what we know so far</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card" onclick="switchTab('plan')">
+            <div class="toc-number">5</div>
+            <div class="toc-body">
+              <h3>Plan of Action</h3>
+              <p>Phased approach &mdash; from audit to launch, with timelines</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card" onclick="switchTab('mockup')">
+            <div class="toc-number">6</div>
+            <div class="toc-body">
+              <h3>Homepage Wireframe</h3>
+              <p>A basic mockup showing what the revamped homepage could look like</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card" onclick="switchTab('nextsteps')">
+            <div class="toc-number">7</div>
+            <div class="toc-body">
+              <h3>Next Steps</h3>
+              <p>What we need from you (Shopify access + questionnaire) to refine everything</p>
+            </div>
+            <span class="toc-arrow">&#8594;</span>
+          </div>
+          <div class="toc-card">
+            <div class="toc-number">8</div>
+            <div class="toc-body">
+              <h3>What We Deliver Next</h3>
+              <p>Complete audit, final features, themes, UI mockups with your products</p>
+            </div>
+            <span class="toc-arrow">&nbsp;</span>
+          </div>
+          <div class="toc-card">
+            <div class="toc-number">9</div>
+            <div class="toc-body">
+              <h3>Theme Finalization</h3>
+              <p>You pick from up to 3 theme options &mdash; we deliver mockups on each</p>
+            </div>
+            <span class="toc-arrow">&nbsp;</span>
+          </div>
+          <div class="toc-card">
+            <div class="toc-number">10</div>
+            <div class="toc-body">
+              <h3>Agreement & Implementation</h3>
+              <p>Scope lock, agreement signing, and build begins</p>
+            </div>
+            <span class="toc-arrow">&nbsp;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story So Far -->
+      <div class="section-card">
+        <h2 class="section-title">MasterMedi at a Glance</h2>
+        <p class="section-subtitle">What we know from our initial research</p>
+        <div class="metric-grid">
+          <div class="metric-card">
+            <div class="metric-value">16</div>
+            <div class="metric-label">Total Products</div>
+            <div class="metric-sub">8 in stock, 8 sold out</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value tertiary">50%</div>
+            <div class="metric-label">Products Sold Out</div>
+            <div class="metric-sub">Entire categories unavailable</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">20-25</div>
+            <div class="metric-label">Orders / Month</div>
+            <div class="metric-sub">Room for significant growth</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">$5-40</div>
+            <div class="metric-label">Price Range</div>
+            <div class="metric-sub">Budget to mid-range oral care</div>
+          </div>
+        </div>
+        <div class="metric-grid mt-16">
+          <div class="metric-card">
+            <div class="metric-value">Impact</div>
+            <div class="metric-label">Current Theme</div>
+            <div class="metric-sub">$380 &mdash; 2-3 years old setup</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">US Only</div>
+            <div class="metric-label">Current Market</div>
+            <div class="metric-sub">Needs India expansion</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">TikTok</div>
+            <div class="metric-label">Primary Traffic</div>
+            <div class="metric-sub">Social media driven</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">1M+</div>
+            <div class="metric-label">Tongue Scrapers Sold</div>
+            <div class="metric-sub">Strong brand proof</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         TAB 2: OUR PROCESS (Deck Embed)
+         ============================================================ -->
+    <section class="tab-content" id="tab-process">
+
+      <div class="tab-header">
+        <h1>Our Shopify Revamp Process</h1>
+        <p>The proven 6-step methodology we follow for every Shopify store revamp</p>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-title">Growisto Shopify Revamp Process Deck</h2>
+        <p class="section-subtitle">A visual walkthrough of our approach</p>
+        <div class="slides-embed-container">
+          <iframe src="https://docs.google.com/presentation/d/19XtLpPsscQvyB97hQprfkCueDmNet9SHy3Nbne3FncE/embed?start=false&loop=false&delayms=5000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+        <div class="callout info mt-16">
+          <strong>Tip:</strong> Use the arrows at the bottom of the deck to navigate through slides. You can also click the fullscreen icon (bottom-right) for a better view.
+        </div>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-title">Why This Process Works</h2>
+        <p class="section-subtitle">Every recommendation we make is backed by data, not guesswork</p>
+        <div class="process-highlights">
+          <div class="highlight-card">
+            <div class="highlight-icon">&#128202;</div>
+            <h3>Data-First Approach</h3>
+            <p>We analyze your actual Shopify & GA4 data to find exactly where visitors drop off and revenue leaks. No generic templates.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">&#127912;</div>
+            <h3>Visual Before You Build</h3>
+            <p>You see UI mockups with YOUR products before a single line of code is written. No surprises at launch.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">&#128176;</div>
+            <h3>ROI-Driven Features</h3>
+            <p>Every feature we recommend is tied to a specific conversion problem. We don&rsquo;t add features for the sake of it &mdash; only what moves the needle.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">&#127758;</div>
+            <h3>Multi-Market Ready</h3>
+            <p>We&rsquo;ve built stores that operate across US, India, and global markets with geo-targeting, multi-currency, and separate catalogs.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         TAB 3: CHALLENGES
+         ============================================================ -->
+    <section class="tab-content" id="tab-challenges">
+
+      <div class="tab-header">
+        <h1>Current Challenges</h1>
+        <p>Issues we&rsquo;ve identified from our initial research &mdash; let&rsquo;s align on what matters most</p>
+      </div>
+
+      <!-- Critical -->
+      <div class="section-card">
+        <h2 class="section-title"><span class="severity-dot critical"></span>Critical Issues</h2>
+        <p class="section-subtitle">These are actively costing you customers and revenue</p>
+
+        <div class="challenge-grid">
+          <div class="challenge-card critical">
+            <div class="challenge-header">
+              <span class="challenge-badge critical">Critical</span>
+              <h3>50% of Products Are Sold Out</h3>
+            </div>
+            <p>8 out of 16 products show &ldquo;Sold Out&rdquo; &mdash; including entire categories (Acne Patches, Dietary Supplements, all Teeth Whitening). Visitors arriving from TikTok ads or organic search for these products have zero opportunity to buy.</p>
+            <div class="challenge-impact">
+              <strong>Impact:</strong> Wasted ad spend, immediate bounces, damaged brand perception
+            </div>
+          </div>
+
+          <div class="challenge-card critical">
+            <div class="challenge-header">
+              <span class="challenge-badge critical">Critical</span>
+              <h3>No Trust Elements for Health Products</h3>
+            </div>
+            <p>No FDA compliance badges, no ADA endorsements, no manufacturing certifications (GMP/ISO), no third-party lab testing badges, no ingredient safety certifications. For a health/oral care brand selling in the US, this is a major conversion blocker.</p>
+            <div class="challenge-impact">
+              <strong>Impact:</strong> Health-conscious buyers won&rsquo;t purchase without trust signals
+            </div>
+          </div>
+
+          <div class="challenge-card critical">
+            <div class="challenge-header">
+              <span class="challenge-badge critical">Critical</span>
+              <h3>Cluttered Design & Visual Overload</h3>
+            </div>
+            <p>Too many visual elements competing for attention. Announcement bar text repeated 10 times. 5-slide hero banner. No clear visual hierarchy. The design feels more like a generic ecommerce store than a premium oral care brand.</p>
+            <div class="challenge-impact">
+              <strong>Impact:</strong> High bounce rate, poor brand impression vs competitors like marvis.com
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- High -->
+      <div class="section-card">
+        <h2 class="section-title"><span class="severity-dot high"></span>High Priority Issues</h2>
+        <p class="section-subtitle">Significant friction points hurting conversion</p>
+
+        <div class="challenge-grid">
+          <div class="challenge-card high">
+            <div class="challenge-header">
+              <span class="challenge-badge high">High</span>
+              <h3>Slow Page Load (Likely 30-50 Mobile Score)</h3>
+            </div>
+            <p>Multiple third-party scripts (GA, FB Pixel, Google Ads, AppIO Reviews, Pumper, hCaptcha), 5-slide hero carousel, product galleries with 7-29 images each. For TikTok traffic that&rsquo;s mobile-first, this kills conversion.</p>
+            <div class="challenge-impact">
+              <strong>Impact:</strong> Every 1-second delay = ~7% conversion loss
+            </div>
+          </div>
+
+          <div class="challenge-card high">
+            <div class="challenge-header">
+              <span class="challenge-badge high">High</span>
+              <h3>Reviews Not Rendering on Product Pages</h3>
+            </div>
+            <p>Star ratings and review counts show on collection pages (4.2-4.9 stars, 4-98 reviews), but actual review content doesn&rsquo;t render on product detail pages. Social proof is the #1 conversion driver for health products.</p>
+            <div class="challenge-impact">
+              <strong>Impact:</strong> Lost social proof at the critical purchase decision moment
+            </div>
+          </div>
+
+          <div class="challenge-card high">
+            <div class="challenge-header">
+              <span class="challenge-badge high">High</span>
+              <h3>No Shipping Cost Transparency</h3>
+            </div>
+            <p>Shipping policy page mentions 3 tiers (Economy, Standard, Express) but provides zero pricing. Customers don&rsquo;t know shipping costs until checkout &mdash; a major cart abandonment driver.</p>
+            <div class="challenge-impact">
+              <strong>Impact:</strong> Surprise costs at checkout = high cart abandonment
+            </div>
+          </div>
+
+          <div class="challenge-card high">
+            <div class="challenge-header">
+              <span class="challenge-badge high">High</span>
+              <h3>Minimal Product Information</h3>
+            </div>
+            <p>Product descriptions are 2-3 sentences. No ingredients list on toothpaste/pulling oil (critical for health products). No usage instructions. No FAQ sections. Health-conscious buyers need detailed information to feel confident purchasing.</p>
+            <div class="challenge-impact">
+              <strong>Impact:</strong> Insufficient info = lost sales on health products
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medium -->
+      <div class="section-card">
+        <h2 class="section-title"><span class="severity-dot medium"></span>Medium Priority Issues</h2>
+        <p class="section-subtitle">Important improvements for a complete revamp</p>
+
+        <div class="challenge-grid">
+          <div class="challenge-card medium">
+            <div class="challenge-header">
+              <span class="challenge-badge medium">Medium</span>
+              <h3>No Multi-Country / India Support</h3>
+            </div>
+            <p>USD only. No geo-targeting, no country selector, no multi-currency. The store is configured as an Indian Shopify store but operates US-only. India expansion needs Shopify Markets, separate catalogs, and geo-routing.</p>
+          </div>
+
+          <div class="challenge-card medium">
+            <div class="challenge-header">
+              <span class="challenge-badge medium">Medium</span>
+              <h3>Broken Links & UX Issues</h3>
+            </div>
+            <p>FAQs footer link goes to &ldquo;#&rdquo; (broken). Cookie Policy link broken. Affiliate page CTA links to &ldquo;#&rdquo;. URL typo: /collections/dietry-supplement. Shipping policy on confusing URL (/return-policy-1).</p>
+          </div>
+
+          <div class="challenge-card medium">
+            <div class="challenge-header">
+              <span class="challenge-badge medium">Medium</span>
+              <h3>Limited Payment Options</h3>
+            </div>
+            <p>Only PayPal visible in footer. No credit card logos, no Apple Pay, no Google Pay, no Shop Pay badges. For US customers, this limits checkout confidence and options.</p>
+          </div>
+
+          <div class="challenge-card medium">
+            <div class="challenge-header">
+              <span class="challenge-badge medium">Medium</span>
+              <h3>No Contact Transparency</h3>
+            </div>
+            <p>Only an email (marketing@mastermedi.co) and a basic form. No phone number, no live chat, no WhatsApp, no physical address. For health products, customers want to know there&rsquo;s a real company behind the brand.</p>
+          </div>
+
+          <div class="challenge-card medium">
+            <div class="challenge-header">
+              <span class="challenge-badge medium">Medium</span>
+              <h3>Blog Abandoned Since August 2024</h3>
+            </div>
+            <p>Only 5 blog posts, all from Aug 2024 (6+ months stale). For oral care/health products, educational content (ingredient science, usage guides, oral health tips) drives organic traffic and builds authority.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Discussion prompt -->
+      <div class="section-card">
+        <h2 class="section-title">Let&rsquo;s Align</h2>
+        <p class="section-subtitle">Questions for discussion</p>
+        <div class="discussion-grid">
+          <div class="discussion-card">
+            <div class="discussion-num">Q1</div>
+            <p>Which of these challenges are most painful for you right now?</p>
+          </div>
+          <div class="discussion-card">
+            <div class="discussion-num">Q2</div>
+            <p>Are there challenges we haven&rsquo;t listed that you&rsquo;re experiencing?</p>
+          </div>
+          <div class="discussion-card">
+            <div class="discussion-num">Q3</div>
+            <p>For the India expansion &mdash; what&rsquo;s the timeline? Is it Day 1 or Phase 2?</p>
+          </div>
+          <div class="discussion-card">
+            <div class="discussion-num">Q4</div>
+            <p>The sold-out products &mdash; are these coming back, or should we restructure the catalog?</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         TAB 4: FEATURES & THEMES
+         ============================================================ -->
+    <section class="tab-content" id="tab-features">
+
+      <div class="tab-header">
+        <h1>Feature & Theme Recommendations</h1>
+        <p>Preliminary recommendations based on our initial research &mdash; will be refined after data audit</p>
+      </div>
+
+      <div class="callout warning mb-24">
+        <strong>Note:</strong> These are preliminary recommendations based on our website analysis and your category (Health & Oral Care). After we get Shopify admin access and you fill out the requirements questionnaire, we&rsquo;ll refine these into a final, data-backed feature list with exact implementation details and costs.
+      </div>
+
+      <!-- Critical Features -->
+      <div class="section-card">
+        <h2 class="section-title">Critical Features for MasterMedi</h2>
+        <p class="section-subtitle">Must-haves based on health/oral care category and your goals</p>
+
+        <div class="feature-category">
+          <h3 class="feature-cat-title">Trust & Credibility (Health Products Need This)</h3>
+          <div class="feature-table-wrap">
+            <table class="feature-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Why It Matters</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Trust Badges (FDA, Eco, Cruelty-Free)</td>
+                  <td>Health products need visible certifications to convert</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Product Certification Badges</td>
+                  <td>ADA, BPA-free, recyclable &mdash; on every PDP</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Ingredient List / Safety Info</td>
+                  <td>nHa toothpaste, pulling oil &mdash; customers NEED to see ingredients</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Expert Endorsements Section</td>
+                  <td>Dentist recommendations build credibility</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Reviews & Ratings (Visible on PDP)</td>
+                  <td>Your 4.2-4.9 star ratings exist but don&rsquo;t render on PDPs</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Customer Photos / UGC</td>
+                  <td>Real customer usage photos build social proof</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="feature-category">
+          <h3 class="feature-cat-title">Multi-Country & Geo-Targeting (India Expansion)</h3>
+          <div class="feature-table-wrap">
+            <table class="feature-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Why It Matters</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Shopify Markets Setup (US + India)</td>
+                  <td>Native multi-country with separate catalogs, pricing, shipping</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Geo-Targeting Auto-Redirect</td>
+                  <td>Automatically show India/US store based on IP address</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Country & Currency Toggle (Header)</td>
+                  <td>Manual override to switch between US ($) and India (&#8377;)</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Separate Product Catalogs per Region</td>
+                  <td>Different products for India vs US, with 1-2 shared</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Region-Specific Payment Gateways</td>
+                  <td>US: Stripe/PayPal | India: Razorpay/UPI/COD</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Region-Specific Shipping</td>
+                  <td>Different carriers and rates for US vs India</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="feature-category">
+          <h3 class="feature-cat-title">Conversion & Purchase Experience</h3>
+          <div class="feature-table-wrap">
+            <table class="feature-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Why It Matters</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Delivery Date Estimation</td>
+                  <td>Reduces uncertainty &mdash; &ldquo;When will I get this?&rdquo;</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Shipping Cost on Cart Page</td>
+                  <td>Eliminates surprise costs at checkout</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Bundle Builder (Oral Care Kit)</td>
+                  <td>Your kits are a key selling point &mdash; make it interactive</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Free Shipping Progress Bar</td>
+                  <td>Increases AOV &mdash; &ldquo;Add $X more for free shipping&rdquo;</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Subscription / Auto-Replenish</td>
+                  <td>Toothpaste & pulling oil are consumables &mdash; recurring revenue</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Abandoned Cart Recovery (Email/SMS)</td>
+                  <td>Recover lost sales from social traffic that doesn&rsquo;t convert first visit</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="feature-category">
+          <h3 class="feature-cat-title">Brand & Content</h3>
+          <div class="feature-table-wrap">
+            <table class="feature-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Why It Matters</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Brand Story / Science Section</td>
+                  <td>Explain nHa technology, eco credentials, brand mission</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>&ldquo;How It Works&rdquo; Section</td>
+                  <td>Educate visitors on pulling oil, tongue scraping, nHa benefits</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Product FAQ Section (Per Product)</td>
+                  <td>Answer common questions right on the PDP</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Blog / Educational Hub</td>
+                  <td>Oral health tips, ingredient deep-dives &mdash; SEO + authority</td>
+                  <td><span class="impl-badge inbuilt">Inbuilt</span></td>
+                </tr>
+                <tr>
+                  <td>Video Content Integration</td>
+                  <td>TikTok is your main channel &mdash; embed video content on-site</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Theme Direction -->
+      <div class="section-card">
+        <h2 class="section-title">Theme Direction</h2>
+        <p class="section-subtitle">Where your current theme stands and where we should go</p>
+
+        <div class="theme-comparison">
+          <div class="theme-card current-theme">
+            <div class="theme-card-header">
+              <span class="theme-status-badge current">Current</span>
+              <h3>Impact by Maestrooo</h3>
+              <p class="theme-price">$380 (one-time)</p>
+            </div>
+            <div class="theme-card-body">
+              <h4>What&rsquo;s Good</h4>
+              <ul class="theme-pros">
+                <li>35+ customizable sections</li>
+                <li>Product comparison feature</li>
+                <li>Cross-selling & bundle displays</li>
+                <li>Good desktop performance (~80 PageSpeed)</li>
+                <li>Regular updates (last: Dec 2025)</li>
+              </ul>
+              <h4>What&rsquo;s Not Working</h4>
+              <ul class="theme-cons">
+                <li>Mobile PageSpeed only ~71 (3.2s load)</li>
+                <li>Bold/heavy design &ne; clean premium aesthetic you want</li>
+                <li>Designed for editorial/fashion &mdash; not health/wellness</li>
+                <li>Current setup has too many visual elements</li>
+                <li>2-3 year old configuration is cluttered</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="theme-card recommended-theme">
+            <div class="theme-card-header">
+              <span class="theme-status-badge recommended">Direction</span>
+              <h3>What We&rsquo;re Looking For</h3>
+              <p class="theme-price">Will evaluate 3-4 options</p>
+            </div>
+            <div class="theme-card-body">
+              <h4>Design Criteria (Based on marvis.com Reference)</h4>
+              <ul class="theme-pros">
+                <li>Clean, minimal, premium aesthetic</li>
+                <li>Generous whitespace &mdash; products are the hero</li>
+                <li>Fast mobile performance (PageSpeed 70+)</li>
+                <li>Health/wellness-appropriate design language</li>
+                <li>Strong product photography support</li>
+              </ul>
+              <h4>Functional Criteria</h4>
+              <ul class="theme-pros">
+                <li>Shopify Markets compatible (multi-country)</li>
+                <li>Built-in trust badge sections</li>
+                <li>Product comparison capability</li>
+                <li>Subscription-friendly product pages</li>
+                <li>Video content integration (for TikTok repurposing)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout info mt-16">
+          <strong>Theme evaluation is a key next step.</strong> After we get Shopify access and your questionnaire responses, we&rsquo;ll evaluate 3-4 specific themes, compare their feature-fit scores, and present a detailed comparison. You&rsquo;ll then pick up to 3, and we&rsquo;ll deliver UI mockups on each.
+        </div>
+      </div>
+
+      <!-- Feature Summary Stats -->
+      <div class="section-card">
+        <h2 class="section-title">Feature Summary (Preliminary)</h2>
+        <div class="metric-grid">
+          <div class="metric-card">
+            <div class="metric-value">23</div>
+            <div class="metric-label">Critical Features Identified</div>
+            <div class="metric-sub">Must-haves for launch</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">6</div>
+            <div class="metric-label">Multi-Country Features</div>
+            <div class="metric-sub">India + US expansion</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">~8</div>
+            <div class="metric-label">Apps Needed</div>
+            <div class="metric-sub">Reviews, delivery, subscriptions, etc.</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">TBD</div>
+            <div class="metric-label">Custom Development Items</div>
+            <div class="metric-sub">Finalized after audit</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         TAB 5: PLAN OF ACTION
+         ============================================================ -->
+    <section class="tab-content" id="tab-plan">
+
+      <div class="tab-header">
+        <h1>Plan of Action</h1>
+        <p>Phased approach from discovery to launch &mdash; estimated 10-14 week timeline</p>
+      </div>
+
+      <div class="section-card">
+        <h2 class="section-title">Project Phases</h2>
+        <p class="section-subtitle">Each phase has clear deliverables before moving to the next</p>
+
+        <div class="phase-timeline">
+
+          <div class="phase-card active-phase">
+            <div class="phase-header">
+              <div class="phase-number">1</div>
+              <div class="phase-info">
+                <h3>Discovery & Deep Audit</h3>
+                <span class="phase-duration">Week 1-2</span>
+              </div>
+              <span class="phase-status current-status">We are here</span>
+            </div>
+            <div class="phase-body">
+              <div class="phase-items">
+                <div class="phase-item">You fill out the requirements questionnaire</div>
+                <div class="phase-item">You provide Shopify admin + GA4 access</div>
+                <div class="phase-item">We run full CRO audit (funnel analysis, PageSpeed, UX review)</div>
+                <div class="phase-item">We analyze your data and identify exact revenue leaks</div>
+                <div class="phase-item">We scope multi-country requirements (India/US catalogs, geo-routing)</div>
+              </div>
+              <div class="phase-deliverable">
+                <strong>Deliverable:</strong> Complete CRO Audit Report + Refined Feature List + Data-Backed ROI Projection
+              </div>
+            </div>
+          </div>
+
+          <div class="phase-card">
+            <div class="phase-header">
+              <div class="phase-number">2</div>
+              <div class="phase-info">
+                <h3>Theme Evaluation & Feature Planning</h3>
+                <span class="phase-duration">Week 2-3</span>
+              </div>
+            </div>
+            <div class="phase-body">
+              <div class="phase-items">
+                <div class="phase-item">Evaluate 3-4 themes against your feature requirements</div>
+                <div class="phase-item">Score each theme on feature-fit, performance, and multi-country support</div>
+                <div class="phase-item">Finalize complete feature list (inbuilt vs custom vs app)</div>
+                <div class="phase-item">Define app stack with monthly costs</div>
+                <div class="phase-item">Architecture plan for India/US multi-store setup</div>
+              </div>
+              <div class="phase-deliverable">
+                <strong>Deliverable:</strong> Theme Comparison Report + Final SOW with All Features + App Stack Recommendation
+              </div>
+            </div>
+          </div>
+
+          <div class="phase-card">
+            <div class="phase-header">
+              <div class="phase-number">3</div>
+              <div class="phase-info">
+                <h3>UI Mockups & Visual Identity</h3>
+                <span class="phase-duration">Week 3-5</span>
+              </div>
+            </div>
+            <div class="phase-body">
+              <div class="phase-items">
+                <div class="phase-item">Homepage mockups on 2-3 shortlisted themes</div>
+                <div class="phase-item">Product Detail Page (PDP) mockup</div>
+                <div class="phase-item">Collection page mockup</div>
+                <div class="phase-item">Mobile responsive versions for all pages</div>
+                <div class="phase-item">US version + India version mockups (separate catalog view)</div>
+                <div class="phase-item">Visual identity direction (colors, typography, brand feel)</div>
+              </div>
+              <div class="phase-deliverable">
+                <strong>Deliverable:</strong> Figma Mockups (Desktop + Mobile) for 2-3 Themes + Visual Identity Guide
+              </div>
+            </div>
+          </div>
+
+          <div class="phase-card">
+            <div class="phase-header">
+              <div class="phase-number">4</div>
+              <div class="phase-info">
+                <h3>Agreement & Kickoff</h3>
+                <span class="phase-duration">Week 5</span>
+              </div>
+            </div>
+            <div class="phase-body">
+              <div class="phase-items">
+                <div class="phase-item">You select final theme from mockups</div>
+                <div class="phase-item">We finalize scope and investment</div>
+                <div class="phase-item">Sign agreement, first payment</div>
+                <div class="phase-item">Assign development team</div>
+              </div>
+              <div class="phase-deliverable">
+                <strong>Deliverable:</strong> Signed SOW + Agreement + Project Kickoff
+              </div>
+            </div>
+          </div>
+
+          <div class="phase-card">
+            <div class="phase-header">
+              <div class="phase-number">5</div>
+              <div class="phase-info">
+                <h3>Development & Implementation</h3>
+                <span class="phase-duration">Week 5-11</span>
+              </div>
+            </div>
+            <div class="phase-body">
+              <div class="phase-items">
+                <div class="phase-item">Theme setup & customization</div>
+                <div class="phase-item">Multi-country/currency configuration (Shopify Markets)</div>
+                <div class="phase-item">Geo-targeting implementation</div>
+                <div class="phase-item">Custom feature development</div>
+                <div class="phase-item">App integrations (reviews, delivery, subscriptions, etc.)</div>
+                <div class="phase-item">Content migration & optimization</div>
+                <div class="phase-item">India catalog setup with separate products</div>
+                <div class="phase-item">Payment gateway setup (US: Stripe/PayPal | India: Razorpay)</div>
+              </div>
+              <div class="phase-deliverable">
+                <strong>Deliverable:</strong> Fully Functional Staging Site (US + India)
+              </div>
+            </div>
+          </div>
+
+          <div class="phase-card">
+            <div class="phase-header">
+              <div class="phase-number">6</div>
+              <div class="phase-info">
+                <h3>Testing, Optimization & Launch</h3>
+                <span class="phase-duration">Week 11-14</span>
+              </div>
+            </div>
+            <div class="phase-body">
+              <div class="phase-items">
+                <div class="phase-item">QA testing (desktop + mobile, all browsers)</div>
+                <div class="phase-item">PageSpeed optimization (target: 70+ mobile)</div>
+                <div class="phase-item">Geo-targeting testing (US/India routing)</div>
+                <div class="phase-item">Payment flow testing (both gateways)</div>
+                <div class="phase-item">SEO setup (meta, schema, redirects)</div>
+                <div class="phase-item">Analytics setup (GA4 events, pixels)</div>
+                <div class="phase-item">Soft launch &rarr; Full launch</div>
+                <div class="phase-item">Post-launch support (15 days)</div>
+              </div>
+              <div class="phase-deliverable">
+                <strong>Deliverable:</strong> Live Store (US + India) + Analytics Configured + Post-Launch Support
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Timeline Visual -->
+      <div class="section-card">
+        <h2 class="section-title">Timeline Overview</h2>
+        <div class="timeline-bar-container">
+          <div class="timeline-bar-row">
+            <div class="timeline-bar-label">Discovery & Audit</div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar phase1" style="left:0%;width:14.3%">W1-2</div>
+            </div>
+          </div>
+          <div class="timeline-bar-row">
+            <div class="timeline-bar-label">Theme & Features</div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar phase2" style="left:14.3%;width:7.1%">W2-3</div>
+            </div>
+          </div>
+          <div class="timeline-bar-row">
+            <div class="timeline-bar-label">UI Mockups</div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar phase3" style="left:21.4%;width:14.3%">W3-5</div>
+            </div>
+          </div>
+          <div class="timeline-bar-row">
+            <div class="timeline-bar-label">Agreement</div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar phase4" style="left:35.7%;width:7.1%">W5</div>
+            </div>
+          </div>
+          <div class="timeline-bar-row">
+            <div class="timeline-bar-label">Development</div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar phase5" style="left:35.7%;width:42.9%">W5-11</div>
+            </div>
+          </div>
+          <div class="timeline-bar-row">
+            <div class="timeline-bar-label">Testing & Launch</div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar phase6" style="left:78.6%;width:21.4%">W11-14</div>
+            </div>
+          </div>
+        </div>
+        <div class="callout info mt-16">
+          <strong>Total estimated timeline: 10-14 weeks.</strong> The first 5 weeks (Phases 1-4) happen before development starts &mdash; this is where we get the strategy right so execution is smooth. The multi-country setup (India + US) adds ~2 weeks to a standard revamp.
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         TAB 6: HOMEPAGE WIREFRAME
+         ============================================================ -->
+    <section class="tab-content" id="tab-mockup">
+
+      <div class="tab-header">
+        <h1>Homepage Wireframe</h1>
+        <p>A structural preview of what the revamped MasterMedi homepage could look like &mdash; inspired by the marvis.com aesthetic</p>
+      </div>
+
+      <div class="callout info mb-24">
+        <strong>This is a wireframe, not a final design.</strong> It shows the proposed section structure and layout. After theme selection, we&rsquo;ll create full visual mockups with your actual products, brand colors, and imagery in Figma.
+      </div>
+
+      <!-- Desktop Wireframe -->
+      <div class="section-card">
+        <h2 class="section-title">Desktop Homepage Wireframe</h2>
+        <p class="section-subtitle">14 sections designed to convert social media traffic into customers</p>
+
+        <div class="wireframe-container desktop">
+
+          <!-- Announcement Bar -->
+          <div class="wf-section wf-announcement">
+            <div class="wf-label-badge new-badge">NEW</div>
+            <div class="wf-content-row">
+              <span>Free Shipping on Orders $35+</span>
+              <span class="wf-separator">|</span>
+              <span>Shop Science-Backed Oral Care</span>
+              <span class="wf-separator">|</span>
+              <span class="wf-toggle">US / IN</span>
+            </div>
+            <div class="wf-section-label">Announcement Bar + Country Toggle</div>
+          </div>
+
+          <!-- Header -->
+          <div class="wf-section wf-header">
+            <div class="wf-content-row">
+              <div class="wf-logo">MasterMedi</div>
+              <div class="wf-nav-items">
+                <span>Products</span>
+                <span>Science</span>
+                <span>About</span>
+                <span>Blog</span>
+              </div>
+              <div class="wf-header-icons">
+                <span>&#128269;</span>
+                <span>&#128100;</span>
+                <span>&#128722;</span>
+                <span class="wf-geo-flag">&#127482;&#127480;</span>
+              </div>
+            </div>
+            <div class="wf-section-label">Sticky Header with Mega Menu + Geo Selector</div>
+          </div>
+
+          <!-- Hero -->
+          <div class="wf-section wf-hero">
+            <div class="wf-label-badge new-badge">NEW</div>
+            <div class="wf-hero-content">
+              <div class="wf-hero-text">
+                <p class="wf-hero-eyebrow">SCIENCE-BACKED ORAL CARE</p>
+                <h2>Smile Confidently.<br>Naturally.</h2>
+                <p class="wf-hero-desc">Premium oral care products crafted with nano-hydroxyapatite technology. No harsh chemicals. No compromises.</p>
+                <div class="wf-hero-ctas">
+                  <span class="wf-btn-primary">Shop Now</span>
+                  <span class="wf-btn-secondary">Our Science</span>
+                </div>
+              </div>
+              <div class="wf-hero-visual">
+                <div class="wf-placeholder-img">
+                  <span>Hero Video /<br>Brand Image</span>
+                  <small>Full-width cinematic<br>product showcase</small>
+                </div>
+              </div>
+            </div>
+            <div class="wf-section-label">Hero Section &mdash; Video/Image with Brand Message (marvis-inspired clean layout)</div>
+          </div>
+
+          <!-- Trust Bar -->
+          <div class="wf-section wf-trust-bar">
+            <div class="wf-label-badge new-badge">NEW</div>
+            <div class="wf-content-row">
+              <div class="wf-trust-item">&#9989; Clinically Tested</div>
+              <div class="wf-trust-item">&#127807; Eco-Friendly</div>
+              <div class="wf-trust-item">&#128137; Dentist Recommended</div>
+              <div class="wf-trust-item">&#128256; BPA-Free</div>
+              <div class="wf-trust-item">&#127758; 1M+ Products Sold</div>
+            </div>
+            <div class="wf-section-label">Trust Badge Bar &mdash; Certifications & Social Proof</div>
+          </div>
+
+          <!-- Categories -->
+          <div class="wf-section wf-categories">
+            <h3 class="wf-section-heading">Shop by Category</h3>
+            <div class="wf-grid-4">
+              <div class="wf-card">
+                <div class="wf-card-img"><span>&#129463;</span></div>
+                <p>Tongue Scrapers</p>
+              </div>
+              <div class="wf-card">
+                <div class="wf-card-img"><span>&#129703;</span></div>
+                <p>Toothpaste</p>
+              </div>
+              <div class="wf-card">
+                <div class="wf-card-img"><span>&#128167;</span></div>
+                <p>Pulling Oil</p>
+              </div>
+              <div class="wf-card">
+                <div class="wf-card-img"><span>&#127873;</span></div>
+                <p>Dental Kits</p>
+              </div>
+            </div>
+            <div class="wf-section-label">Featured Categories &mdash; Clean Grid with Hover Effects</div>
+          </div>
+
+          <!-- Best Sellers -->
+          <div class="wf-section wf-products">
+            <h3 class="wf-section-heading">Best Sellers</h3>
+            <div class="wf-grid-4">
+              <div class="wf-product-card">
+                <div class="wf-product-img"><span>Product Image</span></div>
+                <div class="wf-product-info">
+                  <div class="wf-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>(98)</small></div>
+                  <p class="wf-product-name">SS Tongue Scraper</p>
+                  <p class="wf-product-price">$5.99</p>
+                  <span class="wf-btn-small">Quick Add</span>
+                </div>
+              </div>
+              <div class="wf-product-card">
+                <div class="wf-product-img"><span>Product Image</span></div>
+                <div class="wf-product-info">
+                  <div class="wf-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>(72)</small></div>
+                  <p class="wf-product-name">Copper Tongue Scraper</p>
+                  <p class="wf-product-price">$6.49</p>
+                  <span class="wf-btn-small">Quick Add</span>
+                </div>
+              </div>
+              <div class="wf-product-card">
+                <div class="wf-product-img"><span>Product Image</span></div>
+                <div class="wf-product-info">
+                  <div class="wf-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <small>(71)</small></div>
+                  <p class="wf-product-name">nHa Toothpaste</p>
+                  <p class="wf-product-price">$9.99</p>
+                  <span class="wf-btn-small">Quick Add</span>
+                </div>
+              </div>
+              <div class="wf-product-card">
+                <div class="wf-product-img"><span>Product Image</span></div>
+                <div class="wf-product-info">
+                  <div class="wf-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <small>(88)</small></div>
+                  <p class="wf-product-name">Mint Pulling Oil</p>
+                  <p class="wf-product-price">$12.99</p>
+                  <span class="wf-btn-small">Quick Add</span>
+                </div>
+              </div>
+            </div>
+            <div class="wf-section-label">Best Sellers Grid &mdash; Product Cards with Quick Add + Reviews</div>
+          </div>
+
+          <!-- Science Section -->
+          <div class="wf-section wf-science">
+            <div class="wf-label-badge new-badge">NEW</div>
+            <div class="wf-two-col">
+              <div class="wf-col-text">
+                <p class="wf-eyebrow">THE SCIENCE</p>
+                <h3>Why Nano-Hydroxyapatite?</h3>
+                <p>nHa is a naturally-occurring mineral that makes up 97% of tooth enamel. Our toothpaste uses this breakthrough ingredient to remineralize and strengthen teeth &mdash; without fluoride.</p>
+                <span class="wf-btn-secondary">Learn More</span>
+              </div>
+              <div class="wf-col-img">
+                <div class="wf-placeholder-img">
+                  <span>Science<br>Infographic</span>
+                </div>
+              </div>
+            </div>
+            <div class="wf-section-label">Brand Science / Education Section &mdash; Builds Authority</div>
+          </div>
+
+          <!-- How It Works -->
+          <div class="wf-section wf-how-it-works">
+            <div class="wf-label-badge new-badge">NEW</div>
+            <h3 class="wf-section-heading">Your Daily Oral Care Routine</h3>
+            <div class="wf-grid-3">
+              <div class="wf-step-card">
+                <div class="wf-step-num">1</div>
+                <h4>Scrape</h4>
+                <p>Start with tongue scraping to remove bacteria</p>
+              </div>
+              <div class="wf-step-card">
+                <div class="wf-step-num">2</div>
+                <h4>Pull</h4>
+                <p>Swish pulling oil for detox and fresh breath</p>
+              </div>
+              <div class="wf-step-card">
+                <div class="wf-step-num">3</div>
+                <h4>Brush</h4>
+                <p>Brush with nHa toothpaste to remineralize</p>
+              </div>
+            </div>
+            <div class="wf-section-label">&ldquo;How It Works&rdquo; &mdash; 3-Step Routine (Drives Cross-Sell)</div>
+          </div>
+
+          <!-- Reviews -->
+          <div class="wf-section wf-reviews">
+            <div class="wf-label-badge new-badge">NEW</div>
+            <h3 class="wf-section-heading">What Our Customers Say</h3>
+            <div class="wf-grid-3">
+              <div class="wf-review-card">
+                <div class="wf-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>&ldquo;Best tongue scraper I&rsquo;ve ever used. The stainless steel feels premium.&rdquo;</p>
+                <small>&mdash; Verified Customer</small>
+              </div>
+              <div class="wf-review-card">
+                <div class="wf-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>&ldquo;Love the nHa toothpaste. My teeth feel cleaner and whiter.&rdquo;</p>
+                <small>&mdash; Verified Customer</small>
+              </div>
+              <div class="wf-review-card">
+                <div class="wf-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>&ldquo;The oral care kit is amazing value. Everything you need in one package.&rdquo;</p>
+                <small>&mdash; Verified Customer</small>
+              </div>
+            </div>
+            <div class="wf-section-label">Customer Reviews Carousel &mdash; Social Proof from Real Customers</div>
+          </div>
+
+          <!-- Bundle Builder -->
+          <div class="wf-section wf-bundle">
+            <div class="wf-label-badge new-badge">NEW</div>
+            <div class="wf-two-col">
+              <div class="wf-col-img">
+                <div class="wf-placeholder-img">
+                  <span>Bundle<br>Visual</span>
+                </div>
+              </div>
+              <div class="wf-col-text">
+                <p class="wf-eyebrow">SAVE 15%</p>
+                <h3>Build Your Oral Care Kit</h3>
+                <p>Choose your tongue scraper + toothpaste + pulling oil and save 15% on the bundle.</p>
+                <span class="wf-btn-primary">Build Your Kit</span>
+              </div>
+            </div>
+            <div class="wf-section-label">Interactive Bundle Builder &mdash; Increases AOV</div>
+          </div>
+
+          <!-- TikTok / Social -->
+          <div class="wf-section wf-social">
+            <div class="wf-label-badge new-badge">NEW</div>
+            <h3 class="wf-section-heading">#MasterMedi on Social</h3>
+            <div class="wf-grid-4">
+              <div class="wf-social-card"><span>TikTok Video</span></div>
+              <div class="wf-social-card"><span>TikTok Video</span></div>
+              <div class="wf-social-card"><span>Instagram</span></div>
+              <div class="wf-social-card"><span>Instagram</span></div>
+            </div>
+            <div class="wf-section-label">Social Media Feed &mdash; Repurpose TikTok Content On-Site</div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="wf-section wf-newsletter">
+            <div class="wf-newsletter-content">
+              <h3>Get 10% Off Your First Order</h3>
+              <p>Join 100,000+ happy customers. Oral care tips + exclusive deals.</p>
+              <div class="wf-input-group">
+                <span class="wf-input">your@email.com</span>
+                <span class="wf-btn-primary">Subscribe</span>
+              </div>
+            </div>
+            <div class="wf-section-label">Newsletter Signup &mdash; Lead Capture + Discount Incentive</div>
+          </div>
+
+          <!-- Footer -->
+          <div class="wf-section wf-footer">
+            <div class="wf-grid-4">
+              <div class="wf-footer-col">
+                <strong>MasterMedi</strong>
+                <small>Science-backed oral care for a healthier smile.</small>
+              </div>
+              <div class="wf-footer-col">
+                <strong>Shop</strong>
+                <small>Tongue Scrapers<br>Toothpaste<br>Pulling Oil<br>Dental Kits</small>
+              </div>
+              <div class="wf-footer-col">
+                <strong>Company</strong>
+                <small>About Us<br>Our Science<br>Blog<br>Contact</small>
+              </div>
+              <div class="wf-footer-col">
+                <strong>Support</strong>
+                <small>FAQs<br>Shipping<br>Returns<br>Privacy</small>
+              </div>
+            </div>
+            <div class="wf-footer-bottom">
+              <small>&#169; 2026 MasterMedi | Eco-Friendly | Cruelty-Free | Clinically Tested</small>
+              <small class="wf-payment-icons">Visa | Mastercard | PayPal | Apple Pay | Google Pay</small>
+            </div>
+            <div class="wf-section-label">Footer &mdash; Links, Trust Seals, Payment Icons, Certifications</div>
+          </div>
+
+        </div>
+
+        <div class="callout success mt-16">
+          <strong>14 sections total, 10 are NEW</strong> (marked with badges). The current MasterMedi homepage has ~8 sections with limited conversion features. This wireframe adds trust elements, educational content, social proof, and a bundle builder that are critical for converting TikTok traffic.
+        </div>
+      </div>
+
+      <!-- Mobile Wireframe Note -->
+      <div class="section-card">
+        <h2 class="section-title">Mobile Responsive Notes</h2>
+        <p class="section-subtitle">Since most TikTok traffic will be mobile, the mobile version is critical</p>
+        <div class="mobile-notes-grid">
+          <div class="mobile-note">
+            <h4>Single Column Layout</h4>
+            <p>All 4-column grids collapse to 2-column on tablet, 1-column on mobile. Products stack vertically for easy thumb scrolling.</p>
+          </div>
+          <div class="mobile-note">
+            <h4>Sticky Add-to-Cart</h4>
+            <p>On product pages, a sticky &ldquo;Add to Cart&rdquo; bar stays at the bottom of the screen so the CTA is always visible.</p>
+          </div>
+          <div class="mobile-note">
+            <h4>Hamburger Menu with Geo Toggle</h4>
+            <p>Country selector (US/IN) is visible in the hamburger drawer menu on mobile. Easy to switch regions.</p>
+          </div>
+          <div class="mobile-note">
+            <h4>Video-First Hero</h4>
+            <p>Hero section plays autoplay muted video on mobile &mdash; feels native to TikTok users landing on the site.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         TAB 7: NEXT STEPS
+         ============================================================ -->
+    <section class="tab-content" id="tab-nextsteps">
+
+      <div class="tab-header">
+        <h1>Next Steps</h1>
+        <p>What we need from you, what we deliver next, and the path forward</p>
+      </div>
+
+      <!-- What We Need -->
+      <div class="section-card">
+        <h2 class="section-title">What We Need From You</h2>
+        <p class="section-subtitle">Two things to move forward &mdash; takes about 15 minutes total</p>
+
+        <div class="needs-grid">
+          <div class="need-card primary-need">
+            <div class="need-number">1</div>
+            <div class="need-content">
+              <h3>Shopify Collaborator Access</h3>
+              <p>This lets us audit your store performance, review your product setup, analyze checkout flow, and understand your current theme configuration.</p>
+              <div class="need-how">
+                <strong>How to grant access:</strong>
+                <ol>
+                  <li>Go to Shopify Admin &rarr; Settings &rarr; Users and Permissions</li>
+                  <li>Scroll to &ldquo;Collaborators&rdquo; section</li>
+                  <li>Generate a Collaborator Request Code</li>
+                  <li>Share the code with us</li>
+                </ol>
+              </div>
+              <div class="need-time">&#9201; ~2 minutes</div>
+            </div>
+          </div>
+
+          <div class="need-card primary-need">
+            <div class="need-number">2</div>
+            <div class="need-content">
+              <h3>GA4 / Analytics Access</h3>
+              <p>This lets us analyze your traffic sources, conversion funnel, user behavior, and identify exactly where visitors drop off &mdash; so our proposal is backed by real data, not guesswork.</p>
+              <div class="need-how">
+                <strong>How to grant access:</strong>
+                <ol>
+                  <li>Go to GA4 &rarr; Admin &rarr; Property Access Management</li>
+                  <li>Click &ldquo;+&rdquo; to Add User</li>
+                  <li>Enter our email: <strong>growth@growisto.com</strong></li>
+                  <li>Set role to &ldquo;Viewer&rdquo;</li>
+                </ol>
+              </div>
+              <div class="need-time">&#9201; ~2 minutes</div>
+            </div>
+          </div>
+
+          <div class="need-card">
+            <div class="need-number">3</div>
+            <div class="need-content">
+              <h3>Requirements Questionnaire (~10 min)</h3>
+              <p>A short Google Form covering your product catalog details, feature preferences, design direction, and integration needs. Only asks what we can&rsquo;t extract ourselves.</p>
+              <div class="need-how">
+                <strong>We&rsquo;ll share the link after this call</strong> &mdash; customized based on our discussion today.
+              </div>
+              <div class="need-time">&#9201; ~10 minutes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout warning mt-16">
+          <strong>Timeline is in your hands.</strong> The sooner you share Shopify access + GA4 + complete the form, the sooner we can deliver the complete data-backed revamp plan. Ideally within 3-5 business days.
+        </div>
+      </div>
+
+      <!-- What We Deliver Next -->
+      <div class="section-card">
+        <h2 class="section-title">What We Deliver Next</h2>
+        <p class="section-subtitle">Once we have your data, here&rsquo;s what you get</p>
+
+        <div class="deliverables-timeline">
+          <div class="deliverable-card">
+            <div class="deliverable-icon">&#128202;</div>
+            <div class="deliverable-content">
+              <h3>Complete CRO Audit Report</h3>
+              <p>Full funnel analysis with your actual Shopify + GA4 data. Exact drop-off points, PageSpeed deep-dive, mobile vs desktop comparison, traffic source analysis. Every finding backed by numbers.</p>
+              <span class="deliverable-timeline-tag">Within 1 week of access</span>
+            </div>
+          </div>
+
+          <div class="deliverable-card">
+            <div class="deliverable-icon">&#9889;</div>
+            <div class="deliverable-content">
+              <h3>Final Feature List + App Stack</h3>
+              <p>Complete list of features categorized as inbuilt (free with theme), custom development, or app-needed. Each feature tied to a specific funnel problem. Monthly app costs included.</p>
+              <span class="deliverable-timeline-tag">Within 1 week of access</span>
+            </div>
+          </div>
+
+          <div class="deliverable-card">
+            <div class="deliverable-icon">&#127912;</div>
+            <div class="deliverable-content">
+              <h3>Theme Comparison Report</h3>
+              <p>3-4 themes evaluated against your feature requirements, with feature-fit scores, performance benchmarks, and total cost comparison. Multi-country compatibility verified.</p>
+              <span class="deliverable-timeline-tag">Within 1 week of access</span>
+            </div>
+          </div>
+
+          <div class="deliverable-card">
+            <div class="deliverable-icon">&#128176;</div>
+            <div class="deliverable-content">
+              <h3>ROI Projection & Investment Plan</h3>
+              <p>Data-backed revenue uplift estimates. Investment amount, payment schedule, payback period, and 3-month projected ROI.</p>
+              <span class="deliverable-timeline-tag">Within 1 week of access</span>
+            </div>
+          </div>
+
+          <div class="deliverable-card">
+            <div class="deliverable-icon">&#128421;</div>
+            <div class="deliverable-content">
+              <h3>UI Mockups (After Theme Selection)</h3>
+              <p>Once you pick 2-3 themes from our recommendations, we build visual mockups with YOUR products &mdash; homepage, PDP, collection page, desktop + mobile. US and India versions.</p>
+              <span class="deliverable-timeline-tag">1-2 weeks after theme selection</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Path Forward -->
+      <div class="section-card">
+        <h2 class="section-title">The Path Forward</h2>
+        <div class="path-visual">
+          <div class="path-step done-step">
+            <div class="path-marker">&#10003;</div>
+            <div class="path-label">Today&rsquo;s Call</div>
+            <div class="path-detail">Align on challenges, initial plan</div>
+          </div>
+          <div class="path-connector"></div>
+          <div class="path-step next-step">
+            <div class="path-marker">2</div>
+            <div class="path-label">You Share Access + Fill Form</div>
+            <div class="path-detail">Shopify + GA4 + Questionnaire</div>
+          </div>
+          <div class="path-connector"></div>
+          <div class="path-step future-step">
+            <div class="path-marker">3</div>
+            <div class="path-label">We Deliver Complete Plan</div>
+            <div class="path-detail">Audit + Features + Themes + ROI</div>
+          </div>
+          <div class="path-connector"></div>
+          <div class="path-step future-step">
+            <div class="path-marker">4</div>
+            <div class="path-label">Theme Finalization</div>
+            <div class="path-detail">You pick 2-3 themes for mockups</div>
+          </div>
+          <div class="path-connector"></div>
+          <div class="path-step future-step">
+            <div class="path-marker">5</div>
+            <div class="path-label">UI Mockups Delivered</div>
+            <div class="path-detail">Your products on chosen themes</div>
+          </div>
+          <div class="path-connector"></div>
+          <div class="path-step future-step">
+            <div class="path-marker">6</div>
+            <div class="path-label">Agreement & Build</div>
+            <div class="path-detail">Scope lock, development begins</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="section-card contact-card">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-info">
+          <p><strong>Email:</strong> growth@growisto.com</p>
+          <p><strong>Website:</strong> growisto.com</p>
+        </div>
+        <p class="text-muted text-small mt-16">We don&rsquo;t just build stores. We build revenue machines.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script>
+    // Password
+    const PASSWORD = 'mastermedi2026';
+    const overlay = document.getElementById('passwordOverlay');
+    const form = document.getElementById('passwordForm');
+    const input = document.getElementById('passwordInput');
+    const error = document.getElementById('errorMsg');
+
+    if (localStorage.getItem('mm_auth') === 'true') {
+      overlay.classList.add('hidden');
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (input.value === PASSWORD) {
+        localStorage.setItem('mm_auth', 'true');
+        overlay.classList.add('hidden');
+      } else {
+        error.style.display = 'block';
+        input.classList.add('shake');
+        setTimeout(() => input.classList.remove('shake'), 500);
+      }
+    });
+
+    // Tab switching
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      document.getElementById('tab-' + tabId).classList.add('active');
+      document.querySelector('[data-tab="' + tabId + '"]').classList.add('active');
+      document.getElementById('mainContent').scrollTop = 0;
+      if (window.innerWidth < 900) toggleSidebar();
+    }
+
+    // Sidebar toggle (mobile)
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('sidebarOverlay').classList.toggle('visible');
+    }
+  </script>
+
+</body>
+</html>
