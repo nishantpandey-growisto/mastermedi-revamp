@@ -128,7 +128,7 @@
         <div class="agenda-hero-content">
           <p class="agenda-hero-eyebrow">Growisto &times; MasterMedi</p>
           <h1>Discovery & Alignment Call</h1>
-          <p class="agenda-hero-sub">A comprehensive Shopify revamp plan to grow your 20-25 monthly orders into a high-converting, globally-ready oral care brand.</p>
+          <p class="agenda-hero-sub">A comprehensive Shopify revamp &mdash; frontend design, backend operations, inventory management, and multi-country setup &mdash; to grow your 20-25 monthly orders into a high-converting, globally-ready oral care brand.</p>
         </div>
       </div>
 
@@ -204,7 +204,7 @@
             <div class="toc-number">3</div>
             <div class="toc-body">
               <h3>Align on Challenges</h3>
-              <p>Current store issues &mdash; some we found, some you know &mdash; let&rsquo;s align</p>
+              <p>Frontend, backend operations &amp; integrations &mdash; let&rsquo;s align on what needs fixing</p>
             </div>
             <span class="toc-arrow">&#8594;</span>
           </div>
@@ -376,7 +376,7 @@
 
       <div class="tab-header">
         <h1>Current Challenges</h1>
-        <p>Issues we&rsquo;ve identified from our initial research &mdash; let&rsquo;s align on what matters most</p>
+        <p>Frontend issues we spotted + backend operations gaps you&rsquo;ve flagged &mdash; let&rsquo;s align on priorities</p>
       </div>
 
       <!-- Critical -->
@@ -467,6 +467,80 @@
             <p>Product descriptions are 2-3 sentences. No ingredients list on toothpaste/pulling oil (critical for health products). No usage instructions. No FAQ sections. Health-conscious buyers need detailed information to feel confident purchasing.</p>
             <div class="challenge-impact">
               <strong>Impact:</strong> Insufficient info = lost sales on health products
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend & Operations -->
+      <div class="section-card">
+        <h2 class="section-title"><span class="severity-dot critical"></span>Backend &amp; Operations Gaps</h2>
+        <p class="section-subtitle">You mentioned the frontend was set up okay &mdash; it&rsquo;s the backend that&rsquo;s been the challenge. Here&rsquo;s what we see.</p>
+
+        <div class="challenge-grid">
+          <div class="challenge-card critical">
+            <div class="challenge-header">
+              <span class="challenge-badge critical">Critical</span>
+              <h3>No Inventory Management System</h3>
+            </div>
+            <p>With 50% of products showing &ldquo;Sold Out&rdquo; and no automated stock management, there&rsquo;s no visibility into reorder points, stock velocity, or multi-warehouse inventory. Currently relying on manual Shopify inventory counts with no alerts or automation.</p>
+            <div class="challenge-impact">
+              <strong>Impact:</strong> Chronic stockouts, no demand forecasting, lost sales on popular items
+            </div>
+          </div>
+
+          <div class="challenge-card critical">
+            <div class="challenge-header">
+              <span class="challenge-badge critical">Critical</span>
+              <h3>No Order Management / Fulfillment Workflow</h3>
+            </div>
+            <p>No OMS (Order Management System) beyond Shopify&rsquo;s basic orders page. No automated order routing, no fulfillment status tracking, no packing slip automation. As you scale to India, you&rsquo;ll need order routing by geography (US warehouse vs India warehouse).</p>
+            <div class="challenge-impact">
+              <strong>Impact:</strong> Manual order processing doesn&rsquo;t scale; multi-country fulfillment needs automation
+            </div>
+          </div>
+
+          <div class="challenge-card critical">
+            <div class="challenge-header">
+              <span class="challenge-badge critical">Critical</span>
+              <h3>App Stack Not Set Up</h3>
+            </div>
+            <p>Critical apps are either missing or misconfigured: reviews app not rendering, no email/SMS marketing flows (abandoned cart, post-purchase, win-back), no shipping calculator, no delivery estimation, no loyalty program, no analytics beyond basic GA. These are the revenue drivers.</p>
+            <div class="challenge-impact">
+              <strong>Impact:</strong> Zero retention marketing, zero post-purchase engagement, no automated revenue recovery
+            </div>
+          </div>
+
+          <div class="challenge-card high">
+            <div class="challenge-header">
+              <span class="challenge-badge high">High</span>
+              <h3>No Multi-Country Backend Infrastructure</h3>
+            </div>
+            <p>India expansion requires: Shopify Markets setup, geo-IP routing, separate product catalogs by market, INR pricing, Indian payment gateways (Razorpay/PayU), Indian shipping partners (Shiprocket/Delhivery), GST invoicing. None of this is in place.</p>
+            <div class="challenge-impact">
+              <strong>Impact:</strong> India launch is blocked until backend infrastructure is built
+            </div>
+          </div>
+
+          <div class="challenge-card high">
+            <div class="challenge-header">
+              <span class="challenge-badge high">High</span>
+              <h3>Shipping &amp; Logistics Not Configured</h3>
+            </div>
+            <p>No shipping rate transparency for customers. No integrated shipping solution for rate calculation, label generation, or tracking. For India, you&rsquo;ll need domestic logistics partners. For US, need to optimize current shipping setup with real-time rates.</p>
+            <div class="challenge-impact">
+              <strong>Impact:</strong> High cart abandonment from hidden shipping costs; no tracking experience
+            </div>
+          </div>
+
+          <div class="challenge-card high">
+            <div class="challenge-header">
+              <span class="challenge-badge high">High</span>
+              <h3>No Analytics &amp; Tracking Setup</h3>
+            </div>
+            <p>Basic Google Analytics likely installed but ecommerce events (add_to_cart, begin_checkout, purchase, etc.) may not be properly configured. No server-side tracking. No heatmaps or session recordings. Without proper tracking, you can&rsquo;t measure what&rsquo;s working.</p>
+            <div class="challenge-impact">
+              <strong>Impact:</strong> Flying blind &mdash; no data to optimize ad spend, conversion, or customer journey
             </div>
           </div>
         </div>
@@ -749,6 +823,376 @@
         </div>
       </div>
 
+      <!-- Backend Operations & Integrations -->
+      <div class="section-card">
+        <h2 class="section-title">Backend Operations &amp; Integrations</h2>
+        <p class="section-subtitle">The backbone of your store &mdash; inventory, orders, shipping, marketing, analytics</p>
+
+        <div class="feature-category">
+          <h3 class="feature-cat-title">Inventory &amp; Order Management</h3>
+          <div class="feature-table-wrap">
+            <table class="feature-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Why It Matters</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Inventory Management System (IMS)</td>
+                  <td>Multi-location stock tracking, low-stock alerts, reorder points</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Order Management System (OMS)</td>
+                  <td>Automated order processing, fulfillment workflows, status tracking</td>
+                  <td><span class="impl-badge inbuilt">Inbuilt</span> + <span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Automated Order Allocation &amp; Routing</td>
+                  <td>Route orders to US or India warehouse based on delivery address</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Multi-Warehouse / Multi-Location Setup</td>
+                  <td>Track inventory separately for US warehouse and India warehouse</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Packing Slip &amp; Invoice Automation</td>
+                  <td>Auto-generate shipping labels, packing slips, GST invoices (India)</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="feature-category">
+          <h3 class="feature-cat-title">Shipping &amp; Logistics</h3>
+          <div class="feature-table-wrap">
+            <table class="feature-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Why It Matters</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>US Shipping (USPS/UPS/FedEx Integration)</td>
+                  <td>Real-time rates, label generation, tracking</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>India Shipping (Shiprocket/Delhivery)</td>
+                  <td>Domestic India fulfillment with COD support</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Order Tracking Page</td>
+                  <td>Branded tracking page so customers don&rsquo;t call &ldquo;Where&rsquo;s my order?&rdquo;</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Returns &amp; Exchange Management</td>
+                  <td>Self-service return portal, automated labels</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="feature-category">
+          <h3 class="feature-cat-title">Marketing &amp; Retention Apps</h3>
+          <div class="feature-table-wrap">
+            <table class="feature-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Why It Matters</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Email &amp; SMS Marketing (Klaviyo/Omnisend)</td>
+                  <td>Abandoned cart, post-purchase, win-back, welcome series &mdash; revenue on autopilot</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Reviews Collection (Judge.me/Loox)</td>
+                  <td>Automated post-purchase review requests with photo uploads</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Loyalty &amp; Rewards Program</td>
+                  <td>Points for purchases, referrals, social shares &mdash; repeat customers</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Live Chat / Customer Support</td>
+                  <td>Real-time support for health product questions</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+                <tr>
+                  <td>Social Media Product Catalog Sync</td>
+                  <td>Facebook/Instagram/Google Shopping product feeds</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="feature-category">
+          <h3 class="feature-cat-title">Analytics &amp; Tracking</h3>
+          <div class="feature-table-wrap">
+            <table class="feature-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Why It Matters</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>GA4 Ecommerce Event Setup</td>
+                  <td>Track every funnel step: view_item, add_to_cart, begin_checkout, purchase</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Google Tag Manager Setup</td>
+                  <td>Central tag management for all marketing/analytics pixels</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Facebook/TikTok Pixel (Server-Side)</td>
+                  <td>Accurate ad attribution even with iOS privacy restrictions</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Google Search Console + Merchant Center</td>
+                  <td>SEO monitoring, product listing ads, shopping feed</td>
+                  <td><span class="impl-badge custom">Custom</span></td>
+                </tr>
+                <tr>
+                  <td>Heatmaps &amp; Session Recording (Hotjar/Microsoft Clarity)</td>
+                  <td>See exactly where visitors click, scroll, and drop off</td>
+                  <td><span class="impl-badge app">App</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cost Overview -->
+      <div class="section-card">
+        <h2 class="section-title">Tentative Cost Overview</h2>
+        <p class="section-subtitle">A complete view of what this setup costs &mdash; Shopify, theme, apps, and our services</p>
+
+        <div class="callout warning mb-24">
+          <strong>Shopify Plan Upgrade Required:</strong> Your store is registered in India, so you get <strong>India pricing</strong> (significantly cheaper than US rates). You&rsquo;re currently on <strong>Shopify Basic (&#8377;1,499/mo)</strong>. For multi-country with Shopify Markets (US + India &mdash; separate catalogs, geo-routing, multi-currency, 5 staff accounts), you need to upgrade to <strong>Shopify Grow (&#8377;5,599/mo)</strong>.
+        </div>
+
+        <!-- Shopify Plan Comparison -->
+        <div class="feature-category">
+          <h3 class="feature-cat-title">Shopify Plan Options (India Pricing)</h3>
+          <div class="feature-table-wrap">
+            <table class="feature-table">
+              <thead>
+                <tr>
+                  <th>Plan</th>
+                  <th>India Price</th>
+                  <th>US Equivalent</th>
+                  <th>Markets</th>
+                  <th>Staff</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Basic</td>
+                  <td>&#8377;1,499/mo</td>
+                  <td><s>$39/mo</s></td>
+                  <td>3 markets</td>
+                  <td>2</td>
+                  <td>Current plan &mdash; limited for multi-country</td>
+                </tr>
+                <tr style="background: #e8f5f0;">
+                  <td><strong>Grow &star;</strong></td>
+                  <td><strong>&#8377;5,599/mo</strong></td>
+                  <td><s>$105/mo</s></td>
+                  <td>3 markets</td>
+                  <td>5</td>
+                  <td><strong>Recommended</strong> &mdash; Shopify Markets + staff for India team</td>
+                </tr>
+                <tr>
+                  <td>Advanced</td>
+                  <td>&#8377;22,680/mo</td>
+                  <td><s>$399/mo</s></td>
+                  <td>3 markets + local storefronts</td>
+                  <td>15</td>
+                  <td>Only if fully separate storefronts per country needed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Prices shown are annual billing rates. Since your store is registered in India, you pay INR &mdash; saving 35-55% vs US pricing.</p>
+        </div>
+
+        <!-- Full Cost Breakdown -->
+        <div class="feature-category">
+          <h3 class="feature-cat-title">Complete Cost Breakdown</h3>
+          <div class="feature-table-wrap">
+            <table class="feature-table">
+              <thead>
+                <tr>
+                  <th>Cost Category</th>
+                  <th>Item</th>
+                  <th>Cost</th>
+                  <th>Frequency</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background: var(--bg-light);">
+                  <td><strong>Shopify Plan</strong></td>
+                  <td>Upgrade to Grow plan</td>
+                  <td><strong>&#8377;5,599/mo</strong></td>
+                  <td>Monthly</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td style="color: var(--text-muted); font-size: 0.85rem;">Currently: Basic &#8377;1,499/mo &rarr; Additional &#8377;4,100/mo</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr style="background: var(--bg-light);">
+                  <td><strong>Theme</strong></td>
+                  <td>Premium Shopify theme (e.g., Habitat, Be Yours, or similar)</td>
+                  <td><strong>$250&ndash;$400</strong></td>
+                  <td>One-time</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td style="color: var(--text-muted); font-size: 0.85rem;">Could retain Impact if only backend is the priority &mdash; to discuss</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr style="background: var(--bg-light);">
+                  <td rowspan="10"><strong>Apps (Monthly)</strong></td>
+                  <td>Reviews (Judge.me / Loox)</td>
+                  <td>$15&ndash;$20/mo</td>
+                  <td>Monthly</td>
+                </tr>
+                <tr>
+                  <td>Email &amp; SMS Marketing (Klaviyo/Omnisend)</td>
+                  <td>$0&ndash;$50/mo</td>
+                  <td>Monthly (scales with list)</td>
+                </tr>
+                <tr>
+                  <td>Delivery Estimation</td>
+                  <td>$7&ndash;$10/mo</td>
+                  <td>Monthly</td>
+                </tr>
+                <tr>
+                  <td>Subscription/Auto-Replenish (ReCharge/Seal)</td>
+                  <td>$0&ndash;$50/mo</td>
+                  <td>Monthly</td>
+                </tr>
+                <tr>
+                  <td>Bundle Builder</td>
+                  <td>$10&ndash;$30/mo</td>
+                  <td>Monthly</td>
+                </tr>
+                <tr>
+                  <td>Shipping &mdash; India (Shiprocket)</td>
+                  <td>$20&ndash;$30/mo</td>
+                  <td>Monthly</td>
+                </tr>
+                <tr>
+                  <td>Order Tracking (AfterShip / Track123)</td>
+                  <td>$0&ndash;$25/mo</td>
+                  <td>Monthly</td>
+                </tr>
+                <tr>
+                  <td>Live Chat (Tidio / Gorgias)</td>
+                  <td>$0&ndash;$30/mo</td>
+                  <td>Monthly</td>
+                </tr>
+                <tr>
+                  <td>Back-in-Stock / Loyalty / Other</td>
+                  <td>$15&ndash;$40/mo</td>
+                  <td>Monthly</td>
+                </tr>
+                <tr style="background: #e8f5f0;">
+                  <td><strong>Est. Total App Stack</strong></td>
+                  <td><strong>$80&ndash;$250/mo</strong></td>
+                  <td><strong>Monthly</strong></td>
+                </tr>
+                <tr style="background: var(--bg-light);">
+                  <td><strong>Payment Gateway</strong></td>
+                  <td>US: Shopify Payments (2.7% + 30&cent;) | India: Razorpay (~2% + GST)</td>
+                  <td>Per txn</td>
+                  <td>Per order</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td style="color: var(--text-muted); font-size: 0.85rem;">Grow plan: 1% third-party gateway fee (vs 2% on Basic)</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr style="background: #fff3e0;">
+                  <td><strong>Growisto Fee</strong></td>
+                  <td>Complete revamp: Frontend + Backend + Multi-Country + App Setup + Analytics</td>
+                  <td><strong>$4,000&ndash;$8,000</strong></td>
+                  <td>One-time</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td style="color: var(--text-muted); font-size: 0.85rem;">Includes: theme setup/customization, backend operations setup, app configuration &amp; integration, Shopify Markets (US + India), analytics &amp; tracking, page speed optimization. Final quote after audit.</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="metric-grid mt-24">
+          <div class="metric-card">
+            <div class="metric-value">&#8377;5,599</div>
+            <div class="metric-label">Shopify Grow (Monthly)</div>
+            <div class="metric-sub">India pricing &mdash; saves ~36% vs US</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">$250&ndash;$400</div>
+            <div class="metric-label">Theme (One-time)</div>
+            <div class="metric-sub">Or retain Impact if backend-only</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">$80&ndash;$250</div>
+            <div class="metric-label">App Stack (Monthly)</div>
+            <div class="metric-sub">~15 apps for full setup</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">$4K&ndash;$8K</div>
+            <div class="metric-label">Growisto (One-time)</div>
+            <div class="metric-sub">Frontend + Backend + Multi-Country</div>
+          </div>
+        </div>
+
+        <div class="callout info mt-16">
+          <strong>These are tentative ranges.</strong> Final numbers depend on: which theme is selected, which apps you choose, your exact feature requirements, and the scope of custom development. We&rsquo;ll provide a precise quote after the data audit and scope finalization.
+        </div>
+      </div>
+
       <!-- Theme Direction -->
       <div class="section-card">
         <h2 class="section-title">Theme Direction</h2>
@@ -819,8 +1263,13 @@
         <div class="metric-grid">
           <div class="metric-card">
             <div class="metric-value">23</div>
-            <div class="metric-label">Critical Features Identified</div>
-            <div class="metric-sub">Must-haves for launch</div>
+            <div class="metric-label">Frontend Features</div>
+            <div class="metric-sub">Trust, conversion, content</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">19</div>
+            <div class="metric-label">Backend &amp; Operations</div>
+            <div class="metric-sub">Inventory, OMS, shipping, analytics</div>
           </div>
           <div class="metric-card">
             <div class="metric-value">6</div>
@@ -828,14 +1277,9 @@
             <div class="metric-sub">India + US expansion</div>
           </div>
           <div class="metric-card">
-            <div class="metric-value">~8</div>
-            <div class="metric-label">Apps Needed</div>
-            <div class="metric-sub">Reviews, delivery, subscriptions, etc.</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-value">TBD</div>
-            <div class="metric-label">Custom Development Items</div>
-            <div class="metric-sub">Finalized after audit</div>
+            <div class="metric-value">~15</div>
+            <div class="metric-label">Apps to Set Up</div>
+            <div class="metric-sub">$80&ndash;$250/mo total</div>
           </div>
         </div>
       </div>
