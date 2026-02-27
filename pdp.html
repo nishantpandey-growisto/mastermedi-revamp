@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MasterMedi — PDP Mockup | Growisto</title>
+  <link rel="stylesheet" href="mockup-styles.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #e8e2da;
+      font-family: -apple-system, sans-serif;
+    }
+    .mockup-label {
+      text-align: center;
+      font-size: 13px;
+      color: #8b7560;
+      margin-bottom: 24px;
+      font-family: 'Cormorant SC', serif;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .mockup-label strong { color: #C06B3A; }
+
+    /* ── PDP-SPECIFIC STYLES ── */
+    .mk-pdp { padding: 0 48px; max-width: 1280px; margin: 0 auto; }
+
+    .mk-breadcrumb {
+      padding: 16px 48px;
+      font-size: 13px;
+      color: var(--mm-text-muted);
+      font-family: var(--mm-body);
+      background: var(--mm-ivory);
+    }
+    .mk-breadcrumb a { color: var(--mm-text-secondary); }
+    .mk-breadcrumb a:hover { color: var(--mm-terracotta); }
+    .mk-breadcrumb span { margin: 0 8px; color: var(--mm-border); }
+
+    .mk-pdp-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      padding: 40px 48px;
+      background: var(--mm-ivory);
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    /* Gallery */
+    .mk-pdp-gallery {}
+    .mk-pdp-hero-img {
+      width: 100%;
+      aspect-ratio: 1;
+      background: var(--mm-cream);
+      border: 1px solid var(--mm-border-light);
+      border-radius: var(--mm-radius-lg);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .mk-pdp-hero-img img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .mk-pdp-zoom-hint {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(61,31,10,0.7);
+      color: var(--mm-cream);
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-family: var(--mm-accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .mk-pdp-thumbs {
+      display: flex;
+      gap: 12px;
+    }
+    .mk-pdp-thumb {
+      width: 80px;
+      height: 80px;
+      background: var(--mm-cream);
+      border: 2px solid var(--mm-border-light);
+      border-radius: var(--mm-radius);
+      overflow: hidden;
+      cursor: pointer;
+      padding: 6px;
+      transition: border-color 0.2s;
+    }
+    .mk-pdp-thumb.active,
+    .mk-pdp-thumb:hover {
+      border-color: var(--mm-terracotta);
+    }
+    .mk-pdp-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Info Panel */
+    .mk-pdp-info {}
+    .mk-pdp-brand {
+      font-family: var(--mm-accent);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mm-terracotta);
+      margin-bottom: 8px;
+    }
+    .mk-pdp-title {
+      font-family: var(--mm-heading);
+      font-size: 36px;
+      font-weight: 500;
+      color: var(--mm-brown-deep);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .mk-pdp-rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .mk-pdp-rating .mk-stars { margin-bottom: 0; }
+    .mk-pdp-rating-link {
+      font-size: 13px;
+      color: var(--mm-terracotta);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .mk-pdp-price-block {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 8px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--mm-border-light);
+    }
+    .mk-pdp-price-main {
+      font-family: var(--mm-heading);
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--mm-brown-deep);
+    }
+    .mk-pdp-price-compare {
+      font-size: 18px;
+      color: var(--mm-text-muted);
+      text-decoration: line-through;
+    }
+    .mk-pdp-price-badge {
+      background: var(--mm-terracotta);
+      color: white;
+      font-family: var(--mm-accent);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+
+    /* Short Description */
+    .mk-pdp-short-desc {
+      font-size: 15px;
+      color: var(--mm-text-secondary);
+      line-height: 1.7;
+      margin: 20px 0;
+    }
+
+    /* Variant Selector */
+    .mk-pdp-variants {
+      margin-bottom: 20px;
+    }
+    .mk-pdp-variant-label {
+      font-family: var(--mm-accent);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mm-brown-deep);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .mk-pdp-variant-options {
+      display: flex;
+      gap: 10px;
+    }
+    .mk-pdp-variant-btn {
+      padding: 10px 24px;
+      border: 1.5px solid var(--mm-border);
+      background: white;
+      font-family: var(--mm-body);
+      font-size: 14px;
+      color: var(--mm-brown-deep);
+      cursor: pointer;
+      border-radius: var(--mm-radius);
+      transition: all 0.2s;
+    }
+    .mk-pdp-variant-btn.active,
+    .mk-pdp-variant-btn:hover {
+      border-color: var(--mm-terracotta);
+      background: var(--mm-cream);
+      color: var(--mm-terracotta);
+      font-weight: 600;
+    }
+
+    /* Trust Badges on PDP */
+    .mk-pdp-trust {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+      padding: 16px 0;
+      border-top: 1px solid var(--mm-border-light);
+      border-bottom: 1px solid var(--mm-border-light);
+    }
+    .mk-pdp-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--mm-text-secondary);
+    }
+    .mk-pdp-trust-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--mm-cream);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: var(--mm-gold);
+      flex-shrink: 0;
+    }
+
+    /* Quantity + ATC */
+    .mk-pdp-actions {
+      display: flex;
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .mk-pdp-qty {
+      display: flex;
+      align-items: center;
+      border: 1.5px solid var(--mm-border);
+      border-radius: var(--mm-radius);
+    }
+    .mk-pdp-qty button {
+      width: 40px;
+      height: 44px;
+      border: none;
+      background: transparent;
+      font-size: 18px;
+      color: var(--mm-brown-deep);
+      cursor: pointer;
+    }
+    .mk-pdp-qty span {
+      width: 36px;
+      text-align: center;
+      font-family: var(--mm-body);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--mm-brown-deep);
+    }
+    .mk-pdp-atc {
+      flex: 1;
+      padding: 14px 32px;
+      background: var(--mm-brown-deep);
+      color: var(--mm-cream);
+      font-family: var(--mm-accent);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .mk-pdp-atc:hover { background: var(--mm-terracotta); }
+    .mk-pdp-buynow {
+      width: 100%;
+      padding: 14px;
+      background: var(--mm-terracotta);
+      color: white;
+      font-family: var(--mm-accent);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-bottom: 12px;
+    }
+    .mk-pdp-buynow:hover { background: var(--mm-terracotta-dark); }
+
+    /* Delivery Estimation */
+    .mk-pdp-delivery {
+      background: var(--mm-cream);
+      padding: 16px 20px;
+      border-radius: var(--mm-radius-lg);
+      margin: 16px 0;
+    }
+    .mk-pdp-delivery-title {
+      font-family: var(--mm-accent);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mm-terracotta);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .mk-pdp-delivery-text {
+      font-size: 14px;
+      color: var(--mm-brown-deep);
+    }
+    .mk-pdp-delivery-text strong {
+      color: var(--mm-success);
+    }
+    .mk-pdp-delivery-input {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .mk-pdp-delivery-input input {
+      flex: 1;
+      padding: 8px 12px;
+      border: 1px solid var(--mm-border);
+      font-family: var(--mm-body);
+      font-size: 13px;
+      border-radius: var(--mm-radius);
+      background: white;
+    }
+    .mk-pdp-delivery-input button {
+      padding: 8px 16px;
+      background: var(--mm-brown-deep);
+      color: var(--mm-cream);
+      font-size: 12px;
+      font-family: var(--mm-accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: var(--mm-radius);
+      cursor: pointer;
+    }
+
+    /* Offers */
+    .mk-pdp-offers {
+      margin: 20px 0;
+    }
+    .mk-pdp-offer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border: 1px solid var(--mm-border-light);
+      border-radius: var(--mm-radius);
+      margin-bottom: 8px;
+      font-size: 13px;
+      background: white;
+    }
+    .mk-pdp-offer-icon {
+      color: var(--mm-gold);
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .mk-pdp-offer strong { color: var(--mm-brown-deep); }
+
+    /* ── BELOW-FOLD PDP SECTIONS ── */
+
+    /* Ingredient / Feature Cards */
+    .mk-pdp-features {
+      padding: 56px 48px;
+      background: var(--mm-cream);
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .mk-pdp-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .mk-pdp-feature-card {
+      text-align: center;
+      padding: 28px 20px;
+      background: white;
+      border: 1px solid var(--mm-border-light);
+      border-radius: var(--mm-radius-lg);
+    }
+    .mk-pdp-feature-icon {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, var(--mm-gold), var(--mm-gold-light));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: white;
+    }
+    .mk-pdp-feature-card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+    .mk-pdp-feature-card p {
+      font-size: 13px;
+      color: var(--mm-text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Ingredients List */
+    .mk-pdp-ingredients {
+      padding: 56px 48px;
+      background: var(--mm-ivory);
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .mk-ingredient-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .mk-ingredient-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px;
+      background: white;
+      border: 1px solid var(--mm-border-light);
+      border-radius: var(--mm-radius-lg);
+    }
+    .mk-ingredient-dot {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .mk-ingredient-name {
+      font-family: var(--mm-heading);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--mm-brown-deep);
+      line-height: 1.3;
+    }
+    .mk-ingredient-role {
+      font-size: 12px;
+      color: var(--mm-text-secondary);
+    }
+
+    /* FAQ Accordion */
+    .mk-pdp-faq {
+      padding: 56px 48px;
+      background: var(--mm-cream-light);
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .mk-faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .mk-faq-item {
+      border-bottom: 1px solid var(--mm-border);
+      padding: 20px 0;
+    }
+    .mk-faq-q {
+      font-family: var(--mm-heading);
+      font-size: 19px;
+      font-weight: 500;
+      color: var(--mm-brown-deep);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .mk-faq-q::after {
+      content: '+';
+      font-size: 20px;
+      color: var(--mm-terracotta);
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    .mk-faq-a {
+      font-size: 14px;
+      color: var(--mm-text-secondary);
+      line-height: 1.7;
+      margin-top: 12px;
+      padding-right: 40px;
+    }
+
+    /* Frequently Bought Together */
+    .mk-pdp-fbt {
+      padding: 56px 48px;
+      background: var(--mm-ivory);
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .mk-fbt-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .mk-fbt-item {
+      text-align: center;
+      width: 180px;
+    }
+    .mk-fbt-img {
+      width: 140px;
+      height: 140px;
+      background: var(--mm-cream);
+      border: 1px solid var(--mm-border-light);
+      border-radius: var(--mm-radius-lg);
+      overflow: hidden;
+      margin: 0 auto 10px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mk-fbt-img img { max-height: 100%; object-fit: contain; }
+    .mk-fbt-name {
+      font-family: var(--mm-heading);
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--mm-brown-deep);
+      margin-bottom: 4px;
+    }
+    .mk-fbt-price {
+      font-size: 14px;
+      color: var(--mm-terracotta);
+      font-weight: 600;
+    }
+    .mk-fbt-plus {
+      font-size: 28px;
+      color: var(--mm-gold);
+      font-weight: 300;
+    }
+    .mk-fbt-total {
+      text-align: center;
+      margin-top: 24px;
+    }
+    .mk-fbt-total-price {
+      font-family: var(--mm-heading);
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--mm-brown-deep);
+    }
+    .mk-fbt-total-save {
+      font-size: 14px;
+      color: var(--mm-terracotta);
+      font-weight: 600;
+      margin: 4px 0 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="mockup-label">
+  <strong>MasterMedi</strong> &mdash; Product Detail Page Mockup &bull; Prepared by Growisto &bull; Feb 2026
+</div>
+
+<!-- BROWSER CHROME -->
+<div class="browser-chrome">
+  <div class="browser-topbar">
+    <div class="browser-dots">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="browser-url">mastermedi.co/products/stainless-steel-tongue-scraper</div>
+  </div>
+
+  <div class="mockup-container">
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="mk-announce">
+      Free US Shipping on Orders Over $35 &nbsp;&bull;&nbsp; <span>5 Million+ Units Sold Worldwide</span>
+    </div>
+
+    <!-- HEADER -->
+    <header class="mk-header">
+      <div class="mk-logo">
+        <div class="mk-logo-deer">&#9830;</div>
+        <span class="mk-logo-mark">MasterMedi</span>
+      </div>
+      <nav class="mk-nav">
+        <a href="#">Shop All</a>
+        <a href="#">Tongue Scrapers</a>
+        <a href="#">Toothpaste</a>
+        <a href="#">Oil Pulling</a>
+        <a href="#">Dental Kits</a>
+        <a href="#">Our Story</a>
+      </nav>
+      <div class="mk-header-icons">
+        <span>&#128269;</span>
+        <span>&#9829;</span>
+        <span>&#128722;<span class="mk-cart-badge">0</span></span>
+      </div>
+    </header>
+
+    <!-- USP BAR -->
+    <div class="mk-usp-bar">
+      <div class="mk-usp-item"><span class="mk-usp-icon">&#9733;</span>4.8/5 Star Rating</div>
+      <div class="mk-usp-item"><span class="mk-usp-icon">&#9883;</span>FDA Registered</div>
+      <div class="mk-usp-item"><span class="mk-usp-icon">&#10003;</span>Dentist Recommended</div>
+      <div class="mk-usp-item"><span class="mk-usp-icon">&#9878;</span>Medical Grade Materials</div>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div class="mk-breadcrumb">
+      <a href="#">Home</a><span>/</span>
+      <a href="#">Tongue Scrapers</a><span>/</span>
+      Stainless Steel Tongue Scraper
+    </div>
+
+    <!-- ════════════════════════════════════
+         PDP MAIN: GALLERY + INFO
+         ════════════════════════════════════ -->
+    <div class="mk-pdp-main">
+
+      <!-- Left: Image Gallery -->
+      <div class="mk-pdp-gallery">
+        <div class="mk-pdp-hero-img">
+          <img src="images/scraper-with-props.jpeg" alt="Stainless Steel Tongue Scraper">
+          <span class="mk-pdp-zoom-hint">&#128269; Hover to Zoom</span>
+        </div>
+        <div class="mk-pdp-thumbs">
+          <div class="mk-pdp-thumb active">
+            <img src="images/scraper-with-props.jpeg" alt="Thumb 1">
+          </div>
+          <div class="mk-pdp-thumb">
+            <img src="images/tongue-scraper-box.jpeg" alt="Thumb 2">
+          </div>
+          <div class="mk-pdp-thumb">
+            <img src="images/lifestyle-flatlay.jpeg" alt="Thumb 3">
+          </div>
+          <div class="mk-pdp-thumb">
+            <img src="images/toothpaste-cloud-mint.jpeg" alt="Thumb 4">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Product Info -->
+      <div class="mk-pdp-info">
+        <div class="mk-pdp-brand">MasterMedi</div>
+        <h1 class="mk-pdp-title">Stainless Steel Tongue Scraper</h1>
+
+        <!-- Rating -->
+        <div class="mk-pdp-rating">
+          <div class="mk-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <a class="mk-pdp-rating-link">2,847 Reviews</a>
+        </div>
+
+        <!-- Price -->
+        <div class="mk-pdp-price-block">
+          <span class="mk-pdp-price-main">$9.99</span>
+          <span class="mk-pdp-price-compare">$14.99</span>
+          <span class="mk-pdp-price-badge">Save 33%</span>
+        </div>
+
+        <!-- Short Description -->
+        <div class="mk-pdp-short-desc">
+          Medical-grade 304 stainless steel tongue scraper with ergonomic U-shaped design. Removes bacteria and debris that cause bad breath. Used by 5 million+ customers worldwide.
+        </div>
+
+        <!-- Variant: Material -->
+        <div class="mk-pdp-variants">
+          <div class="mk-pdp-variant-label">Material</div>
+          <div class="mk-pdp-variant-options">
+            <button class="mk-pdp-variant-btn active">Stainless Steel</button>
+            <button class="mk-pdp-variant-btn">Copper</button>
+          </div>
+        </div>
+
+        <!-- Variant: Pack Size -->
+        <div class="mk-pdp-variants">
+          <div class="mk-pdp-variant-label">Pack Size</div>
+          <div class="mk-pdp-variant-options">
+            <button class="mk-pdp-variant-btn active">Single</button>
+            <button class="mk-pdp-variant-btn">2-Pack ($17.99)</button>
+            <button class="mk-pdp-variant-btn">Family 4-Pack ($34.99)</button>
+          </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="mk-pdp-trust">
+          <div class="mk-pdp-trust-item">
+            <div class="mk-pdp-trust-icon">&#9883;</div>
+            <div>FDA<br>Registered</div>
+          </div>
+          <div class="mk-pdp-trust-item">
+            <div class="mk-pdp-trust-icon">&#9878;</div>
+            <div>Medical<br>Grade 304</div>
+          </div>
+          <div class="mk-pdp-trust-item">
+            <div class="mk-pdp-trust-icon">&#10003;</div>
+            <div>Dentist<br>Recommended</div>
+          </div>
+        </div>
+
+        <!-- Quantity + Add to Cart -->
+        <div class="mk-pdp-actions">
+          <div class="mk-pdp-qty">
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
+          </div>
+          <button class="mk-pdp-atc">Add to Cart &mdash; $9.99</button>
+        </div>
+
+        <!-- Buy Now -->
+        <button class="mk-pdp-buynow">Buy It Now</button>
+
+        <!-- Delivery Estimation -->
+        <div class="mk-pdp-delivery">
+          <div class="mk-pdp-delivery-title">Delivery Estimate</div>
+          <div class="mk-pdp-delivery-text">
+            <strong>Free Shipping</strong> &mdash; Arrives Mar 5 - 8
+          </div>
+          <div class="mk-pdp-delivery-input">
+            <input type="text" placeholder="Enter ZIP code">
+            <button>Check</button>
+          </div>
+        </div>
+
+        <!-- Offers -->
+        <div class="mk-pdp-offers">
+          <div class="mk-pdp-offer">
+            <span class="mk-pdp-offer-icon">&#127873;</span>
+            <div><strong>Bundle & Save:</strong> Add toothpaste + oil pulling for 25% off</div>
+          </div>
+          <div class="mk-pdp-offer">
+            <span class="mk-pdp-offer-icon">&#128666;</span>
+            <div><strong>Free shipping</strong> on all orders over $35</div>
+          </div>
+          <div class="mk-pdp-offer">
+            <span class="mk-pdp-offer-icon">&#8634;</span>
+            <div><strong>30-day returns</strong> &mdash; no questions asked</div>
+          </div>
+        </div>
+
+      </div><!-- end mk-pdp-info -->
+    </div><!-- end mk-pdp-main -->
+
+    <!-- ════════════════════════════════════
+         PDP SECTION: KEY FEATURES
+         ════════════════════════════════════ -->
+    <section class="mk-pdp-features">
+      <div class="mk-section-title">
+        <span class="mk-label">Product Highlights</span>
+        <h2>Why This Scraper?</h2>
+      </div>
+      <div class="mk-divider"></div>
+      <div class="mk-pdp-feature-grid">
+        <div class="mk-pdp-feature-card">
+          <div class="mk-pdp-feature-icon">&#9878;</div>
+          <h3>Medical-Grade 304 SS</h3>
+          <p>Same steel used in surgical instruments. Non-porous, resists bacterial buildup.</p>
+        </div>
+        <div class="mk-pdp-feature-card">
+          <div class="mk-pdp-feature-icon">&#128170;</div>
+          <h3>Ergonomic Grip</h3>
+          <p>Wide U-shape with non-slip handle edges for comfortable daily use.</p>
+        </div>
+        <div class="mk-pdp-feature-card">
+          <div class="mk-pdp-feature-icon">&#9883;</div>
+          <h3>FDA Registered</h3>
+          <p>Manufactured in our FDA-registered facility with strict quality controls.</p>
+        </div>
+        <div class="mk-pdp-feature-card">
+          <div class="mk-pdp-feature-icon">&#9854;</div>
+          <h3>Lifetime Durability</h3>
+          <p>Will not rust, bend, or degrade. Replace your plastic scrapers forever.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         PDP SECTION: INGREDIENTS / MATERIALS
+         (Shapes Theme Built-in Feature)
+         ════════════════════════════════════ -->
+    <section class="mk-pdp-ingredients">
+      <div class="mk-section-title">
+        <span class="mk-label">Material Transparency</span>
+        <h2>What It's Made Of</h2>
+        <span class="mk-section-badge mk-badge-theme">Shapes Built-in</span>
+      </div>
+      <div class="mk-divider"></div>
+      <div class="mk-ingredient-grid">
+        <div class="mk-ingredient-item">
+          <div class="mk-ingredient-dot" style="background: #e8e0d8;">&#9878;</div>
+          <div>
+            <div class="mk-ingredient-name">304 Stainless Steel</div>
+            <div class="mk-ingredient-role">Food-grade, surgical quality</div>
+          </div>
+        </div>
+        <div class="mk-ingredient-item">
+          <div class="mk-ingredient-dot" style="background: #f0e8dc;">&#10024;</div>
+          <div>
+            <div class="mk-ingredient-name">Mirror-Polished Finish</div>
+            <div class="mk-ingredient-role">Ultra-smooth scraping surface</div>
+          </div>
+        </div>
+        <div class="mk-ingredient-item">
+          <div class="mk-ingredient-dot" style="background: #e0ece0;">&#9729;</div>
+          <div>
+            <div class="mk-ingredient-name">BPA-Free</div>
+            <div class="mk-ingredient-role">No plastics, no toxins</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         PDP SECTION: PRODUCT FAQs
+         ════════════════════════════════════ -->
+    <section class="mk-pdp-faq">
+      <div class="mk-section-title">
+        <span class="mk-label">Common Questions</span>
+        <h2>Product FAQs</h2>
+      </div>
+      <div class="mk-divider"></div>
+      <div class="mk-faq-list">
+        <div class="mk-faq-item">
+          <div class="mk-faq-q">How do I use a tongue scraper?</div>
+          <div class="mk-faq-a">Simply place the rounded edge at the back of your tongue, and gently pull forward toward the tip. Rinse the scraper after each pass. Repeat 3-5 times, or until your tongue feels clean. Best used in the morning before brushing.</div>
+        </div>
+        <div class="mk-faq-item">
+          <div class="mk-faq-q">Stainless steel vs copper &mdash; which should I choose?</div>
+          <div class="mk-faq-a">Stainless steel is more durable and easier to maintain. Copper has natural antimicrobial properties rooted in Ayurvedic tradition but requires occasional polishing. Both are equally effective at removing tongue coating.</div>
+        </div>
+        <div class="mk-faq-item">
+          <div class="mk-faq-q">How do I clean my tongue scraper?</div>
+          <div class="mk-faq-a">Rinse with warm water after each use. For a deeper clean, wash with soap and water or place in your dishwasher (top rack). Stainless steel scrapers can also be sterilized with boiling water.</div>
+        </div>
+        <div class="mk-faq-item">
+          <div class="mk-faq-q">Is this safe for sensitive tongues?</div>
+          <div class="mk-faq-a">Absolutely. The mirror-polished edges are smooth and gentle. Start with light pressure and gradually increase as you become comfortable. Our U-shape design distributes pressure evenly to prevent gagging.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         PDP SECTION: FREQUENTLY BOUGHT TOGETHER
+         ════════════════════════════════════ -->
+    <section class="mk-pdp-fbt">
+      <div class="mk-section-title">
+        <span class="mk-label">Complete Your Routine</span>
+        <h2>Frequently Bought Together</h2>
+      </div>
+      <div class="mk-divider"></div>
+      <div class="mk-fbt-row">
+        <div class="mk-fbt-item">
+          <div class="mk-fbt-img">
+            <img src="images/scraper-with-props.jpeg" alt="SS Tongue Scraper">
+          </div>
+          <div class="mk-fbt-name">SS Tongue Scraper</div>
+          <div class="mk-fbt-price">$9.99</div>
+        </div>
+        <div class="mk-fbt-plus">+</div>
+        <div class="mk-fbt-item">
+          <div class="mk-fbt-img">
+            <img src="images/toothpaste-cloud-mint.jpeg" alt="Cloud Mint Toothpaste">
+          </div>
+          <div class="mk-fbt-name">Cloud Mint Toothpaste</div>
+          <div class="mk-fbt-price">$12.99</div>
+        </div>
+        <div class="mk-fbt-plus">+</div>
+        <div class="mk-fbt-item">
+          <div class="mk-fbt-img">
+            <img src="images/lifestyle-flatlay.jpeg" alt="Pulling Oil">
+          </div>
+          <div class="mk-fbt-name">Mint Pulling Oil</div>
+          <div class="mk-fbt-price">$14.99</div>
+        </div>
+      </div>
+      <div class="mk-fbt-total">
+        <div class="mk-fbt-total-price">$29.97 <span style="font-size:16px;color:var(--mm-text-muted);text-decoration:line-through;">$37.97</span></div>
+        <div class="mk-fbt-total-save">Save $8.00 (21% off) with bundle</div>
+        <button class="mk-btn mk-btn-primary">Add All 3 to Cart</button>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         PDP SECTION: REVIEWS
+         ════════════════════════════════════ -->
+    <section class="mk-reviews">
+      <div class="mk-reviews-header">
+        <div class="mk-reviews-big-rating">4.9</div>
+        <div class="mk-reviews-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="mk-reviews-count">Based on 2,847 verified reviews</div>
+      </div>
+      <div class="mk-review-grid">
+        <div class="mk-review-card">
+          <div class="mk-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="mk-review-text">"Best tongue scraper on the market. The stainless steel quality is immediately apparent &mdash; thick, sturdy, and perfectly curved."</div>
+          <div class="mk-review-author">David K.</div>
+          <div class="mk-review-verified">&#10003; Verified Purchase</div>
+        </div>
+        <div class="mk-review-card">
+          <div class="mk-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="mk-review-text">"My dentist recommended tongue scraping and I'm glad I found MasterMedi. Premium feel, easy to clean, and the results are noticeable immediately."</div>
+          <div class="mk-review-author">Amanda T.</div>
+          <div class="mk-review-verified">&#10003; Verified Purchase</div>
+        </div>
+        <div class="mk-review-card">
+          <div class="mk-review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+          <div class="mk-review-text">"Great product, beautiful packaging. Only wish they had a travel case included. But the scraper itself is perfect &mdash; will definitely buy again."</div>
+          <div class="mk-review-author">James W.</div>
+          <div class="mk-review-verified">&#10003; Verified Purchase</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="mk-newsletter">
+      <h2>Complete Your Oral Care Routine</h2>
+      <p>Subscribe for 10% off your next order and exclusive oral care tips.</p>
+      <div class="mk-newsletter-form">
+        <input type="email" class="mk-newsletter-input" placeholder="Enter your email address">
+        <button class="mk-newsletter-btn">Subscribe</button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mk-footer">
+      <div class="mk-footer-trust">
+        <div class="mk-footer-trust-item"><span class="mk-footer-trust-icon">&#9883;</span>FDA Registered</div>
+        <div class="mk-footer-trust-item"><span class="mk-footer-trust-icon">&#10003;</span>ADA Standards</div>
+        <div class="mk-footer-trust-item"><span class="mk-footer-trust-icon">&#9878;</span>Medical Grade</div>
+        <div class="mk-footer-trust-item"><span class="mk-footer-trust-icon">&#128666;</span>Free US Shipping $35+</div>
+        <div class="mk-footer-trust-item"><span class="mk-footer-trust-icon">&#8634;</span>30-Day Returns</div>
+      </div>
+      <div class="mk-footer-grid">
+        <div class="mk-footer-brand">
+          <span class="mk-logo-mark">MasterMedi</span>
+          <p>Premium oral care rooted in Ayurvedic tradition and backed by modern dental science.</p>
+          <div class="mk-footer-social">
+            <a href="#">&#128247;</a><a href="#">&#127909;</a><a href="#">&#128172;</a><a href="#">&#9993;</a>
+          </div>
+        </div>
+        <div class="mk-footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#">Tongue Scrapers</a></li>
+            <li><a href="#">Toothpaste</a></li>
+            <li><a href="#">Oil Pulling</a></li>
+            <li><a href="#">Dental Kits</a></li>
+            <li><a href="#">Bundles</a></li>
+          </ul>
+        </div>
+        <div class="mk-footer-col">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Ingredient Science</a></li>
+            <li><a href="#">Oral Care Blog</a></li>
+            <li><a href="#">Clinical Studies</a></li>
+          </ul>
+        </div>
+        <div class="mk-footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="mk-footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mk-footer-bottom">
+        <div class="mk-footer-copy">&copy; 2026 MasterMedi by Innovation Exports. All rights reserved.</div>
+        <div class="mk-footer-payments">
+          <span>Visa</span><span>Mastercard</span><span>Amex</span><span>Apple Pay</span><span>PayPal</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Disclaimer -->
+    <div class="mk-disclaimer">
+      <strong>Mockup Disclaimer:</strong> Product Detail Page layout showing key sections. Colors and imagery derived from client brand packaging. Final design refined once brand guidelines are received.
+    </div>
+
+  </div><!-- end .mockup-container -->
+</div><!-- end .browser-chrome -->
+
+</body>
+</html>
