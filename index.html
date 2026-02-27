@@ -1679,6 +1679,17 @@
     <section class="tab-content" id="tab-delivery">
       <!-- ── Delivery & Commercials ── -->
 
+      <!-- Sub-tab pill navigation -->
+      <div class="subtab-nav">
+        <div class="subtab-pill active" onclick="switchSubTab('responsibilities')">Responsibilities</div>
+        <div class="subtab-pill" onclick="switchSubTab('content-scope')">Content Scope</div>
+        <div class="subtab-pill" onclick="switchSubTab('costs')">Costs</div>
+        <div class="subtab-pill" onclick="switchSubTab('timeline')">Timeline</div>
+        <div class="subtab-pill" onclick="switchSubTab('investment')">Investment</div>
+      </div>
+
+      <!-- ── SUB-TAB: Responsibilities ── -->
+      <div class="subtab-content active" id="subtab-responsibilities">
       <!-- Responsibilities -->
       <div class="section-card">
         <h2 class="section-title">Client vs Growisto Responsibilities</h2>
@@ -1741,7 +1752,10 @@
         </table></div>
       </div>
 
-      <!-- ── Content Responsibility Scope ── -->
+      </div><!-- /subtab-responsibilities -->
+
+      <!-- ── SUB-TAB: Content Scope ── -->
+      <div class="subtab-content" id="subtab-content-scope">
       <div class="section-card">
         <h2 class="section-title">Content Responsibility Scope</h2>
         <p>Clear ownership for every piece of content needed to build the store. This avoids surprises and delays.</p>
@@ -2019,7 +2033,10 @@
         </div>
       </div>
 
-      <!-- ── Costs ── -->
+      </div><!-- /subtab-content-scope -->
+
+      <!-- ── SUB-TAB: Costs ── -->
+      <div class="subtab-content" id="subtab-costs">
       <div class="section-card">
         <h2 class="section-title">Costs &mdash; Shopify Plan, Apps, Theme</h2>
       </div>
@@ -2093,7 +2110,10 @@
         </table></div>
       </div>
 
-      <!-- ── Gantt Chart ── -->
+      </div><!-- /subtab-costs -->
+
+      <!-- ── SUB-TAB: Timeline ── -->
+      <div class="subtab-content" id="subtab-timeline">
       <div class="section-card">
         <h2 class="section-title">8-Week Timeline &amp; Gantt Chart</h2>
         <p>Target Go-Live: <strong>Late April 2026</strong> (Week of Apr 21)</p>
@@ -2211,7 +2231,10 @@
         </ol>
       </div>
 
-      <!-- ── Commercials ── -->
+      </div><!-- /subtab-timeline -->
+
+      <!-- ── SUB-TAB: Investment ── -->
+      <div class="subtab-content" id="subtab-investment">
       <div class="section-card">
         <h2 class="section-title">Investment Options &amp; Commercials</h2>
       </div>
@@ -2339,6 +2362,7 @@
           </div>
         </div>
       </div>
+      </div><!-- /subtab-investment -->
     </section>
 
   </main>
@@ -2378,6 +2402,16 @@
       document.querySelector('[data-tab="' + tabId + '"]').classList.add('active');
       document.getElementById('mainContent').scrollTop = 0;
       if (window.innerWidth < 900) toggleSidebar();
+    }
+
+    // Sub-tab switching (within Delivery & Commercials)
+    function switchSubTab(id) {
+      document.querySelectorAll('.subtab-content').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.subtab-pill').forEach(p => p.classList.remove('active'));
+      document.getElementById('subtab-' + id).classList.add('active');
+      event.currentTarget.classList.add('active');
+      // Scroll to top of the delivery section
+      document.getElementById('mainContent').scrollTop = 0;
     }
 
     // Sidebar toggle (mobile)
