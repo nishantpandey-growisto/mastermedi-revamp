@@ -114,7 +114,7 @@
   display: block;
 }
 
-.mockup-container a {
+.mockup-container a:not(.mk-btn) {
   text-decoration: none;
   color: inherit;
 }
