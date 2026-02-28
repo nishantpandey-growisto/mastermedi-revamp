@@ -153,6 +153,10 @@
           </table>
         </div>
 
+        <div class="callout mt-16" style="background:#fef7ed;border-left:4px solid #C4953A;font-size:.85rem;">
+          <strong>&#9432; Source:</strong> You indicated <strong>4 parent SKUs at launch</strong> (tongue scrapers, toothpaste, dental kits) in the project questionnaire, with Floss, Mouthwash Tablets, Whitening Strips, and other products listed under <strong>"new products in next 6 months."</strong> We've mapped these to regimen steps accordingly. <br><strong>Pending confirmation:</strong> Should these 3 steps launch as "Coming Soon" placeholders on the regimen page, or should any of them be included at launch?
+        </div>
+
         <p class="mt-16 mb-8"><strong>What you envision:</strong></p>
         <ul style="margin-left:20px;line-height:2;">
           <li>"Shop by Regimen" navigation system</li>
@@ -293,18 +297,38 @@
         <h2 class="section-title">1. Speed &amp; Performance &mdash; <span style="color:#367588;">Fully Aligned</span></h2>
 
         <div class="callout" style="background:#f0f7f4;border-left:4px solid #367588;">
-          This is already the #1 design principle of our plan. Our theme choice (Shapes) has the highest speed rating in its class. We're targeting <strong>70+ mobile / 90+ desktop</strong> PageSpeed scores.
+          Speed is the #1 design principle of our plan. Our theme choice (Shapes) has the highest speed rating in its class. Our targets are set to <strong>match or beat your direct competitors</strong> &mdash; not aspirational numbers that ignore the reality of apps, custom features, and rich visual content.
         </div>
 
+        <!-- Competitive Analysis -->
+        <p class="mt-16 mb-8"><strong>Category Competitive Analysis (Google PageSpeed Insights):</strong></p>
+        <div class="feature-table-wrap">
+          <table class="feature-table">
+            <thead><tr><th>Store</th><th>Mobile</th><th>Desktop</th><th>Platform</th><th>Why This Score</th></tr></thead>
+            <tbody>
+              <tr><td><strong>GuruNanda</strong></td><td style="color:#C0392B;"><strong>35</strong></td><td style="color:#C4953A;"><strong>49</strong></td><td>Shopify</td><td>50+ products, heavy app stack, aggressive JS, video embeds</td></tr>
+              <tr><td><strong>Marvis</strong> (your reference)</td><td style="color:#C0392B;"><strong>28</strong></td><td style="color:#C4953A;"><strong>59</strong></td><td>Custom</td><td>Premium animations, auto-play video, heavy imagery, custom platform</td></tr>
+              <tr><td><strong>MasterMedi</strong> (current)</td><td style="color:#C4953A;"><strong>32</strong></td><td style="color:#367588;"><strong>69</strong></td><td>Shopify / Impact</td><td>Minimal content currently &mdash; score will drop post-revamp with more sections + apps</td></tr>
+              <tr style="background:#f0f7f4;"><td><strong>MasterMedi</strong> (post-revamp target)</td><td style="color:#367588;"><strong>50+</strong></td><td style="color:#367588;"><strong>60+</strong></td><td>Shopify / Shapes</td><td>Optimised theme + controlled app stack + speed-first build practices</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout mt-16" style="background:#fef7ed;border-left:4px solid #C4953A;font-size:.85rem;">
+          <strong>&#9432; Why not 90+ mobile?</strong> Every Shopify store's PageSpeed score is a trade-off between features and speed. Each app (Klaviyo, Judge.me, Tidio, etc.) adds 50-200KB of JavaScript. Premium visual design (animations, custom fonts, hero videos) adds render weight. A 90+ mobile score is only realistic for stores with zero third-party apps and minimal visual design &mdash; which defeats the purpose of a premium oral care brand. Our target of <strong>50+ mobile / 60+ desktop</strong> means we will <strong>outperform every competitor in your category</strong> while still delivering the rich experience your brand needs.
+        </div>
+
+        <!-- Our Strategy -->
+        <p class="mt-16 mb-8"><strong>How we achieve this:</strong></p>
         <div class="feature-table-wrap">
           <table class="feature-table">
             <thead><tr><th>Area</th><th>Our Strategy</th><th>Target</th></tr></thead>
             <tbody>
               <tr><td><strong>Theme</strong></td><td>Shapes (&#9733;&#9733;&#9733;&#9733;&#9733; speed rating). Remove unused sections/features.</td><td>&lt; 3s first load</td></tr>
-              <tr><td><strong>Images</strong></td><td>WebP format, lazy loading, responsive srcset, max 200KB/image</td><td>LCP &lt; 2.5s</td></tr>
+              <tr><td><strong>Images</strong></td><td>WebP format, lazy loading, responsive srcset, max 200KB/image</td><td>LCP &lt; 4s mobile</td></tr>
               <tr><td><strong>Fonts</strong></td><td>2 families max, preloaded, font-display: swap</td><td>No FOIT</td></tr>
               <tr><td><strong>Apps</strong></td><td>8-10 apps (vs industry avg 15-20). All non-critical load deferred.</td><td>&lt; 150KB app JS</td></tr>
-              <tr><td><strong>Scripts</strong></td><td>GTM as single container. Defer social feeds, chat widget.</td><td>TBT &lt; 200ms</td></tr>
+              <tr><td><strong>Scripts</strong></td><td>GTM as single container. Defer social feeds, chat widget.</td><td>TBT &lt; 300ms</td></tr>
               <tr><td><strong>Video</strong></td><td>YouTube embeds with facade pattern (load on click, not on page load)</td><td>Zero video on first load</td></tr>
               <tr><td><strong>CSS</strong></td><td>Shapes' built-in critical CSS. Custom CSS &lt; 30KB. No framework bloat.</td><td>CLS &lt; 0.1</td></tr>
             </tbody>
@@ -313,21 +337,25 @@
 
         <div class="metric-grid col-4 mt-16">
           <div class="metric-card" style="border-left:4px solid #367588">
-            <div class="metric-value">70+</div>
+            <div class="metric-value">50+</div>
             <div class="metric-label">Mobile PageSpeed</div>
           </div>
           <div class="metric-card" style="border-left:4px solid #367588">
-            <div class="metric-value">90+</div>
+            <div class="metric-value">60+</div>
             <div class="metric-label">Desktop PageSpeed</div>
           </div>
           <div class="metric-card" style="border-left:4px solid #367588">
-            <div class="metric-value">&lt;2.5s</div>
-            <div class="metric-label">LCP Target</div>
+            <div class="metric-value">&lt;4s</div>
+            <div class="metric-label">LCP Target (Mobile)</div>
           </div>
           <div class="metric-card" style="border-left:4px solid #367588">
             <div class="metric-value">&lt;0.1</div>
             <div class="metric-label">CLS Target</div>
           </div>
+        </div>
+
+        <div class="callout mt-16" style="background:#f5f5f5;border-left:4px solid #555;font-size:.85rem;">
+          <strong>&#9432; Shopify plan impact:</strong> Stores on <strong>Shopify Basic ($39/mo)</strong> share server resources. Moving to <strong>Shopify ($105/mo)</strong> or <strong>Advanced ($399/mo)</strong> improves server response time (TTFB), which directly lifts PageSpeed scores by 5-15 points. If speed becomes a top priority, a plan upgrade is the single highest-impact lever &mdash; more impactful than any code optimization. We'll advise on this after launch based on actual traffic patterns.
         </div>
       </div>
 
@@ -2709,7 +2737,7 @@
             <li>Before/After gallery feature</li>
             <li>Multi-country architecture (India pre-configured)</li>
             <li>OMS consultation (ShipHero evaluation)</li>
-            <li>Speed target: Mobile 70+, Desktop 90+</li>
+            <li>Speed target: Mobile 50+, Desktop 60+ (category-leading)</li>
             <li>Advanced variant comparison</li>
             <li>Custom branded email templates</li>
             <li>30 days post-launch support</li>
