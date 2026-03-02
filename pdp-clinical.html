@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterMedi — PDP Mockup B: Clean Clinical</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ======================================================
+           RESET & GLOBALS
+           ====================================================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f0f0;
+            color: #1A1A1A;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ======================================================
+           MOCKUP LABEL
+           ====================================================== */
+        .mockup-label {
+            text-align: center;
+            padding: 28px 20px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #888;
+        }
+
+        /* ======================================================
+           BROWSER CHROME
+           ====================================================== */
+        .browser-chrome {
+            max-width: 1440px;
+            margin: 0 auto 40px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .browser-bar {
+            background: #e8e8e8;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .browser-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .browser-dots span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .browser-dots span:nth-child(1) { background: #ff5f57; }
+        .browser-dots span:nth-child(2) { background: #febc2e; }
+        .browser-dots span:nth-child(3) { background: #28c840; }
+
+        .browser-url {
+            flex: 1;
+            background: #fff;
+            border-radius: 6px;
+            padding: 7px 16px;
+            font-size: 13px;
+            color: #666;
+            text-align: center;
+        }
+
+        /* ======================================================
+           SITE CONTAINER
+           ====================================================== */
+        .site {
+            background: #FAFAFA;
+        }
+
+        .site-inner {
+            background: #ffffff;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        /* ======================================================
+           SECTION LABEL UTILITY
+           ====================================================== */
+        .section-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #999;
+        }
+
+        /* ======================================================
+           1. ANNOUNCEMENT BAR
+           ====================================================== */
+        .announcement-bar {
+            background: #ffffff;
+            border-bottom: 1px solid #eee;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+            color: #367588;
+            letter-spacing: 0.02em;
+        }
+
+        /* ======================================================
+           2. HEADER
+           ====================================================== */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 60px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-logo {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1A1A1A;
+            letter-spacing: -0.02em;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .header-nav a {
+            font-size: 14px;
+            font-weight: 500;
+            color: #1A1A1A;
+            transition: color 0.2s;
+        }
+
+        .header-nav a:hover {
+            color: #367588;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-icons svg {
+            width: 20px;
+            height: 20px;
+            stroke: #1A1A1A;
+            fill: none;
+            stroke-width: 1.5;
+            cursor: pointer;
+            transition: stroke 0.2s;
+        }
+
+        .header-icons svg:hover {
+            stroke: #367588;
+        }
+
+        .cart-icon-wrap {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -6px;
+            right: -8px;
+            background: #1A1A1A;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 600;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ======================================================
+           3. BREADCRUMB
+           ====================================================== */
+        .breadcrumb {
+            padding: 16px 60px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .breadcrumb a,
+        .breadcrumb span {
+            font-size: 12px;
+            color: #999;
+            font-weight: 400;
+        }
+
+        .breadcrumb a:hover {
+            color: #367588;
+        }
+
+        .breadcrumb .separator {
+            margin: 0 8px;
+            color: #ccc;
+        }
+
+        .breadcrumb .current {
+            color: #1A1A1A;
+            font-weight: 500;
+        }
+
+        /* ======================================================
+           4. MAIN PDP GRID
+           ====================================================== */
+        .pdp-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            padding: 48px 60px 60px;
+        }
+
+        /* --- Gallery (Left) --- */
+        .pdp-gallery {
+            padding-right: 48px;
+        }
+
+        .gallery-main {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background: #F8F8F8;
+            border: 1px solid #E5E5E5;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .gallery-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-thumbs {
+            display: flex;
+            gap: 10px;
+        }
+
+        .gallery-thumb {
+            width: 72px;
+            height: 72px;
+            border-radius: 6px;
+            border: 1px solid #E5E5E5;
+            overflow: hidden;
+            cursor: pointer;
+            transition: border-color 0.2s;
+            background: #F8F8F8;
+        }
+
+        .gallery-thumb.active {
+            border-color: #1A1A1A;
+            border-width: 2px;
+        }
+
+        .gallery-thumb:hover {
+            border-color: #999;
+        }
+
+        .gallery-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- Info (Right) --- */
+        .pdp-info {
+            padding-left: 12px;
+        }
+
+        .pdp-brand {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .pdp-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1A1A1A;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            margin-bottom: 12px;
+        }
+
+        .pdp-regimen-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #F0F9F8;
+            border: 1px solid #D4EDEB;
+            border-radius: 50px;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #367588;
+            margin-bottom: 16px;
+        }
+
+        .pdp-regimen-badge svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: #367588;
+            stroke-width: 2;
+        }
+
+        .pdp-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .stars svg {
+            width: 15px;
+            height: 15px;
+            fill: #1A1A1A;
+        }
+
+        .stars svg.star-partial {
+            fill: url(#star-gradient);
+        }
+
+        .rating-text {
+            font-size: 13px;
+            color: #999;
+            font-weight: 400;
+        }
+
+        .rating-text strong {
+            color: #1A1A1A;
+            font-weight: 600;
+        }
+
+        .pdp-divider {
+            height: 1px;
+            background: #E5E5E5;
+            margin: 20px 0;
+        }
+
+        /* Price Block */
+        .pdp-price-block {
+            margin-bottom: 24px;
+        }
+
+        .pdp-price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .pdp-price {
+            font-size: 26px;
+            font-weight: 600;
+            color: #1A1A1A;
+            letter-spacing: -0.01em;
+        }
+
+        .pdp-compare-price {
+            font-size: 16px;
+            color: #bbb;
+            text-decoration: line-through;
+            font-weight: 400;
+        }
+
+        .pdp-save-badge {
+            display: inline-block;
+            background: #F0F9F8;
+            color: #367588;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 50px;
+        }
+
+        .pdp-tax-note {
+            font-size: 12px;
+            color: #999;
+            margin-top: 4px;
+        }
+
+        /* Variant Selector */
+        .pdp-variants-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #1A1A1A;
+            margin-bottom: 10px;
+        }
+
+        .pdp-variants-label span {
+            font-weight: 400;
+            color: #999;
+        }
+
+        .pdp-variants {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .variant-pill {
+            padding: 8px 18px;
+            border: 1px solid #E5E5E5;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #fff;
+        }
+
+        .variant-pill:hover {
+            border-color: #999;
+            color: #1A1A1A;
+        }
+
+        .variant-pill.active {
+            border-color: #1A1A1A;
+            color: #1A1A1A;
+            background: #FAFAFA;
+            border-width: 2px;
+            padding: 7px 17px;
+        }
+
+        /* Quantity Selector */
+        .pdp-qty-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .pdp-qty-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #1A1A1A;
+        }
+
+        .qty-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid #E5E5E5;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .qty-btn {
+            width: 36px;
+            height: 36px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            color: #1A1A1A;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            transition: background 0.15s;
+        }
+
+        .qty-btn:hover {
+            background: #F5F5F5;
+        }
+
+        .qty-value {
+            width: 40px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1A1A1A;
+            border-left: 1px solid #E5E5E5;
+            border-right: 1px solid #E5E5E5;
+            line-height: 36px;
+        }
+
+        /* CTA Buttons */
+        .pdp-cta-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .btn-add-cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 15px 32px;
+            background: #1A1A1A;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            letter-spacing: 0.01em;
+        }
+
+        .btn-add-cart:hover {
+            background: #333;
+        }
+
+        .btn-add-cart svg {
+            width: 18px;
+            height: 18px;
+            stroke: #fff;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .btn-buy-now {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 14px 32px;
+            background: #fff;
+            color: #1A1A1A;
+            border: 1.5px solid #1A1A1A;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 0.01em;
+        }
+
+        .btn-buy-now:hover {
+            background: #FAFAFA;
+        }
+
+        /* Shipping Estimate */
+        .pdp-shipping {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 0;
+            border-top: 1px solid #F0F0F0;
+            border-bottom: 1px solid #F0F0F0;
+            margin-bottom: 20px;
+        }
+
+        .pdp-shipping svg {
+            width: 18px;
+            height: 18px;
+            stroke: #367588;
+            fill: none;
+            stroke-width: 1.5;
+            flex-shrink: 0;
+        }
+
+        .pdp-shipping-text {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .pdp-shipping-text strong {
+            color: #1A1A1A;
+            font-weight: 600;
+        }
+
+        /* Trust Badges */
+        .pdp-trust-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .trust-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            flex: 1;
+            text-align: center;
+        }
+
+        .trust-badge svg {
+            width: 22px;
+            height: 22px;
+            stroke: #367588;
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .trust-badge-text {
+            font-size: 11px;
+            color: #999;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        /* ======================================================
+           5. REGIMEN CONTEXT BANNER
+           ====================================================== */
+        .regimen-banner {
+            background: #FAFAFA;
+            border-top: 1px solid #E5E5E5;
+            border-bottom: 1px solid #E5E5E5;
+            padding: 48px 60px;
+        }
+
+        .regimen-banner-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .regimen-banner .section-label {
+            margin-bottom: 8px;
+        }
+
+        .regimen-banner h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1A1A1A;
+            margin-bottom: 32px;
+            letter-spacing: -0.01em;
+        }
+
+        .regimen-steps {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+        }
+
+        .regimen-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            min-width: 120px;
+        }
+
+        .regimen-step-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid #E5E5E5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: #bbb;
+            background: #fff;
+            transition: all 0.2s;
+        }
+
+        .regimen-step.active .regimen-step-circle {
+            border-color: #367588;
+            background: #367588;
+            color: #fff;
+        }
+
+        .regimen-step-name {
+            font-size: 12px;
+            font-weight: 500;
+            color: #999;
+        }
+
+        .regimen-step.active .regimen-step-name {
+            color: #367588;
+            font-weight: 600;
+        }
+
+        .regimen-connector {
+            width: 40px;
+            height: 2px;
+            background: #E5E5E5;
+            margin-bottom: 24px;
+        }
+
+        /* ======================================================
+           6. PRODUCT DETAILS TABS
+           ====================================================== */
+        .details-section {
+            padding: 56px 60px;
+            border-bottom: 1px solid #E5E5E5;
+        }
+
+        .details-tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 1px solid #E5E5E5;
+            margin-bottom: 32px;
+        }
+
+        .details-tab {
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #999;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+            transition: all 0.2s;
+        }
+
+        .details-tab:hover {
+            color: #666;
+        }
+
+        .details-tab.active {
+            color: #1A1A1A;
+            border-bottom-color: #1A1A1A;
+        }
+
+        .details-tab-content {
+            max-width: 760px;
+        }
+
+        .details-tab-content h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1A1A1A;
+            margin-bottom: 12px;
+        }
+
+        .details-tab-content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .details-features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .detail-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px;
+            background: #FAFAFA;
+            border-radius: 8px;
+        }
+
+        .detail-feature svg {
+            width: 18px;
+            height: 18px;
+            stroke: #367588;
+            fill: none;
+            stroke-width: 2;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .detail-feature-text {
+            font-size: 13px;
+            color: #1A1A1A;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .detail-feature-text span {
+            display: block;
+            font-weight: 400;
+            color: #999;
+            font-size: 12px;
+            margin-top: 2px;
+        }
+
+        /* ======================================================
+           7. CLINICAL EVIDENCE
+           ====================================================== */
+        .clinical-section {
+            padding: 56px 60px;
+            border-bottom: 1px solid #E5E5E5;
+        }
+
+        .clinical-section .section-label {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .clinical-section h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1A1A1A;
+            text-align: center;
+            margin-bottom: 36px;
+            letter-spacing: -0.01em;
+        }
+
+        .clinical-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .clinical-card {
+            background: #FAFAFA;
+            border: 1px solid #F0F0F0;
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        .clinical-card-number {
+            font-size: 36px;
+            font-weight: 600;
+            color: #367588;
+            line-height: 1;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .clinical-card-label {
+            font-size: 14px;
+            color: #1A1A1A;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .clinical-card-desc {
+            font-size: 12px;
+            color: #999;
+            line-height: 1.5;
+        }
+
+        /* ======================================================
+           8. COMPLETE YOUR ROUTINE (Cross-Sell)
+           ====================================================== */
+        .routine-section {
+            padding: 56px 60px;
+            border-bottom: 1px solid #E5E5E5;
+        }
+
+        .routine-section .section-label {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .routine-section h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1A1A1A;
+            text-align: center;
+            margin-bottom: 36px;
+            letter-spacing: -0.01em;
+        }
+
+        .routine-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .routine-card {
+            border: 1px solid #E5E5E5;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            transition: box-shadow 0.2s;
+        }
+
+        .routine-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .routine-card-img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: #F8F8F8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .routine-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .routine-card-body {
+            padding: 16px 18px;
+        }
+
+        .routine-card-step {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #367588;
+            margin-bottom: 6px;
+        }
+
+        .routine-card-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1A1A1A;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .routine-card-price {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 14px;
+        }
+
+        .btn-add-routine {
+            display: block;
+            width: 100%;
+            padding: 10px 16px;
+            background: #fff;
+            color: #1A1A1A;
+            border: 1.5px solid #1A1A1A;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .btn-add-routine:hover {
+            background: #1A1A1A;
+            color: #fff;
+        }
+
+        /* ======================================================
+           9. REVIEWS SECTION
+           ====================================================== */
+        .reviews-section {
+            padding: 56px 60px;
+            border-bottom: 1px solid #E5E5E5;
+        }
+
+        .reviews-section .section-label {
+            margin-bottom: 8px;
+        }
+
+        .reviews-section h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1A1A1A;
+            margin-bottom: 32px;
+            letter-spacing: -0.01em;
+        }
+
+        .reviews-summary {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 36px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #F0F0F0;
+        }
+
+        .reviews-avg {
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .reviews-avg-number {
+            font-size: 48px;
+            font-weight: 600;
+            color: #1A1A1A;
+            line-height: 1;
+            margin-bottom: 4px;
+            letter-spacing: -0.02em;
+        }
+
+        .reviews-avg-stars {
+            display: flex;
+            justify-content: center;
+            gap: 2px;
+            margin-bottom: 4px;
+        }
+
+        .reviews-avg-stars svg {
+            width: 16px;
+            height: 16px;
+            fill: #1A1A1A;
+        }
+
+        .reviews-avg-count {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .reviews-breakdown {
+            flex: 1;
+            max-width: 320px;
+        }
+
+        .review-bar-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .review-bar-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #999;
+            width: 36px;
+            text-align: right;
+        }
+
+        .review-bar-track {
+            flex: 1;
+            height: 6px;
+            background: #F0F0F0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .review-bar-fill {
+            height: 100%;
+            background: #1A1A1A;
+            border-radius: 3px;
+        }
+
+        .review-bar-count {
+            font-size: 12px;
+            color: #bbb;
+            width: 30px;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .review-card {
+            border: 1px solid #F0F0F0;
+            border-radius: 10px;
+            padding: 24px;
+        }
+
+        .review-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .review-card-stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .review-card-stars svg {
+            width: 13px;
+            height: 13px;
+            fill: #1A1A1A;
+        }
+
+        .review-verified {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #367588;
+            background: #F0F9F8;
+            padding: 3px 8px;
+            border-radius: 50px;
+        }
+
+        .review-card-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1A1A1A;
+            margin-bottom: 6px;
+        }
+
+        .review-card-text {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .review-card-author {
+            font-size: 12px;
+            color: #999;
+            font-weight: 500;
+        }
+
+        /* ======================================================
+           10. RECENTLY VIEWED
+           ====================================================== */
+        .recently-viewed {
+            padding: 56px 60px;
+            border-bottom: 1px solid #E5E5E5;
+        }
+
+        .recently-viewed .section-label {
+            margin-bottom: 8px;
+        }
+
+        .recently-viewed h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1A1A1A;
+            margin-bottom: 32px;
+            letter-spacing: -0.01em;
+        }
+
+        .recently-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .recently-card {
+            border: 1px solid #E5E5E5;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            transition: box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .recently-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+
+        .recently-card-img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: #F8F8F8;
+            overflow: hidden;
+        }
+
+        .recently-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .recently-card-body {
+            padding: 12px 14px;
+        }
+
+        .recently-card-name {
+            font-size: 13px;
+            font-weight: 500;
+            color: #1A1A1A;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .recently-card-price {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* ======================================================
+           11. FOOTER
+           ====================================================== */
+        .footer {
+            background: #FAFAFA;
+            border-top: 1px solid #E5E5E5;
+            padding: 48px 60px 32px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1A1A1A;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            font-size: 13px;
+            color: #999;
+            line-height: 1.6;
+        }
+
+        .footer-col h5 {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 16px;
+        }
+
+        .footer-col a {
+            display: block;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 10px;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #367588;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #E5E5E5;
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copy {
+            font-size: 12px;
+            color: #bbb;
+        }
+
+        .footer-payments {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-payments svg {
+            width: 32px;
+            height: 20px;
+            fill: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Mockup Label -->
+<div class="mockup-label">
+    MasterMedi &mdash; PDP Mockup B: Clean Clinical &bull; Prepared by Growisto &bull; March 2026
+</div>
+
+<!-- Browser Chrome -->
+<div class="browser-chrome">
+    <div class="browser-bar">
+        <div class="browser-dots">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="browser-url">mastermedi.co/products/stainless-steel-tongue-scraper</div>
+    </div>
+
+    <!-- ====== SITE START ====== -->
+    <div class="site">
+        <div class="site-inner">
+
+            <!-- 1. ANNOUNCEMENT BAR -->
+            <div class="announcement-bar">
+                Free shipping on orders over $25 &mdash; Subscribe & save 15%
+            </div>
+
+            <!-- 2. HEADER -->
+            <header class="header">
+                <a href="#" class="header-logo">MasterMedi</a>
+                <nav class="header-nav">
+                    <a href="#">Shop All</a>
+                    <a href="#">Tongue Scrapers</a>
+                    <a href="#">Toothpaste</a>
+                    <a href="#">Bundles</a>
+                    <a href="#">Our Science</a>
+                </nav>
+                <div class="header-icons">
+                    <!-- Search -->
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+                    <!-- Account -->
+                    <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <!-- Cart -->
+                    <div class="cart-icon-wrap">
+                        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        <span class="cart-count">2</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 3. BREADCRUMB -->
+            <nav class="breadcrumb">
+                <a href="#">Home</a>
+                <span class="separator">/</span>
+                <a href="#">Tongue Scrapers</a>
+                <span class="separator">/</span>
+                <span class="current">Stainless Steel Tongue Scraper</span>
+            </nav>
+
+            <!-- 4. MAIN PDP GRID -->
+            <div class="pdp-main">
+
+                <!-- LEFT: Gallery -->
+                <div class="pdp-gallery">
+                    <div class="gallery-main">
+                        <img src="images/scraper-with-props.jpeg" alt="MasterMedi Stainless Steel Tongue Scraper">
+                    </div>
+                    <div class="gallery-thumbs">
+                        <div class="gallery-thumb active">
+                            <img src="images/scraper-with-props.jpeg" alt="Product view 1">
+                        </div>
+                        <div class="gallery-thumb">
+                            <img src="images/tongue-scraper-box.jpeg" alt="Product packaging">
+                        </div>
+                        <div class="gallery-thumb">
+                            <img src="images/lifestyle-flatlay.jpeg" alt="Lifestyle flatlay">
+                        </div>
+                        <div class="gallery-thumb">
+                            <div style="width:100%;height:100%;background:#F0F0F0;display:flex;align-items:center;justify-content:center;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Product Info -->
+                <div class="pdp-info">
+                    <div class="pdp-brand">MasterMedi</div>
+
+                    <h1 class="pdp-title">Stainless Steel Tongue Scraper</h1>
+
+                    <!-- Regimen Badge -->
+                    <div class="pdp-regimen-badge">
+                        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                        Step 2 of 5 &mdash; Tongue Scraping
+                    </div>
+
+                    <!-- Rating -->
+                    <div class="pdp-rating">
+                        <div class="stars">
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" style="fill:#E5E5E5;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <span class="rating-text"><strong>4.8</strong> &nbsp;(2,140 reviews)</span>
+                    </div>
+
+                    <div class="pdp-divider"></div>
+
+                    <!-- Price -->
+                    <div class="pdp-price-block">
+                        <div class="pdp-price-row">
+                            <span class="pdp-price">$9.99</span>
+                            <span class="pdp-compare-price">$14.99</span>
+                            <span class="pdp-save-badge">Save 33%</span>
+                        </div>
+                        <div class="pdp-tax-note">Tax included. Shipping calculated at checkout.</div>
+                    </div>
+
+                    <!-- Variants -->
+                    <div class="pdp-variants-label">Type: <span>SS U-Shape</span></div>
+                    <div class="pdp-variants">
+                        <div class="variant-pill active">SS U-Shape</div>
+                        <div class="variant-pill">SS Spoon</div>
+                        <div class="variant-pill">SS Spoon Black</div>
+                        <div class="variant-pill">Copper</div>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="pdp-qty-row">
+                        <span class="pdp-qty-label">Quantity</span>
+                        <div class="qty-selector">
+                            <button class="qty-btn">&minus;</button>
+                            <div class="qty-value">1</div>
+                            <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+
+                    <!-- CTAs -->
+                    <div class="pdp-cta-stack">
+                        <button class="btn-add-cart">
+                            <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            Add to Cart &mdash; $9.99
+                        </button>
+                        <button class="btn-buy-now">Buy It Now</button>
+                    </div>
+
+                    <!-- Shipping Estimate -->
+                    <div class="pdp-shipping">
+                        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        <span class="pdp-shipping-text">Free shipping &mdash; Estimated delivery <strong>Mar 5 - Mar 8</strong></span>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="pdp-trust-row">
+                        <div class="trust-badge">
+                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span class="trust-badge-text">Medical-Grade<br>Steel</span>
+                        </div>
+                        <div class="trust-badge">
+                            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span class="trust-badge-text">Dentist<br>Recommended</span>
+                        </div>
+                        <div class="trust-badge">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span class="trust-badge-text">Made in<br>USA</span>
+                        </div>
+                        <div class="trust-badge">
+                            <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                            <span class="trust-badge-text">30-Day<br>Guarantee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. REGIMEN CONTEXT BANNER -->
+            <section class="regimen-banner">
+                <div class="regimen-banner-inner">
+                    <div class="section-label">Your Routine</div>
+                    <h3>Part of the MasterMedi 5-Step Routine</h3>
+                    <div class="regimen-steps">
+                        <div class="regimen-step">
+                            <div class="regimen-step-circle">1</div>
+                            <span class="regimen-step-name">Floss</span>
+                        </div>
+                        <div class="regimen-connector"></div>
+                        <div class="regimen-step active">
+                            <div class="regimen-step-circle">2</div>
+                            <span class="regimen-step-name">Tongue Scrape</span>
+                        </div>
+                        <div class="regimen-connector"></div>
+                        <div class="regimen-step">
+                            <div class="regimen-step-circle">3</div>
+                            <span class="regimen-step-name">Brush</span>
+                        </div>
+                        <div class="regimen-connector"></div>
+                        <div class="regimen-step">
+                            <div class="regimen-step-circle">4</div>
+                            <span class="regimen-step-name">Rinse</span>
+                        </div>
+                        <div class="regimen-connector"></div>
+                        <div class="regimen-step">
+                            <div class="regimen-step-circle">5</div>
+                            <span class="regimen-step-name">Protect</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. PRODUCT DETAILS TABS -->
+            <section class="details-section">
+                <div class="details-tabs">
+                    <div class="details-tab active">Description</div>
+                    <div class="details-tab">Materials &amp; Specs</div>
+                    <div class="details-tab">How to Use</div>
+                </div>
+                <div class="details-tab-content">
+                    <h4>Elevate your oral care routine</h4>
+                    <p>
+                        The MasterMedi Stainless Steel Tongue Scraper is designed to remove bacteria, food debris, and dead cells from the surface of your tongue that brushing alone cannot reach. Regular tongue scraping has been shown to improve taste perception, reduce bad breath, and promote overall oral hygiene.
+                    </p>
+                    <p>
+                        Crafted from medical-grade 304 stainless steel, this scraper is built to last a lifetime. The ergonomic U-shape design follows the natural contour of your tongue for a comfortable, effective clean every time.
+                    </p>
+                    <div class="details-features-grid">
+                        <div class="detail-feature">
+                            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            <div class="detail-feature-text">
+                                Medical-Grade Steel
+                                <span>304 stainless steel, rust-resistant</span>
+                            </div>
+                        </div>
+                        <div class="detail-feature">
+                            <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                            <div class="detail-feature-text">
+                                Ergonomic Grip
+                                <span>Non-slip handles, comfortable hold</span>
+                            </div>
+                        </div>
+                        <div class="detail-feature">
+                            <svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l2 2 4-4"/></svg>
+                            <div class="detail-feature-text">
+                                Easy to Clean
+                                <span>Rinse under water, dishwasher safe</span>
+                            </div>
+                        </div>
+                        <div class="detail-feature">
+                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <div class="detail-feature-text">
+                                Dentist Recommended
+                                <span>Endorsed by oral health professionals</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. CLINICAL EVIDENCE -->
+            <section class="clinical-section">
+                <div class="section-label">The Evidence</div>
+                <h3>Backed by Clinical Research</h3>
+                <div class="clinical-stats">
+                    <div class="clinical-card">
+                        <div class="clinical-card-number">93%</div>
+                        <div class="clinical-card-label">Dentists Recommend</div>
+                        <div class="clinical-card-desc">Based on a survey of 500+ dental professionals who recommend daily tongue scraping</div>
+                    </div>
+                    <div class="clinical-card">
+                        <div class="clinical-card-number">2x</div>
+                        <div class="clinical-card-label">More Bacteria Removed</div>
+                        <div class="clinical-card-desc">Tongue scraping removes twice the bacteria compared to brushing the tongue alone</div>
+                    </div>
+                    <div class="clinical-card">
+                        <div class="clinical-card-number">304</div>
+                        <div class="clinical-card-label">Medical-Grade Steel</div>
+                        <div class="clinical-card-desc">Same grade used in surgical instruments. BPA-free, non-toxic, lasts a lifetime</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. COMPLETE YOUR ROUTINE -->
+            <section class="routine-section">
+                <div class="section-label">Complete Your Routine</div>
+                <h3>Pairs Perfectly With</h3>
+                <div class="routine-grid">
+                    <div class="routine-card">
+                        <div class="routine-card-img">
+                            <img src="images/toothpaste-cloud-mint.jpeg" alt="Cloud Mint Toothpaste">
+                        </div>
+                        <div class="routine-card-body">
+                            <div class="routine-card-step">Step 3 &mdash; Brush</div>
+                            <div class="routine-card-name">Cloud Mint Toothpaste</div>
+                            <div class="routine-card-price">$8.99</div>
+                            <button class="btn-add-routine">Add to Routine</button>
+                        </div>
+                    </div>
+                    <div class="routine-card">
+                        <div class="routine-card-img">
+                            <img src="images/lifestyle-flatlay.jpeg" alt="Complete Oral Care Kit">
+                        </div>
+                        <div class="routine-card-body">
+                            <div class="routine-card-step">All 5 Steps</div>
+                            <div class="routine-card-name">Complete Oral Care Kit</div>
+                            <div class="routine-card-price">$34.99 <span style="font-size:12px;color:#367588;font-weight:500;">Save 20%</span></div>
+                            <button class="btn-add-routine">Add to Routine</button>
+                        </div>
+                    </div>
+                    <div class="routine-card">
+                        <div class="routine-card-img" style="background:#F0F0F0;display:flex;align-items:center;justify-content:center;">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l2 2 4-4"/></svg>
+                        </div>
+                        <div class="routine-card-body">
+                            <div class="routine-card-step">Step 1 &mdash; Floss</div>
+                            <div class="routine-card-name">Charcoal Dental Floss</div>
+                            <div class="routine-card-price">$6.99</div>
+                            <button class="btn-add-routine">Add to Routine</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. REVIEWS SECTION -->
+            <section class="reviews-section">
+                <div class="section-label">Reviews</div>
+                <h3>What Our Customers Say</h3>
+
+                <!-- Summary -->
+                <div class="reviews-summary">
+                    <div class="reviews-avg">
+                        <div class="reviews-avg-number">4.8</div>
+                        <div class="reviews-avg-stars">
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" style="fill:#E5E5E5;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <div class="reviews-avg-count">2,140 reviews</div>
+                    </div>
+                    <div class="reviews-breakdown">
+                        <div class="review-bar-row">
+                            <span class="review-bar-label">5 star</span>
+                            <div class="review-bar-track"><div class="review-bar-fill" style="width:78%"></div></div>
+                            <span class="review-bar-count">78%</span>
+                        </div>
+                        <div class="review-bar-row">
+                            <span class="review-bar-label">4 star</span>
+                            <div class="review-bar-track"><div class="review-bar-fill" style="width:14%"></div></div>
+                            <span class="review-bar-count">14%</span>
+                        </div>
+                        <div class="review-bar-row">
+                            <span class="review-bar-label">3 star</span>
+                            <div class="review-bar-track"><div class="review-bar-fill" style="width:5%"></div></div>
+                            <span class="review-bar-count">5%</span>
+                        </div>
+                        <div class="review-bar-row">
+                            <span class="review-bar-label">2 star</span>
+                            <div class="review-bar-track"><div class="review-bar-fill" style="width:2%"></div></div>
+                            <span class="review-bar-count">2%</span>
+                        </div>
+                        <div class="review-bar-row">
+                            <span class="review-bar-label">1 star</span>
+                            <div class="review-bar-track"><div class="review-bar-fill" style="width:1%"></div></div>
+                            <span class="review-bar-count">1%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Cards -->
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <div class="review-card-stars">
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <span class="review-verified">Verified</span>
+                        </div>
+                        <div class="review-card-title">Game changer for morning breath</div>
+                        <div class="review-card-text">I've been using this for 3 months now and the difference is incredible. My dentist even noticed the improvement at my last checkup. The steel quality is top-notch.</div>
+                        <div class="review-card-author">Sarah M. &mdash; Feb 18, 2026</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <div class="review-card-stars">
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <span class="review-verified">Verified</span>
+                        </div>
+                        <div class="review-card-title">Better than plastic alternatives</div>
+                        <div class="review-card-text">Switched from a plastic scraper and there's no comparison. This feels premium, cleans better, and will probably last forever. Worth every penny.</div>
+                        <div class="review-card-author">James R. &mdash; Feb 9, 2026</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <div class="review-card-stars">
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" style="fill:#E5E5E5;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <span class="review-verified">Verified</span>
+                        </div>
+                        <div class="review-card-title">Part of my daily ritual now</div>
+                        <div class="review-card-text">Love the minimal design and how easy it is to clean. I bought one for myself and then two more as gifts. The packaging is really thoughtful too.</div>
+                        <div class="review-card-author">Priya K. &mdash; Jan 27, 2026</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. RECENTLY VIEWED -->
+            <section class="recently-viewed">
+                <div class="section-label">Recently Viewed</div>
+                <h3>Continue Browsing</h3>
+                <div class="recently-grid">
+                    <div class="recently-card">
+                        <div class="recently-card-img">
+                            <img src="images/toothpaste-cloud-mint.jpeg" alt="Cloud Mint Toothpaste">
+                        </div>
+                        <div class="recently-card-body">
+                            <div class="recently-card-name">Cloud Mint Toothpaste</div>
+                            <div class="recently-card-price">$8.99</div>
+                        </div>
+                    </div>
+                    <div class="recently-card">
+                        <div class="recently-card-img">
+                            <img src="images/tongue-scraper-box.jpeg" alt="Copper Tongue Scraper">
+                        </div>
+                        <div class="recently-card-body">
+                            <div class="recently-card-name">Copper Tongue Scraper</div>
+                            <div class="recently-card-price">$11.99</div>
+                        </div>
+                    </div>
+                    <div class="recently-card">
+                        <div class="recently-card-img">
+                            <img src="images/lifestyle-flatlay.jpeg" alt="Oral Care Starter Kit">
+                        </div>
+                        <div class="recently-card-body">
+                            <div class="recently-card-name">Oral Care Starter Kit</div>
+                            <div class="recently-card-price">$24.99</div>
+                        </div>
+                    </div>
+                    <div class="recently-card">
+                        <div class="recently-card-img" style="background:#F0F0F0;display:flex;align-items:center;justify-content:center;">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ddd" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                        </div>
+                        <div class="recently-card-body">
+                            <div class="recently-card-name">Charcoal Dental Floss</div>
+                            <div class="recently-card-price">$6.99</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. FOOTER -->
+            <footer class="footer">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h4>MasterMedi</h4>
+                        <p>Clinical-grade oral care products designed for the modern routine. Simple, effective, beautiful.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Shop</h5>
+                        <a href="#">Tongue Scrapers</a>
+                        <a href="#">Toothpaste</a>
+                        <a href="#">Bundles</a>
+                        <a href="#">Gift Cards</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Learn</h5>
+                        <a href="#">Our Science</a>
+                        <a href="#">The 5-Step Routine</a>
+                        <a href="#">Blog</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Company</h5>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Shipping &amp; Returns</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span class="footer-copy">&copy; 2026 MasterMedi. All rights reserved.</span>
+                    <div class="footer-payments">
+                        <!-- Visa -->
+                        <svg viewBox="0 0 32 20"><rect width="32" height="20" rx="3" fill="#f0f0f0"/><text x="16" y="13" text-anchor="middle" font-size="7" font-weight="600" fill="#1A1A66" font-family="Inter,sans-serif">VISA</text></svg>
+                        <!-- Mastercard -->
+                        <svg viewBox="0 0 32 20"><rect width="32" height="20" rx="3" fill="#f0f0f0"/><circle cx="12" cy="10" r="5" fill="#EB001B" opacity="0.3"/><circle cx="20" cy="10" r="5" fill="#F79E1B" opacity="0.3"/></svg>
+                        <!-- Amex -->
+                        <svg viewBox="0 0 32 20"><rect width="32" height="20" rx="3" fill="#f0f0f0"/><text x="16" y="13" text-anchor="middle" font-size="6" font-weight="600" fill="#006FCF" font-family="Inter,sans-serif">AMEX</text></svg>
+                        <!-- PayPal -->
+                        <svg viewBox="0 0 32 20"><rect width="32" height="20" rx="3" fill="#f0f0f0"/><text x="16" y="13" text-anchor="middle" font-size="5.5" font-weight="600" fill="#003087" font-family="Inter,sans-serif">PayPal</text></svg>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+    <!-- ====== SITE END ====== -->
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MasterMedi — PDP Mockup C: Warm Botanical | Growisto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Cormorant+SC:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ═══════════════════════════════════════════
+       RESET & BASE
+       ═══════════════════════════════════════════ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #e8e2da;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #3D3027;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ═══════════════════════════════════════════
+       MOCKUP LABEL
+       ═══════════════════════════════════════════ */
+    .mockup-label {
+      text-align: center;
+      font-size: 13px;
+      color: #8b7560;
+      margin-bottom: 24px;
+      font-family: 'Cormorant SC', 'Cormorant Garamond', serif;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      line-height: 1.6;
+    }
+
+    .mockup-label strong {
+      color: #5C7A5C;
+      font-weight: 500;
+    }
+
+    /* ═══════════════════════════════════════════
+       BROWSER CHROME
+       ═══════════════════════════════════════════ */
+    .browser-chrome {
+      max-width: 1440px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow:
+        0 25px 60px rgba(61, 48, 39, 0.15),
+        0 8px 20px rgba(61, 48, 39, 0.08);
+    }
+
+    .browser-topbar {
+      background: #f0ece6;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid rgba(61, 48, 39, 0.08);
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .browser-dots span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .browser-dots span:nth-child(1) { background: #ee6a5f; }
+    .browser-dots span:nth-child(2) { background: #f5bf4f; }
+    .browser-dots span:nth-child(3) { background: #62c554; }
+
+    .browser-url {
+      flex: 1;
+      text-align: center;
+      background: rgba(61, 48, 39, 0.06);
+      border-radius: 8px;
+      padding: 7px 16px;
+      font-size: 13px;
+      color: #6B5E50;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    /* ═══════════════════════════════════════════
+       MOCKUP CONTAINER
+       ═══════════════════════════════════════════ */
+    .mockup-container {
+      background: #FAF7F2;
+      overflow: hidden;
+    }
+
+    /* ═══════════════════════════════════════════
+       SHARED STYLES
+       ═══════════════════════════════════════════ */
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(122, 154, 122, 0.4);
+      margin: 0;
+    }
+
+    .section-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 16px;
+      color: #7A9A7A;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+      margin-bottom: 12px;
+    }
+
+    .section-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 38px;
+      color: #3D3027;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .section-heading em {
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .btn-sage {
+      display: inline-block;
+      background: #5C7A5C;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 14px 32px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: background 0.3s ease;
+    }
+
+    .btn-sage:hover {
+      background: #4a6a4a;
+    }
+
+    .btn-sage-outline {
+      display: inline-block;
+      background: transparent;
+      color: #5C7A5C;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 13px 32px;
+      border-radius: 8px;
+      border: 1.5px solid #7A9A7A;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: all 0.3s ease;
+    }
+
+    .btn-sage-outline:hover {
+      background: #7A9A7A;
+      color: #ffffff;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 1: HEADER
+       ═══════════════════════════════════════════ */
+    .bt-announce {
+      background: #FAF7F2;
+      border-bottom: 1px solid rgba(122, 154, 122, 0.25);
+      padding: 12px 20px;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: #5C7A5C;
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+    }
+
+    .bt-announce span {
+      opacity: 0.5;
+      margin: 0 6px;
+    }
+
+    .bt-header {
+      padding: 28px 40px 20px;
+      text-align: center;
+      background: #FAF7F2;
+    }
+
+    .bt-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 28px;
+      color: #3D3027;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .bt-nav {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 10px;
+    }
+
+    .bt-nav a {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #6B5E50;
+      transition: color 0.2s ease;
+      padding-bottom: 2px;
+    }
+
+    .bt-nav a:hover {
+      color: #5C7A5C;
+    }
+
+    .bt-header-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 12px;
+    }
+
+    .bt-header-icons span {
+      font-size: 16px;
+      color: #6B5E50;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .bt-header-icons span:hover {
+      opacity: 1;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 2: BREADCRUMB
+       ═══════════════════════════════════════════ */
+    .bt-breadcrumb {
+      padding: 16px 48px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: #6B5E50;
+      background: #FAF7F2;
+      border-top: 1px solid rgba(122, 154, 122, 0.2);
+    }
+
+    .bt-breadcrumb a {
+      color: #7A9A7A;
+      transition: color 0.2s;
+    }
+
+    .bt-breadcrumb a:hover {
+      color: #5C7A5C;
+    }
+
+    .bt-breadcrumb .sep {
+      margin: 0 8px;
+      opacity: 0.4;
+      font-style: normal;
+    }
+
+    .bt-breadcrumb .current {
+      color: #3D3027;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 3: MAIN PDP GRID
+       ═══════════════════════════════════════════ */
+    .pdp-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      padding: 40px 48px 56px;
+      background: #FAF7F2;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* --- Gallery --- */
+    .pdp-gallery {}
+
+    .pdp-hero-img {
+      width: 100%;
+      aspect-ratio: 1;
+      background: #f0ece6;
+      border: 1px solid rgba(122, 154, 122, 0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .pdp-hero-img img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .pdp-zoom-hint {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      background: rgba(61, 48, 39, 0.6);
+      color: #FAF7F2;
+      font-size: 11px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      letter-spacing: 0.06em;
+    }
+
+    .pdp-thumbs {
+      display: flex;
+      gap: 12px;
+    }
+
+    .pdp-thumb {
+      width: 80px;
+      height: 80px;
+      background: #f0ece6;
+      border: 2px solid rgba(122, 154, 122, 0.15);
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      padding: 6px;
+      transition: border-color 0.25s ease;
+    }
+
+    .pdp-thumb.active {
+      border-color: #7A9A7A;
+    }
+
+    .pdp-thumb:hover {
+      border-color: #7A9A7A;
+    }
+
+    .pdp-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* --- Info Panel --- */
+    .pdp-info {
+      padding-top: 8px;
+    }
+
+    .pdp-brand-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      color: #7A9A7A;
+      margin-bottom: 10px;
+      text-transform: lowercase;
+    }
+
+    .pdp-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 34px;
+      color: #3D3027;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+    }
+
+    .pdp-regimen-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(122, 154, 122, 0.1);
+      border: 1px solid rgba(122, 154, 122, 0.3);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 13px;
+      color: #5C7A5C;
+      letter-spacing: 0.04em;
+      margin-bottom: 18px;
+    }
+
+    .pdp-regimen-badge svg {
+      flex-shrink: 0;
+    }
+
+    .pdp-rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .pdp-stars {
+      display: flex;
+      gap: 2px;
+    }
+
+    .pdp-stars svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .pdp-review-count {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #6B5E50;
+      font-weight: 400;
+    }
+
+    .pdp-price-block {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .pdp-price-current {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 32px;
+      color: #3D3027;
+    }
+
+    .pdp-price-compare {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      color: #a09688;
+      text-decoration: line-through;
+    }
+
+    .pdp-price-save {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #5C7A5C;
+      background: rgba(122, 154, 122, 0.12);
+      padding: 3px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .pdp-tax-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 13px;
+      color: #a09688;
+      margin-bottom: 28px;
+    }
+
+    /* Variants */
+    .pdp-variant-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: #6B5E50;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+
+    .pdp-variant-label span {
+      font-style: normal;
+      font-weight: 500;
+      color: #3D3027;
+    }
+
+    .pdp-variants {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .pdp-variant {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      padding: 10px 18px;
+      border: 1.5px solid rgba(122, 154, 122, 0.25);
+      border-radius: 8px;
+      background: transparent;
+      color: #6B5E50;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      letter-spacing: 0.02em;
+    }
+
+    .pdp-variant:hover {
+      border-color: #7A9A7A;
+      color: #5C7A5C;
+    }
+
+    .pdp-variant.active {
+      border-color: #5C7A5C;
+      background: rgba(122, 154, 122, 0.08);
+      color: #5C7A5C;
+      font-weight: 500;
+    }
+
+    /* Quantity */
+    .pdp-qty-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .pdp-qty-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: #6B5E50;
+      letter-spacing: 0.04em;
+    }
+
+    .pdp-qty-selector {
+      display: flex;
+      align-items: center;
+      border: 1.5px solid rgba(122, 154, 122, 0.25);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .pdp-qty-btn {
+      width: 38px;
+      height: 38px;
+      border: none;
+      background: transparent;
+      font-size: 18px;
+      color: #6B5E50;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.2s;
+    }
+
+    .pdp-qty-btn:hover {
+      background: rgba(122, 154, 122, 0.08);
+    }
+
+    .pdp-qty-val {
+      width: 44px;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #3D3027;
+      border-left: 1px solid rgba(122, 154, 122, 0.2);
+      border-right: 1px solid rgba(122, 154, 122, 0.2);
+      line-height: 38px;
+    }
+
+    /* CTA Buttons */
+    .pdp-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .pdp-btn-atc {
+      width: 100%;
+      padding: 16px 32px;
+      background: #5C7A5C;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .pdp-btn-atc:hover {
+      background: #4a6a4a;
+    }
+
+    .pdp-btn-buynow {
+      width: 100%;
+      padding: 15px 32px;
+      background: transparent;
+      color: #5C7A5C;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1.5px solid #7A9A7A;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .pdp-btn-buynow:hover {
+      background: #7A9A7A;
+      color: #ffffff;
+    }
+
+    .pdp-shipping-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: #7A9A7A;
+      text-align: center;
+      margin-bottom: 28px;
+      padding: 0 8px;
+    }
+
+    .pdp-shipping-note svg {
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    /* Trust Badges */
+    .pdp-trust-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(122, 154, 122, 0.2);
+    }
+
+    .pdp-trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      flex: 1;
+    }
+
+    .pdp-trust-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(122, 154, 122, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pdp-trust-icon svg {
+      width: 18px;
+      height: 18px;
+      color: #5C7A5C;
+    }
+
+    .pdp-trust-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      color: #6B5E50;
+      text-align: center;
+      letter-spacing: 0.02em;
+      line-height: 1.3;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 4: REGIMEN CONTEXT
+       ═══════════════════════════════════════════ */
+    .bt-regimen {
+      background: #ffffff;
+      padding: 64px 48px;
+    }
+
+    .bt-regimen-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .bt-regimen .section-label {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .bt-regimen .section-heading {
+      font-size: 34px;
+      margin-bottom: 14px;
+    }
+
+    .bt-regimen-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: #6B5E50;
+      margin-bottom: 48px;
+      line-height: 1.5;
+    }
+
+    .regimen-steps {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .regimen-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      max-width: 140px;
+      position: relative;
+    }
+
+    .regimen-step-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 20px;
+      transition: transform 0.2s;
+    }
+
+    .regimen-step-circle.inactive {
+      background: rgba(122, 154, 122, 0.1);
+      color: #7A9A7A;
+      border: 1.5px solid rgba(122, 154, 122, 0.3);
+    }
+
+    .regimen-step-circle.active {
+      background: #5C7A5C;
+      color: #ffffff;
+      border: 2px solid #5C7A5C;
+      box-shadow: 0 4px 16px rgba(92, 122, 92, 0.3);
+    }
+
+    .regimen-step-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #3D3027;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+
+    .regimen-step-product {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 12px;
+      color: #7A9A7A;
+      text-align: center;
+    }
+
+    .regimen-connector {
+      width: 24px;
+      height: 2px;
+      background: rgba(122, 154, 122, 0.3);
+      margin-top: 28px;
+      flex-shrink: 0;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 5: INGREDIENT SPOTLIGHT
+       ═══════════════════════════════════════════ */
+    .bt-ingredients {
+      background: #FAF7F2;
+      padding: 64px 48px;
+    }
+
+    .bt-ingredients-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .bt-ingredients .section-label {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .bt-ingredients .section-heading {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 48px;
+    }
+
+    .ingredients-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .ingredient-card {
+      text-align: center;
+      padding: 36px 24px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid rgba(122, 154, 122, 0.15);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .ingredient-card:hover {
+      box-shadow: 0 8px 24px rgba(61, 48, 39, 0.06);
+    }
+
+    .ingredient-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(122, 154, 122, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .ingredient-icon svg {
+      width: 28px;
+      height: 28px;
+      color: #5C7A5C;
+    }
+
+    .ingredient-latin {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 13px;
+      color: #7A9A7A;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .ingredient-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 22px;
+      color: #3D3027;
+      margin-bottom: 12px;
+    }
+
+    .ingredient-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #6B5E50;
+      line-height: 1.65;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 6: PRODUCT DETAILS ACCORDION
+       ═══════════════════════════════════════════ */
+    .bt-details {
+      background: #ffffff;
+      padding: 56px 48px;
+    }
+
+    .bt-details-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .bt-details .section-label {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .bt-details .section-heading {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid rgba(122, 154, 122, 0.2);
+    }
+
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .accordion-header:hover .accordion-title {
+      color: #5C7A5C;
+    }
+
+    .accordion-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 20px;
+      color: #3D3027;
+      transition: color 0.2s;
+      letter-spacing: 0.01em;
+    }
+
+    .accordion-toggle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(122, 154, 122, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+
+    .accordion-toggle svg {
+      width: 14px;
+      height: 14px;
+      color: #5C7A5C;
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-item.open .accordion-toggle svg {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+
+    .accordion-item.open .accordion-content {
+      max-height: 400px;
+    }
+
+    .accordion-body {
+      padding: 0 0 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #6B5E50;
+      line-height: 1.75;
+    }
+
+    .accordion-body ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .accordion-body ul li {
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+
+    .accordion-body ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #7A9A7A;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 7: COMPLETE YOUR RITUAL
+       ═══════════════════════════════════════════ */
+    .bt-crosssell {
+      background: #FAF7F2;
+      padding: 64px 48px;
+    }
+
+    .bt-crosssell-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .bt-crosssell .section-label {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .bt-crosssell .section-heading {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 48px;
+    }
+
+    .crosssell-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .crosssell-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid rgba(122, 154, 122, 0.15);
+      overflow: hidden;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .crosssell-card:hover {
+      box-shadow: 0 12px 32px rgba(61, 48, 39, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .crosssell-img {
+      width: 100%;
+      aspect-ratio: 1;
+      background: #f0ece6;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .crosssell-img img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .crosssell-body {
+      padding: 20px;
+    }
+
+    .crosssell-step {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 12px;
+      color: #7A9A7A;
+      margin-bottom: 6px;
+      letter-spacing: 0.04em;
+    }
+
+    .crosssell-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 18px;
+      color: #3D3027;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .crosssell-price {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #3D3027;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .crosssell-price .compare {
+      color: #a09688;
+      text-decoration: line-through;
+      font-weight: 400;
+      font-size: 13px;
+      margin-left: 8px;
+    }
+
+    .crosssell-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: transparent;
+      color: #5C7A5C;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1.5px solid #7A9A7A;
+      border-radius: 8px;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .crosssell-btn:hover {
+      background: #7A9A7A;
+      color: #ffffff;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 8: REVIEWS
+       ═══════════════════════════════════════════ */
+    .bt-reviews {
+      background: #ffffff;
+      padding: 64px 48px;
+    }
+
+    .bt-reviews-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .bt-reviews .section-label {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .reviews-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .reviews-score {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 72px;
+      color: #3D3027;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .reviews-stars-large {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+
+    .reviews-stars-large svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .reviews-count {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #6B5E50;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .review-card {
+      background: #FAF7F2;
+      border-radius: 12px;
+      padding: 28px;
+      border: 1px solid rgba(122, 154, 122, 0.1);
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 14px;
+    }
+
+    .review-stars svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .review-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 17px;
+      color: #3D3027;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .review-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #6B5E50;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .review-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(122, 154, 122, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: #5C7A5C;
+    }
+
+    .review-author-info {}
+
+    .review-author-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: #3D3027;
+    }
+
+    .review-verified {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: #7A9A7A;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 9: RECENTLY VIEWED
+       ═══════════════════════════════════════════ */
+    .bt-recent {
+      background: #FAF7F2;
+      padding: 56px 48px;
+    }
+
+    .bt-recent-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .bt-recent .section-label {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .bt-recent .section-heading {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+
+    .recent-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .recent-card {
+      background: #ffffff;
+      border-radius: 10px;
+      border: 1px solid rgba(122, 154, 122, 0.12);
+      overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+
+    .recent-card:hover {
+      box-shadow: 0 8px 24px rgba(61, 48, 39, 0.06);
+      transform: translateY(-3px);
+    }
+
+    .recent-img {
+      width: 100%;
+      aspect-ratio: 1;
+      background: #f0ece6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .recent-img img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .recent-body {
+      padding: 16px;
+    }
+
+    .recent-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 15px;
+      color: #3D3027;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .recent-price {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #3D3027;
+      font-weight: 500;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 10: FOOTER
+       ═══════════════════════════════════════════ */
+    .bt-footer {
+      background: #3D3027;
+      padding: 56px 48px 32px;
+      color: #e8e2da;
+    }
+
+    .bt-footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .bt-footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .bt-footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 24px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #FAF7F2;
+      margin-bottom: 16px;
+    }
+
+    .bt-footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: rgba(250, 247, 242, 0.6);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .bt-footer-social {
+      display: flex;
+      gap: 14px;
+    }
+
+    .bt-footer-social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(250, 247, 242, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(250, 247, 242, 0.6);
+      font-size: 14px;
+      transition: all 0.25s;
+    }
+
+    .bt-footer-social a:hover {
+      background: rgba(122, 154, 122, 0.3);
+      color: #FAF7F2;
+    }
+
+    .bt-footer-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: #FAF7F2;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .bt-footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .bt-footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .bt-footer-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: rgba(250, 247, 242, 0.55);
+      transition: color 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .bt-footer-links a:hover {
+      color: #FAF7F2;
+    }
+
+    .bt-footer-bottom {
+      border-top: 1px solid rgba(250, 247, 242, 0.1);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .bt-footer-copy {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: rgba(250, 247, 242, 0.4);
+      letter-spacing: 0.02em;
+    }
+
+    .bt-footer-trust {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .bt-footer-trust-badge {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: rgba(250, 247, 242, 0.45);
+      background: rgba(250, 247, 242, 0.06);
+      padding: 5px 12px;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .bt-footer-payments {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .payment-icon {
+      width: 38px;
+      height: 24px;
+      background: rgba(250, 247, 242, 0.08);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      color: rgba(250, 247, 242, 0.5);
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MOCKUP LABEL -->
+  <div class="mockup-label">
+    <strong>MasterMedi</strong> &mdash; PDP Mockup C: Warm Botanical &bull; Prepared by Growisto &bull; March 2026
+  </div>
+
+  <!-- BROWSER CHROME -->
+  <div class="browser-chrome">
+    <div class="browser-topbar">
+      <div class="browser-dots">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="browser-url">mastermedi.co/products/stainless-steel-tongue-scraper</div>
+    </div>
+
+    <!-- ═══ MOCKUP CONTENT ═══ -->
+    <div class="mockup-container">
+
+      <!-- ──────────────────────────────────────
+           SECTION 1: ANNOUNCEMENT BAR + HEADER
+           ────────────────────────────────────── -->
+      <div class="bt-announce">
+        complimentary shipping on orders above $35 <span>&bull;</span> crafted for the mindful oral ritual
+      </div>
+
+      <header class="bt-header">
+        <div class="bt-logo">MasterMedi</div>
+        <nav class="bt-nav">
+          <a href="#">Shop</a>
+          <a href="#">Tongue Scrapers</a>
+          <a href="#">Toothpaste</a>
+          <a href="#">Oral Rituals</a>
+          <a href="#">Our Story</a>
+        </nav>
+        <div class="bt-header-icons">
+          <!-- Search -->
+          <span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <!-- Account -->
+          <span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </span>
+          <!-- Cart -->
+          <span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </span>
+        </div>
+      </header>
+
+      <div class="section-divider"></div>
+
+      <!-- ──────────────────────────────────────
+           SECTION 2: BREADCRUMB
+           ────────────────────────────────────── -->
+      <div class="bt-breadcrumb">
+        <a href="#">Home</a>
+        <span class="sep">/</span>
+        <a href="#">Tongue Scrapers</a>
+        <span class="sep">/</span>
+        <span class="current">Stainless Steel Tongue Scraper</span>
+      </div>
+
+      <!-- ──────────────────────────────────────
+           SECTION 3: MAIN PDP GRID
+           ────────────────────────────────────── -->
+      <div class="pdp-main">
+        <!-- LEFT: Gallery -->
+        <div class="pdp-gallery">
+          <div class="pdp-hero-img">
+            <img src="images/scraper-with-props.jpeg" alt="MasterMedi Stainless Steel Tongue Scraper">
+            <span class="pdp-zoom-hint">hover to zoom</span>
+          </div>
+          <div class="pdp-thumbs">
+            <div class="pdp-thumb active">
+              <img src="images/scraper-with-props.jpeg" alt="Tongue Scraper — main view">
+            </div>
+            <div class="pdp-thumb">
+              <img src="images/tongue-scraper-box.jpeg" alt="Tongue Scraper — packaging">
+            </div>
+            <div class="pdp-thumb">
+              <img src="images/lifestyle-flatlay.jpeg" alt="Tongue Scraper — lifestyle">
+            </div>
+            <div class="pdp-thumb">
+              <!-- Placeholder for 4th angle -->
+              <div style="width:100%;height:100%;background:rgba(122,154,122,0.08);border-radius:4px;display:flex;align-items:center;justify-content:center;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7A9A7A" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 12l5-5 5 5"/><path d="M12 7v10"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Info -->
+        <div class="pdp-info">
+          <div class="pdp-brand-label">mastermedi</div>
+          <h1 class="pdp-title">Stainless Steel<br>Tongue Scraper</h1>
+
+          <div class="pdp-regimen-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Step 2 of 5 &mdash; Tongue Scraping
+          </div>
+
+          <!-- Stars -->
+          <div class="pdp-rating">
+            <div class="pdp-stars">
+              <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <!-- Partial star -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="none">
+                <defs><linearGradient id="partialStar"><stop offset="80%" stop-color="#B8836A"/><stop offset="80%" stop-color="#e0d6cc"/></linearGradient></defs>
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26" fill="url(#partialStar)"/>
+              </svg>
+            </div>
+            <span class="pdp-review-count">4.8 &mdash; 2,140 reviews</span>
+          </div>
+
+          <!-- Price -->
+          <div class="pdp-price-block">
+            <span class="pdp-price-current">$9.99</span>
+            <span class="pdp-price-compare">$14.99</span>
+            <span class="pdp-price-save">Save 33%</span>
+          </div>
+          <div class="pdp-tax-note">tax included &bull; shipping calculated at checkout</div>
+
+          <!-- Variants -->
+          <div class="pdp-variant-label">variant: <span>SS U-Shape</span></div>
+          <div class="pdp-variants">
+            <button class="pdp-variant active">SS U-Shape</button>
+            <button class="pdp-variant">SS Spoon</button>
+            <button class="pdp-variant">SS Spoon Black</button>
+            <button class="pdp-variant">Copper</button>
+          </div>
+
+          <!-- Quantity -->
+          <div class="pdp-qty-row">
+            <span class="pdp-qty-label">quantity:</span>
+            <div class="pdp-qty-selector">
+              <button class="pdp-qty-btn">&minus;</button>
+              <div class="pdp-qty-val">1</div>
+              <button class="pdp-qty-btn">+</button>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="pdp-cta-group">
+            <button class="pdp-btn-atc">Add to Cart</button>
+            <button class="pdp-btn-buynow">Buy It Now</button>
+          </div>
+
+          <!-- Shipping Note -->
+          <div class="pdp-shipping-note">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7A9A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            free shipping on orders above $35 &mdash; arrives in 3&ndash;5 business days
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="pdp-trust-row">
+            <div class="pdp-trust-item">
+              <div class="pdp-trust-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <span class="pdp-trust-text">Medical-Grade<br>Stainless Steel</span>
+            </div>
+            <div class="pdp-trust-item">
+              <div class="pdp-trust-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+              </div>
+              <span class="pdp-trust-text">Ergonomic<br>Grip Design</span>
+            </div>
+            <div class="pdp-trust-item">
+              <div class="pdp-trust-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <span class="pdp-trust-text">Dentist<br>Recommended</span>
+            </div>
+            <div class="pdp-trust-item">
+              <div class="pdp-trust-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              </div>
+              <span class="pdp-trust-text">Easy to<br>Clean</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- ──────────────────────────────────────
+           SECTION 4: REGIMEN CONTEXT
+           ────────────────────────────────────── -->
+      <section class="bt-regimen">
+        <div class="bt-regimen-inner">
+          <div class="section-label">the five-step ritual</div>
+          <h2 class="section-heading">Part of the <em>Complete Oral Ritual</em></h2>
+          <p class="bt-regimen-sub">
+            Every MasterMedi product is designed to work in harmony.<br>
+            The tongue scraper is step two &mdash; after oil pulling, before brushing.
+          </p>
+
+          <div class="regimen-steps">
+            <div class="regimen-step">
+              <div class="regimen-step-circle inactive">1</div>
+              <span class="regimen-step-name">Oil Pulling</span>
+              <span class="regimen-step-product">Coconut Pulling Oil</span>
+            </div>
+            <div class="regimen-connector"></div>
+            <div class="regimen-step">
+              <div class="regimen-step-circle active">2</div>
+              <span class="regimen-step-name">Tongue Scraping</span>
+              <span class="regimen-step-product">You Are Here</span>
+            </div>
+            <div class="regimen-connector"></div>
+            <div class="regimen-step">
+              <div class="regimen-step-circle inactive">3</div>
+              <span class="regimen-step-name">Brushing</span>
+              <span class="regimen-step-product">Herbal Toothpaste</span>
+            </div>
+            <div class="regimen-connector"></div>
+            <div class="regimen-step">
+              <div class="regimen-step-circle inactive">4</div>
+              <span class="regimen-step-name">Rinsing</span>
+              <span class="regimen-step-product">Botanical Mouthwash</span>
+            </div>
+            <div class="regimen-connector"></div>
+            <div class="regimen-step">
+              <div class="regimen-step-circle inactive">5</div>
+              <span class="regimen-step-name">Flossing</span>
+              <span class="regimen-step-product">Charcoal Floss Picks</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- ──────────────────────────────────────
+           SECTION 5: INGREDIENT SPOTLIGHT
+           ────────────────────────────────────── -->
+      <section class="bt-ingredients">
+        <div class="bt-ingredients-inner">
+          <div class="section-label">the apothecary</div>
+          <h2 class="section-heading">Crafted from <em>Three Essentials</em></h2>
+
+          <div class="ingredients-grid">
+            <!-- Ingredient 1 -->
+            <div class="ingredient-card">
+              <div class="ingredient-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="M12 8v4"/>
+                  <path d="M10 10h4"/>
+                </svg>
+              </div>
+              <div class="ingredient-latin">Austeniticum &mdash; Grade 304</div>
+              <div class="ingredient-name">Stainless Steel</div>
+              <div class="ingredient-desc">
+                Medical-grade 304 stainless steel, chosen for its exceptional corrosion resistance, non-porous surface, and hypoallergenic properties. Will not harbor bacteria.
+              </div>
+            </div>
+
+            <!-- Ingredient 2 -->
+            <div class="ingredient-card">
+              <div class="ingredient-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 16v-4"/>
+                  <path d="M12 8h.01"/>
+                </svg>
+              </div>
+              <div class="ingredient-latin">Silicium &mdash; Non-Slip Compound</div>
+              <div class="ingredient-name">Silicone Grip</div>
+              <div class="ingredient-desc">
+                Food-safe silicone grip pads provide ergonomic comfort and prevent slipping during use. BPA-free and resistant to high temperatures for easy sterilization.
+              </div>
+            </div>
+
+            <!-- Ingredient 3 -->
+            <div class="ingredient-card">
+              <div class="ingredient-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#5C7A5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                  <path d="M8 12l3 3 5-5"/>
+                </svg>
+              </div>
+              <div class="ingredient-latin">Curvatura &mdash; Ergonomica</div>
+              <div class="ingredient-name">Precision Edge</div>
+              <div class="ingredient-desc">
+                Engineered U-curve with a smooth, rounded edge designed to gently remove bacterial coating without triggering the gag reflex. Polished to a mirror finish.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- ──────────────────────────────────────
+           SECTION 6: PRODUCT DETAILS ACCORDION
+           ────────────────────────────────────── -->
+      <section class="bt-details">
+        <div class="bt-details-inner">
+          <div class="section-label">know your product</div>
+          <h2 class="section-heading">The <em>Details</em></h2>
+
+          <!-- Accordion 1: Description (open by default) -->
+          <div class="accordion-item open">
+            <div class="accordion-header" onclick="this.parentElement.classList.toggle('open')">
+              <span class="accordion-title">Description</span>
+              <div class="accordion-toggle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <p>The MasterMedi Stainless Steel Tongue Scraper is an Ayurveda-inspired oral care tool designed for the modern ritual. Crafted from medical-grade 304 stainless steel, it gently and effectively removes the white coating (ama) from your tongue surface, reducing bacteria by up to 75% in a single use.</p>
+                <br>
+                <p>Unlike plastic alternatives, our stainless steel scraper is built to last a lifetime, will not harbor bacteria, and can be sterilized at high temperatures. The ergonomic U-shape fits comfortably against the tongue's natural curve, reaching the back without triggering the gag reflex.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion 2: How to Use -->
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="this.parentElement.classList.toggle('open')">
+              <span class="accordion-title">How to Use</span>
+              <div class="accordion-toggle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <ul>
+                  <li>Use first thing in the morning, ideally after oil pulling and before brushing</li>
+                  <li>Hold both handles firmly with each hand</li>
+                  <li>Extend your tongue and place the curved edge at the back</li>
+                  <li>Gently pull forward in one smooth stroke &mdash; do not press too hard</li>
+                  <li>Rinse the scraper under running water between each stroke</li>
+                  <li>Repeat 5&ndash;7 times until the tongue looks pink and clean</li>
+                  <li>Rinse scraper thoroughly and store in a dry place</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion 3: Care Instructions -->
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="this.parentElement.classList.toggle('open')">
+              <span class="accordion-title">Care Instructions</span>
+              <div class="accordion-toggle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <ul>
+                  <li>Rinse with warm water after each use</li>
+                  <li>For deep cleaning, soak in boiling water for 2&ndash;3 minutes once a week</li>
+                  <li>Alternatively, wipe with rubbing alcohol or hydrogen peroxide</li>
+                  <li>Pat dry and store in the included cotton pouch</li>
+                  <li>Do not use abrasive cleaners or steel wool</li>
+                  <li>Stainless steel will not rust or corrode under normal use</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- ──────────────────────────────────────
+           SECTION 7: COMPLETE YOUR RITUAL
+           ────────────────────────────────────── -->
+      <section class="bt-crosssell">
+        <div class="bt-crosssell-inner">
+          <div class="section-label">complete the ritual</div>
+          <h2 class="section-heading">Pairs Beautifully <em>With</em></h2>
+
+          <div class="crosssell-grid">
+            <!-- Cross-sell 1 -->
+            <div class="crosssell-card">
+              <div class="crosssell-img">
+                <img src="images/toothpaste-cloud-mint.jpeg" alt="Cloud Mint Toothpaste">
+              </div>
+              <div class="crosssell-body">
+                <div class="crosssell-step">step 3 &mdash; brushing</div>
+                <div class="crosssell-name">Cloud Mint Toothpaste</div>
+                <div class="crosssell-price">$12.99 <span class="compare">$16.99</span></div>
+                <button class="crosssell-btn">Add to Ritual</button>
+              </div>
+            </div>
+
+            <!-- Cross-sell 2 -->
+            <div class="crosssell-card">
+              <div class="crosssell-img" style="background: #eee8de;">
+                <!-- Placeholder for product without image -->
+                <div style="text-align:center;color:#7A9A7A;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;line-height:1.5;">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7A9A7A" stroke-width="1" stroke-linecap="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10"/><path d="M12 6v6l4 2"/></svg>
+                  <br>coming soon
+                </div>
+              </div>
+              <div class="crosssell-body">
+                <div class="crosssell-step">step 1 &mdash; oil pulling</div>
+                <div class="crosssell-name">Coconut Pulling Oil</div>
+                <div class="crosssell-price">$14.99</div>
+                <button class="crosssell-btn">Add to Ritual</button>
+              </div>
+            </div>
+
+            <!-- Cross-sell 3 -->
+            <div class="crosssell-card">
+              <div class="crosssell-img" style="background: #eee8de;">
+                <div style="text-align:center;color:#7A9A7A;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;line-height:1.5;">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7A9A7A" stroke-width="1" stroke-linecap="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10"/><path d="M12 6v6l4 2"/></svg>
+                  <br>coming soon
+                </div>
+              </div>
+              <div class="crosssell-body">
+                <div class="crosssell-step">step 4 &mdash; rinsing</div>
+                <div class="crosssell-name">Botanical Mouthwash</div>
+                <div class="crosssell-price">$11.99</div>
+                <button class="crosssell-btn">Add to Ritual</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- ──────────────────────────────────────
+           SECTION 8: REVIEWS
+           ────────────────────────────────────── -->
+      <section class="bt-reviews">
+        <div class="bt-reviews-inner">
+          <div class="section-label">voices from our community</div>
+
+          <div class="reviews-header">
+            <div class="reviews-score">4.8</div>
+            <div class="reviews-stars-large">
+              <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="none">
+                <defs><linearGradient id="partialStarLg"><stop offset="80%" stop-color="#B8836A"/><stop offset="80%" stop-color="#e0d6cc"/></linearGradient></defs>
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26" fill="url(#partialStarLg)"/>
+              </svg>
+            </div>
+            <div class="reviews-count">Based on 2,140 reviews</div>
+          </div>
+
+          <div class="reviews-grid">
+            <!-- Review 1 -->
+            <div class="review-card">
+              <div class="review-stars">
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              </div>
+              <div class="review-title">A morning ritual I actually look forward to</div>
+              <div class="review-text">I was skeptical about tongue scraping but this tool changed everything. The stainless steel feels so much better than the plastic ones I tried before. My mouth feels genuinely clean now. The U-shape reaches the back without any gagging.</div>
+              <div class="review-author">
+                <div class="review-avatar">S</div>
+                <div class="review-author-info">
+                  <div class="review-author-name">Sarah M.</div>
+                  <div class="review-verified">Verified Buyer</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-card">
+              <div class="review-stars">
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              </div>
+              <div class="review-title">My dentist noticed the difference</div>
+              <div class="review-text">Been using this for about 3 months now. At my last dental check-up, my dentist actually commented on how clean my tongue looked. The scraper pays for itself in oral health. Heavy, solid, well-made. Bought three more as gifts.</div>
+              <div class="review-author">
+                <div class="review-avatar">R</div>
+                <div class="review-author-info">
+                  <div class="review-author-name">Rohan K.</div>
+                  <div class="review-verified">Verified Buyer</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-card">
+              <div class="review-stars">
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                <svg viewBox="0 0 24 24" fill="#B8836A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                <svg viewBox="0 0 24 24" fill="#e0d6cc" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              </div>
+              <div class="review-title">Beautiful packaging, premium feel</div>
+              <div class="review-text">Everything about this product feels intentional. The cotton pouch, the weight of the steel, even the card insert with instructions. It doesn't feel like just a tongue scraper, it feels like part of a self-care brand I want to support.</div>
+              <div class="review-author">
+                <div class="review-avatar">A</div>
+                <div class="review-author-info">
+                  <div class="review-author-name">Ananya P.</div>
+                  <div class="review-verified">Verified Buyer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- ──────────────────────────────────────
+           SECTION 9: RECENTLY VIEWED
+           ────────────────────────────────────── -->
+      <section class="bt-recent">
+        <div class="bt-recent-inner">
+          <div class="section-label">recently explored</div>
+          <h2 class="section-heading"><em>Continue</em> Browsing</h2>
+
+          <div class="recent-grid">
+            <div class="recent-card">
+              <div class="recent-img">
+                <img src="images/toothpaste-cloud-mint.jpeg" alt="Cloud Mint Toothpaste">
+              </div>
+              <div class="recent-body">
+                <div class="recent-name">Cloud Mint Toothpaste</div>
+                <div class="recent-price">$12.99</div>
+              </div>
+            </div>
+
+            <div class="recent-card">
+              <div class="recent-img">
+                <img src="images/tongue-scraper-box.jpeg" alt="Tongue Scraper Gift Set">
+              </div>
+              <div class="recent-body">
+                <div class="recent-name">Tongue Scraper Gift Set</div>
+                <div class="recent-price">$24.99</div>
+              </div>
+            </div>
+
+            <div class="recent-card">
+              <div class="recent-img">
+                <img src="images/lifestyle-flatlay.jpeg" alt="Complete Oral Ritual Kit">
+              </div>
+              <div class="recent-body">
+                <div class="recent-name">Complete Oral Ritual Kit</div>
+                <div class="recent-price">$39.99</div>
+              </div>
+            </div>
+
+            <div class="recent-card">
+              <div class="recent-img" style="background: #eee8de;">
+                <div style="text-align:center;color:#a09688;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#a09688" stroke-width="1" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                  <br>Copper Scraper
+                </div>
+              </div>
+              <div class="recent-body">
+                <div class="recent-name">Copper Tongue Scraper</div>
+                <div class="recent-price">$11.99</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- ──────────────────────────────────────
+           SECTION 10: FOOTER
+           ────────────────────────────────────── -->
+      <footer class="bt-footer">
+        <div class="bt-footer-inner">
+          <div class="bt-footer-grid">
+            <!-- Column 1: Brand -->
+            <div>
+              <div class="bt-footer-brand">MasterMedi</div>
+              <div class="bt-footer-tagline">
+                Rooted in Ayurveda.<br>
+                Refined for the modern ritual.<br>
+                Crafted to last a lifetime.
+              </div>
+              <div class="bt-footer-social">
+                <a href="#">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                </a>
+                <a href="#">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Column 2: Shop -->
+            <div>
+              <div class="bt-footer-heading">Shop</div>
+              <ul class="bt-footer-links">
+                <li><a href="#">Tongue Scrapers</a></li>
+                <li><a href="#">Toothpaste</a></li>
+                <li><a href="#">Oil Pulling</a></li>
+                <li><a href="#">Oral Ritual Kits</a></li>
+                <li><a href="#">Gift Sets</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: About -->
+            <div>
+              <div class="bt-footer-heading">About</div>
+              <ul class="bt-footer-links">
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">The Science</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Press</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Support -->
+            <div>
+              <div class="bt-footer-heading">Support</div>
+              <ul class="bt-footer-links">
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Shipping &amp; Returns</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Footer Bottom -->
+          <div class="bt-footer-bottom">
+            <div class="bt-footer-copy">&copy; 2026 MasterMedi. All rights reserved.</div>
+            <div class="bt-footer-trust">
+              <span class="bt-footer-trust-badge">FDA Registered</span>
+              <span class="bt-footer-trust-badge">ADA Compliant</span>
+              <span class="bt-footer-trust-badge">BPA Free</span>
+            </div>
+            <div class="bt-footer-payments">
+              <div class="payment-icon">VISA</div>
+              <div class="payment-icon">MC</div>
+              <div class="payment-icon">AMEX</div>
+              <div class="payment-icon">PYPL</div>
+              <div class="payment-icon">SHOP</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div><!-- /.mockup-container -->
+  </div><!-- /.browser-chrome -->
+
+</body>
+</html>

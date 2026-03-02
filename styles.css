@@ -808,8 +808,117 @@ table { border-collapse: collapse; }
 .subtab-content { display: none; }
 .subtab-content.active { display: block; }
 
+/* Direction-level inner tabs (within Visual Mockups) */
+.direction-tab-nav {
+  display: flex;
+  gap: 0;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid var(--color-border);
+  background: #fff;
+}
+.direction-tab {
+  flex: 1;
+  padding: 14px 16px;
+  text-align: center;
+  cursor: pointer;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-right: 1.5px solid var(--color-border);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.direction-tab:last-child { border-right: none; }
+.direction-tab:hover {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+.direction-tab.active {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+}
+.direction-tab .dir-badge {
+  font-size: .65rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.direction-tab.active .dir-badge {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+}
+.direction-tab:not(.active) .dir-badge-rec {
+  background: #e6f7e6;
+  color: #2d7d2d;
+}
+.direction-tab:not(.active) .dir-badge-alt {
+  background: #f0f0f0;
+  color: #888;
+}
+.direction-content { display: none; }
+.direction-content.active { display: block; }
+.direction-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.direction-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+.direction-palette {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.direction-palette .swatch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.direction-palette .swatch span.color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+.direction-palette .swatch span.label {
+  font-size: .8rem;
+  color: #666;
+}
+.direction-palette .font-label {
+  font-size: .8rem;
+  color: #888;
+}
+.mockup-iframe-wrap {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.mockup-iframe-wrap iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+}
+
 @media (max-width: 600px) {
   .subtab-nav { gap: 6px; }
   .subtab-pill { padding: 6px 14px; font-size: .78rem; }
+  .direction-tab-nav { flex-direction: column; }
+  .direction-tab { border-right: none; border-bottom: 1.5px solid var(--color-border); }
+  .direction-tab:last-child { border-bottom: none; }
 }
 

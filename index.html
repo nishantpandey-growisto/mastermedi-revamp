@@ -1729,72 +1729,109 @@
       <!-- ── Visual Mockups — 3 Directions ── -->
       <div class="section-card">
         <h2 class="section-title">Visual Mockups &mdash; 3 Directions</h2>
-        <p>Each direction below uses <strong>the same 12 homepage sections and the same product content</strong> &mdash; only the visual treatment changes. Scroll through each mockup, or open full-size in a new tab. Pick the direction that feels right, or mix elements across directions.</p>
+        <p>Each direction uses <strong>the same 12 homepage sections, the same PDP layout, and the same product content</strong> &mdash; only the visual treatment changes. Click a tab to explore each direction&rsquo;s homepage + product page, or open full-size in a new tab.</p>
       </div>
 
-      <!-- ── Direction A: Heritage Editorial ── -->
-      <div class="section-card" style="border-left:4px solid #C06B3A;">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
-          <h3 class="section-title" style="font-size:1.15rem;margin:0;color:#C06B3A;">Direction A: Heritage Editorial</h3>
-          <span class="impl-badge badge-inbuilt">RECOMMENDED</span>
+      <!-- Direction Tab Navigation -->
+      <div class="direction-tab-nav">
+        <div class="direction-tab active" onclick="switchDirection('a', this)">
+          Direction A: Heritage Editorial
+          <span class="dir-badge dir-badge-rec">RECOMMENDED</span>
         </div>
-        <p style="font-size:.9rem;color:#555;margin-bottom:8px;"><strong>Think:</strong> Marvis meets Diptyque. Serif typography, warm cream backgrounds, scrollwork details, gold foil accents.</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
-          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#C06B3A;"></span><span style="font-size:.8rem;">Terracotta</span></div>
-          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#C4953A;"></span><span style="font-size:.8rem;">Gold</span></div>
-          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#F5E6D0;"></span><span style="font-size:.8rem;">Cream</span></div>
-          <span style="font-size:.8rem;color:#888;">| Cormorant Garamond + Inter</span>
+        <div class="direction-tab" onclick="switchDirection('b', this)">
+          Direction B: Clean Clinical
+          <span class="dir-badge dir-badge-alt">ALTERNATIVE</span>
         </div>
-        <p style="margin-bottom:12px;"><a href="homepage.html" target="_blank" style="color:#367588;">Open Full-Size &rarr;</a></p>
-        <div style="border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;">
-          <iframe src="homepage.html" style="width:100%;height:700px;border:none;" loading="lazy"></iframe>
+        <div class="direction-tab" onclick="switchDirection('c', this)">
+          Direction C: Warm Botanical
+          <span class="dir-badge dir-badge-alt">ALTERNATIVE</span>
         </div>
       </div>
 
-      <!-- ── Direction B: Clean Clinical ── -->
-      <div class="section-card" style="border-left:4px solid #367588;">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
-          <h3 class="section-title" style="font-size:1.15rem;margin:0;color:#367588;">Direction B: Clean Clinical</h3>
-          <span class="impl-badge badge-custom">ALTERNATIVE</span>
-        </div>
-        <p style="font-size:.9rem;color:#555;margin-bottom:8px;"><strong>Think:</strong> Quip meets Glossier. All sans-serif, white backgrounds, black pill buttons, Apple product-page pacing.</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
-          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#1A1A1A;"></span><span style="font-size:.8rem;">Black</span></div>
-          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#367588;"></span><span style="font-size:.8rem;">Teal</span></div>
-          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#FFFFFF;border:1px solid #ddd;"></span><span style="font-size:.8rem;">White</span></div>
-          <span style="font-size:.8rem;color:#888;">| Inter only</span>
-        </div>
-        <p style="margin-bottom:12px;"><a href="homepage-clinical.html" target="_blank" style="color:#367588;">Open Full-Size &rarr;</a></p>
-        <div style="border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;">
-          <iframe src="homepage-clinical.html" style="width:100%;height:700px;border:none;" loading="lazy"></iframe>
+      <!-- ═══ DIRECTION A: Heritage Editorial ═══ -->
+      <div class="direction-content active" id="direction-a">
+        <div class="section-card" style="border-left:4px solid #C06B3A;">
+          <div class="direction-header">
+            <h3 style="color:#C06B3A;">Direction A: Heritage Editorial</h3>
+            <span class="impl-badge badge-inbuilt">RECOMMENDED</span>
+          </div>
+          <p style="font-size:.9rem;color:#555;margin-bottom:12px;"><strong>Think:</strong> Marvis meets Diptyque. Serif typography, warm cream backgrounds, scrollwork details, gold foil accents.</p>
+          <div class="direction-palette" style="margin-bottom:16px;">
+            <div class="swatch"><span class="color" style="background:#C06B3A;"></span><span class="label">Terracotta</span></div>
+            <div class="swatch"><span class="color" style="background:#C4953A;"></span><span class="label">Gold</span></div>
+            <div class="swatch"><span class="color" style="background:#F5E6D0;"></span><span class="label">Cream</span></div>
+            <span class="font-label">| Cormorant Garamond + Inter</span>
+          </div>
+
+          <h4 style="font-size:.95rem;margin-bottom:8px;">Homepage</h4>
+          <p style="margin-bottom:8px;"><a href="homepage.html" target="_blank" style="color:#367588;">Open Full-Size Homepage &rarr;</a></p>
+          <div class="mockup-iframe-wrap">
+            <iframe src="homepage.html" loading="lazy"></iframe>
+          </div>
+
+          <h4 style="font-size:.95rem;margin-bottom:8px;">Product Page (PDP)</h4>
+          <p style="margin-bottom:8px;"><a href="pdp.html" target="_blank" style="color:#367588;">Open Full-Size PDP &rarr;</a></p>
+          <div class="mockup-iframe-wrap">
+            <iframe src="pdp.html" loading="lazy"></iframe>
+          </div>
         </div>
       </div>
 
-      <!-- ── Direction C: Warm Botanical ── -->
-      <div class="section-card" style="border-left:4px solid #7A9A7A;">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
-          <h3 class="section-title" style="font-size:1.15rem;margin:0;color:#7A9A7A;">Direction C: Warm Botanical</h3>
-          <span class="impl-badge badge-custom">ALTERNATIVE</span>
-        </div>
-        <p style="font-size:.9rem;color:#555;margin-bottom:8px;"><strong>Think:</strong> Humanrace meets Aesop. Sage green, linen backgrounds, apothecary vibe, ingredient stories, editorial flow.</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
-          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#7A9A7A;"></span><span style="font-size:.8rem;">Sage</span></div>
-          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#B8836A;"></span><span style="font-size:.8rem;">Terracotta</span></div>
-          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#FAF7F2;border:1px solid #ddd;"></span><span style="font-size:.8rem;">Linen</span></div>
-          <span style="font-size:.8rem;color:#888;">| Cormorant Garamond (italic) + Inter</span>
-        </div>
-        <p style="margin-bottom:12px;"><a href="homepage-botanical.html" target="_blank" style="color:#367588;">Open Full-Size &rarr;</a></p>
-        <div style="border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;">
-          <iframe src="homepage-botanical.html" style="width:100%;height:700px;border:none;" loading="lazy"></iframe>
+      <!-- ═══ DIRECTION B: Clean Clinical ═══ -->
+      <div class="direction-content" id="direction-b">
+        <div class="section-card" style="border-left:4px solid #367588;">
+          <div class="direction-header">
+            <h3 style="color:#367588;">Direction B: Clean Clinical</h3>
+            <span class="impl-badge badge-custom">ALTERNATIVE</span>
+          </div>
+          <p style="font-size:.9rem;color:#555;margin-bottom:12px;"><strong>Think:</strong> Quip meets Glossier. All sans-serif, white backgrounds, black pill buttons, Apple product-page pacing.</p>
+          <div class="direction-palette" style="margin-bottom:16px;">
+            <div class="swatch"><span class="color" style="background:#1A1A1A;"></span><span class="label">Black</span></div>
+            <div class="swatch"><span class="color" style="background:#367588;"></span><span class="label">Teal</span></div>
+            <div class="swatch"><span class="color" style="background:#FFFFFF;border:1px solid #ddd;"></span><span class="label">White</span></div>
+            <span class="font-label">| Inter only</span>
+          </div>
+
+          <h4 style="font-size:.95rem;margin-bottom:8px;">Homepage</h4>
+          <p style="margin-bottom:8px;"><a href="homepage-clinical.html" target="_blank" style="color:#367588;">Open Full-Size Homepage &rarr;</a></p>
+          <div class="mockup-iframe-wrap">
+            <iframe src="homepage-clinical.html" loading="lazy"></iframe>
+          </div>
+
+          <h4 style="font-size:.95rem;margin-bottom:8px;">Product Page (PDP)</h4>
+          <p style="margin-bottom:8px;"><a href="pdp-clinical.html" target="_blank" style="color:#367588;">Open Full-Size PDP &rarr;</a></p>
+          <div class="mockup-iframe-wrap">
+            <iframe src="pdp-clinical.html" loading="lazy"></iframe>
+          </div>
         </div>
       </div>
 
-      <!-- ── PDP Mockup (Heritage Editorial) ── -->
-      <div class="section-card">
-        <h3 class="section-title" style="font-size:1.15rem;">Product Page (PDP) Mockup &mdash; Heritage Editorial</h3>
-        <p style="margin-bottom:12px;">Full product detail page with 10 sections. PDP mockups for other directions will follow once homepage direction is chosen. <a href="pdp.html" target="_blank" style="color:#367588;">Open Full-Size &rarr;</a></p>
-        <div style="border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;">
-          <iframe src="pdp.html" style="width:100%;height:700px;border:none;" loading="lazy"></iframe>
+      <!-- ═══ DIRECTION C: Warm Botanical ═══ -->
+      <div class="direction-content" id="direction-c">
+        <div class="section-card" style="border-left:4px solid #7A9A7A;">
+          <div class="direction-header">
+            <h3 style="color:#7A9A7A;">Direction C: Warm Botanical</h3>
+            <span class="impl-badge badge-custom">ALTERNATIVE</span>
+          </div>
+          <p style="font-size:.9rem;color:#555;margin-bottom:12px;"><strong>Think:</strong> Humanrace meets Aesop. Sage green, linen backgrounds, apothecary vibe, ingredient stories, editorial flow.</p>
+          <div class="direction-palette" style="margin-bottom:16px;">
+            <div class="swatch"><span class="color" style="background:#7A9A7A;"></span><span class="label">Sage</span></div>
+            <div class="swatch"><span class="color" style="background:#B8836A;"></span><span class="label">Terracotta</span></div>
+            <div class="swatch"><span class="color" style="background:#FAF7F2;border:1px solid #ddd;"></span><span class="label">Linen</span></div>
+            <span class="font-label">| Cormorant Garamond (italic) + Inter</span>
+          </div>
+
+          <h4 style="font-size:.95rem;margin-bottom:8px;">Homepage</h4>
+          <p style="margin-bottom:8px;"><a href="homepage-botanical.html" target="_blank" style="color:#367588;">Open Full-Size Homepage &rarr;</a></p>
+          <div class="mockup-iframe-wrap">
+            <iframe src="homepage-botanical.html" loading="lazy"></iframe>
+          </div>
+
+          <h4 style="font-size:.95rem;margin-bottom:8px;">Product Page (PDP)</h4>
+          <p style="margin-bottom:8px;"><a href="pdp-botanical.html" target="_blank" style="color:#367588;">Open Full-Size PDP &rarr;</a></p>
+          <div class="mockup-iframe-wrap">
+            <iframe src="pdp-botanical.html" loading="lazy"></iframe>
+          </div>
         </div>
       </div>
 
@@ -3703,6 +3740,14 @@
       document.getElementById('subtab-' + id).classList.add('active');
       pill.classList.add('active');
       document.getElementById('mainContent').scrollTop = 0;
+    }
+
+    // Direction tab switching (within Visual Mockups)
+    function switchDirection(dirId, tab) {
+      document.querySelectorAll('.direction-content').forEach(function(d) { d.classList.remove('active'); });
+      document.querySelectorAll('.direction-tab').forEach(function(t) { t.classList.remove('active'); });
+      document.getElementById('direction-' + dirId).classList.add('active');
+      tab.classList.add('active');
     }
 
     // Sidebar toggle (mobile)
