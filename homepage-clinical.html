@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterMedi — Homepage Mockup B: Clean Clinical</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ======================================================
+           RESET & GLOBALS
+           ====================================================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f0f0;
+            color: #1A1A1A;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ======================================================
+           MOCKUP LABEL (above browser chrome)
+           ====================================================== */
+        .mockup-label {
+            text-align: center;
+            padding: 28px 20px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #888;
+        }
+
+        /* ======================================================
+           BROWSER CHROME
+           ====================================================== */
+        .browser-chrome {
+            max-width: 1280px;
+            margin: 0 auto 40px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.12), 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .browser-bar {
+            background: #e8e8e8;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .browser-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .browser-dots span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .browser-dots span:nth-child(1) { background: #ff5f57; }
+        .browser-dots span:nth-child(2) { background: #febc2e; }
+        .browser-dots span:nth-child(3) { background: #28c840; }
+
+        .browser-url {
+            flex: 1;
+            background: #fff;
+            border-radius: 6px;
+            padding: 7px 16px;
+            font-size: 13px;
+            color: #666;
+            text-align: center;
+        }
+
+        /* ======================================================
+           MOCKUP CONTAINER
+           ====================================================== */
+        .mockup-container {
+            background: #ffffff;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* ======================================================
+           SECTION LABEL UTILITY
+           ====================================================== */
+        .section-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #367588;
+            margin-bottom: 16px;
+        }
+
+        /* ======================================================
+           1. ANNOUNCEMENT BAR
+           ====================================================== */
+        .announcement-bar {
+            background: #ffffff;
+            border-bottom: 1px solid #eee;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+            color: #367588;
+            letter-spacing: 0.02em;
+        }
+
+        /* ======================================================
+           2. HEADER
+           ====================================================== */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 60px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1A1A1A;
+            letter-spacing: -0.02em;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .header-nav a {
+            font-size: 14px;
+            font-weight: 500;
+            color: #1A1A1A;
+            transition: color 0.2s;
+        }
+
+        .header-nav a:hover {
+            color: #367588;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-icons svg {
+            width: 20px;
+            height: 20px;
+            stroke: #1A1A1A;
+            fill: none;
+            stroke-width: 1.5;
+            cursor: pointer;
+            transition: stroke 0.2s;
+        }
+
+        .header-icons svg:hover {
+            stroke: #367588;
+        }
+
+        .cart-icon-wrap {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -6px;
+            right: -8px;
+            background: #1A1A1A;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 600;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ======================================================
+           3. USP BAR
+           ====================================================== */
+        .usp-bar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 16px 40px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .usp-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #666;
+            font-weight: 400;
+        }
+
+        .usp-icon {
+            width: 16px;
+            height: 16px;
+            color: #367588;
+            flex-shrink: 0;
+        }
+
+        /* ======================================================
+           4. HERO
+           ====================================================== */
+        .hero {
+            text-align: center;
+            padding: 80px 60px 60px;
+        }
+
+        .hero .section-label {
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1A1A1A;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            color: #666;
+            font-weight: 400;
+            margin-bottom: 36px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: #1A1A1A;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 14px 40px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+            letter-spacing: 0.01em;
+        }
+
+        .btn-primary:hover {
+            background: #333;
+        }
+
+        .hero-products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 56px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-product-card {
+            background: #f8f8f8;
+            border-radius: 12px;
+            padding: 32px 20px 24px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .hero-product-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero-product-card img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 0 auto 16px;
+        }
+
+        .hero-product-name {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .hero-product-price {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* ======================================================
+           5. CATEGORIES
+           ====================================================== */
+        .categories {
+            padding: 80px 60px;
+        }
+
+        .categories .section-label {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .category-card {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .category-card img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 14px;
+            transition: transform 0.2s;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.02);
+        }
+
+        .category-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .category-count {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* ======================================================
+           6. BEST SELLERS
+           ====================================================== */
+        .best-sellers {
+            padding: 80px 60px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .best-sellers .section-label {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .product-card {
+            text-align: center;
+        }
+
+        .product-card-image {
+            background: #f8f8f8;
+            border-radius: 12px;
+            padding: 40px 24px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: background 0.2s;
+        }
+
+        .product-card:hover .product-card-image {
+            background: #f2f2f2;
+        }
+
+        .product-card-image img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin: 0 auto;
+            border-radius: 6px;
+        }
+
+        .product-card-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .product-card-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .product-card-rating {
+            font-size: 14px;
+            color: #1A1A1A;
+            margin-bottom: 10px;
+        }
+
+        .product-card-rating .stars {
+            color: #f5a623;
+            letter-spacing: 1px;
+        }
+
+        .product-card-rating .count {
+            color: #999;
+            font-size: 13px;
+        }
+
+        .product-card-price {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            border: 1.5px solid #367588;
+            color: #367588;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 28px;
+            border-radius: 50px;
+            cursor: pointer;
+            background: transparent;
+            transition: all 0.2s;
+        }
+
+        .btn-outline:hover {
+            background: #367588;
+            color: #fff;
+        }
+
+        /* ======================================================
+           7. WHY MASTERMEDI
+           ====================================================== */
+        .why-section {
+            background: #f8f8f8;
+            padding: 80px 60px;
+        }
+
+        .why-section .section-label {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 0 16px;
+        }
+
+        .why-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #e8f4f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .why-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: #367588;
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .why-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .why-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.65;
+        }
+
+        /* ======================================================
+           8. ROUTINE BUILDER
+           ====================================================== */
+        .routine-section {
+            padding: 80px 60px;
+        }
+
+        .routine-section .section-label {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .routine-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .routine-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 28px;
+            background: #f8f8f8;
+            border-radius: 12px;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #367588;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .step-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .step-action {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .step-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .option-pill {
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 50px;
+            border: 1px solid #ddd;
+            background: #fff;
+            color: #1A1A1A;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .option-pill.active {
+            border-color: #367588;
+            background: #e8f4f3;
+            color: #367588;
+        }
+
+        .routine-summary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            padding: 24px 40px;
+            background: #f8f8f8;
+            border-radius: 12px;
+        }
+
+        .routine-total-label {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .routine-price {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .routine-savings {
+            font-size: 14px;
+            color: #367588;
+            font-weight: 600;
+        }
+
+        /* ======================================================
+           9. BRAND STORY
+           ====================================================== */
+        .brand-story {
+            padding: 80px 60px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .story-image img {
+            width: 100%;
+            border-radius: 12px;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+
+        .story-content .section-label {
+            margin-bottom: 16px;
+        }
+
+        .story-title {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .story-text {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .link-teal {
+            color: #367588;
+            font-size: 15px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            transition: gap 0.2s;
+        }
+
+        .link-teal:hover {
+            gap: 10px;
+        }
+
+        /* ======================================================
+           10. CERTIFICATIONS
+           ====================================================== */
+        .certifications {
+            padding: 80px 60px;
+        }
+
+        .certifications .section-label {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .cert-card {
+            text-align: center;
+            padding: 0 16px;
+        }
+
+        .cert-badge {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #e8f4f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .cert-badge svg {
+            width: 28px;
+            height: 28px;
+            stroke: #367588;
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .cert-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .cert-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.65;
+        }
+
+        /* ======================================================
+           11. REVIEWS
+           ====================================================== */
+        .reviews-section {
+            background: #f8f8f8;
+            padding: 80px 60px;
+        }
+
+        .reviews-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .reviews-big-score {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .reviews-stars {
+            font-size: 24px;
+            color: #f5a623;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .reviews-count {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .review-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .review-stars {
+            font-size: 14px;
+            color: #f5a623;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+        }
+
+        .review-text {
+            font-size: 15px;
+            color: #1A1A1A;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .review-author {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .review-verified {
+            font-size: 12px;
+            color: #367588;
+            font-weight: 500;
+        }
+
+        /* ======================================================
+           12. NEWSLETTER + FOOTER
+           ====================================================== */
+        .newsletter {
+            padding: 80px 60px;
+            text-align: center;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .newsletter-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.01em;
+        }
+
+        .newsletter-sub {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 28px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 14px 20px;
+            border: 1.5px solid #ddd;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .newsletter-input:focus {
+            border-color: #367588;
+        }
+
+        .newsletter-input::placeholder {
+            color: #999;
+        }
+
+        .btn-subscribe {
+            display: inline-block;
+            background: #1A1A1A;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-subscribe:hover {
+            background: #333;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1A1A1A;
+            color: #fff;
+            padding: 60px 60px 32px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .footer-logo {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            font-size: 13px;
+            color: #999;
+            line-height: 1.6;
+            max-width: 240px;
+        }
+
+        .footer-col h4 {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+
+        .footer-col a {
+            display: block;
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 10px;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-copyright {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .footer-badges {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .footer-badge {
+            font-size: 11px;
+            color: #666;
+            padding: 4px 10px;
+            border: 1px solid #333;
+            border-radius: 4px;
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .payment-icon {
+            width: 36px;
+            height: 24px;
+            background: #333;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            color: #999;
+            font-weight: 600;
+        }
+
+        /* ======================================================
+           DISCLAIMER
+           ====================================================== */
+        .mockup-disclaimer {
+            text-align: center;
+            padding: 32px 20px 48px;
+            font-size: 12px;
+            color: #999;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         MOCKUP LABEL
+         ============================================================ -->
+    <div class="mockup-label">
+        MasterMedi &mdash; Homepage Mockup B: Clean Clinical &bull; Prepared by Growisto &bull; Feb 2026
+    </div>
+
+    <!-- ============================================================
+         BROWSER CHROME
+         ============================================================ -->
+    <div class="browser-chrome">
+        <div class="browser-bar">
+            <div class="browser-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="browser-url">mastermedi.co</div>
+        </div>
+
+        <!-- ============================================================
+             MOCKUP CONTAINER
+             ============================================================ -->
+        <div class="mockup-container">
+
+            <!-- 1. ANNOUNCEMENT BAR -->
+            <div class="announcement-bar">
+                Free US Shipping Over $35 &nbsp;&bull;&nbsp; FDA Registered &nbsp;&bull;&nbsp; 5M+ Units Sold
+            </div>
+
+            <!-- 2. HEADER -->
+            <header class="header">
+                <div class="header-logo">MasterMedi</div>
+                <nav class="header-nav">
+                    <a href="#">Shop All</a>
+                    <a href="#">Tongue Scrapers</a>
+                    <a href="#">Toothpaste</a>
+                    <a href="#">Oil Pulling</a>
+                    <a href="#">Our Story</a>
+                </nav>
+                <div class="header-icons">
+                    <!-- Search -->
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+                    <!-- Heart -->
+                    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <!-- Cart -->
+                    <div class="cart-icon-wrap">
+                        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        <span class="cart-count">2</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 3. USP BAR -->
+            <div class="usp-bar">
+                <span class="usp-item">
+                    <svg class="usp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    4.8&#9733; Rating
+                </span>
+                <span class="usp-item">
+                    <svg class="usp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>
+                    FDA Registered
+                </span>
+                <span class="usp-item">
+                    <svg class="usp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6"/><path d="M23 11h-6"/></svg>
+                    Dentist Recommended
+                </span>
+                <span class="usp-item">
+                    <svg class="usp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Medical Grade
+                </span>
+                <span class="usp-item">
+                    <svg class="usp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    5M+ Sold
+                </span>
+            </div>
+
+            <!-- 4. HERO -->
+            <section class="hero">
+                <div class="section-label">Complete Oral Care</div>
+                <h1>Your Complete Oral<br>Care System.</h1>
+                <p class="hero-subtitle">FDA Registered &nbsp;&bull;&nbsp; Ayurvedic &nbsp;&bull;&nbsp; Clinically Tested</p>
+                <a href="#" class="btn-primary">Shop the Routine</a>
+
+                <div class="hero-products">
+                    <div class="hero-product-card">
+                        <img src="images/scraper-with-props.jpeg" alt="SS Tongue Scraper">
+                        <div class="hero-product-name">SS Tongue Scraper</div>
+                        <div class="hero-product-price">$9.99</div>
+                    </div>
+                    <div class="hero-product-card">
+                        <img src="images/toothpaste-cloud-mint.jpeg" alt="Cloud Mint Toothpaste">
+                        <div class="hero-product-name">Cloud Mint Toothpaste</div>
+                        <div class="hero-product-price">$12.99</div>
+                    </div>
+                    <div class="hero-product-card">
+                        <img src="images/tongue-scraper-box.jpeg" alt="Heritage Copper Scraper">
+                        <div class="hero-product-name">Heritage Copper Scraper</div>
+                        <div class="hero-product-price">$11.99</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. CATEGORIES -->
+            <section class="categories">
+                <div class="section-label">Shop by Category</div>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <img src="images/scraper-with-props.jpeg" alt="Tongue Scrapers">
+                        <div class="category-name">Tongue Scrapers</div>
+                        <div class="category-count">8 products</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="images/toothpaste-cloud-mint.jpeg" alt="Toothpaste">
+                        <div class="category-name">Toothpaste</div>
+                        <div class="category-count">5 products</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="images/lifestyle-flatlay.jpeg" alt="Oil Pulling">
+                        <div class="category-name">Oil Pulling</div>
+                        <div class="category-count">4 products</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="images/tongue-scraper-box.jpeg" alt="Bundles">
+                        <div class="category-name">Bundles</div>
+                        <div class="category-count">6 products</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. BEST SELLERS -->
+            <section class="best-sellers">
+                <div class="section-label">Best Sellers</div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <img src="images/scraper-with-props.jpeg" alt="SS Tongue Scraper">
+                        </div>
+                        <div class="product-card-name">SS Tongue Scraper</div>
+                        <div class="product-card-desc">Medical-grade stainless steel. Ergonomic grip.</div>
+                        <div class="product-card-rating">
+                            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="count">(2,140 reviews)</span>
+                        </div>
+                        <div class="product-card-price">$9.99</div>
+                        <button class="btn-outline">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <img src="images/toothpaste-cloud-mint.jpeg" alt="Cloud Mint Toothpaste">
+                        </div>
+                        <div class="product-card-name">Cloud Mint Toothpaste</div>
+                        <div class="product-card-desc">Fluoride-free. SLS-free. Fresh cloud mint.</div>
+                        <div class="product-card-rating">
+                            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="count">(870 reviews)</span>
+                        </div>
+                        <div class="product-card-price">$12.99</div>
+                        <button class="btn-outline">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <img src="images/tongue-scraper-box.jpeg" alt="Heritage Copper Scraper">
+                        </div>
+                        <div class="product-card-name">Heritage Copper Scraper</div>
+                        <div class="product-card-desc">Antimicrobial copper. Ayurvedic tradition.</div>
+                        <div class="product-card-rating">
+                            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="count">(1,190 reviews)</span>
+                        </div>
+                        <div class="product-card-price">$11.99</div>
+                        <button class="btn-outline">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. WHY MASTERMEDI -->
+            <section class="why-section">
+                <div class="section-label">The MasterMedi Difference</div>
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="why-title">Medical-Grade Materials</div>
+                        <div class="why-desc">Every product uses surgical-grade stainless steel or pure antimicrobial copper. No cheap alloys, no coatings that wear off.</div>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                        </div>
+                        <div class="why-title">Clinically Backed</div>
+                        <div class="why-desc">Formulations developed with dental professionals. Toothpaste and oils tested for efficacy, not just safety. Real results, real science.</div>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <div class="why-title">Heritage Craftsmanship</div>
+                        <div class="why-desc">Rooted in Ayurvedic oral care traditions refined over millennia. We blend ancient wisdom with modern manufacturing standards.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. ROUTINE BUILDER -->
+            <section class="routine-section">
+                <div class="section-label">Build Your Routine</div>
+                <div class="routine-steps">
+                    <div class="routine-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <img class="step-image" src="images/scraper-with-props.jpeg" alt="Step 1: Scrape">
+                            <div class="step-name">Scrape</div>
+                            <div class="step-action">Remove bacteria &amp; toxins</div>
+                            <div class="step-options">
+                                <span class="option-pill active">Stainless Steel</span>
+                                <span class="option-pill">Copper</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="routine-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <img class="step-image" src="images/toothpaste-cloud-mint.jpeg" alt="Step 2: Brush">
+                            <div class="step-name">Brush</div>
+                            <div class="step-action">Clean &amp; protect enamel</div>
+                            <div class="step-options">
+                                <span class="option-pill active">Cloud Mint</span>
+                                <span class="option-pill">Charcoal</span>
+                                <span class="option-pill">Cinnamon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="routine-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <img class="step-image" src="images/lifestyle-flatlay.jpeg" alt="Step 3: Pull">
+                            <div class="step-name">Pull</div>
+                            <div class="step-action">Detoxify &amp; freshen breath</div>
+                            <div class="step-options">
+                                <span class="option-pill active">Coconut Oil</span>
+                                <span class="option-pill">Sesame Oil</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="routine-summary">
+                    <span class="routine-total-label">Your Custom Routine</span>
+                    <span class="routine-price">$29.97</span>
+                    <span class="routine-savings">Save 29%</span>
+                    <a href="#" class="btn-primary" style="margin-left: 16px;">Add Routine to Cart</a>
+                </div>
+            </section>
+
+            <!-- 9. BRAND STORY -->
+            <section class="brand-story">
+                <div class="story-grid">
+                    <div class="story-image">
+                        <img src="images/lifestyle-flatlay.jpeg" alt="MasterMedi Products">
+                    </div>
+                    <div class="story-content">
+                        <div class="section-label">Our Story</div>
+                        <h2 class="story-title">A Decade of Excellence</h2>
+                        <p class="story-text">Founded in 2015, MasterMedi began with a simple observation: most oral care products were either clinically effective or rooted in natural tradition, but rarely both. We set out to bridge that gap.</p>
+                        <p class="story-text">Today, with over 5 million units sold across 30+ countries, we've built a brand trusted by dentists and loved by customers. Every product reflects our commitment to medical-grade quality and Ayurvedic heritage.</p>
+                        <a href="#" class="link-teal">Read Our Story &rarr;</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. CERTIFICATIONS -->
+            <section class="certifications">
+                <div class="section-label">Trusted &amp; Certified</div>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </div>
+                        <div class="cert-title">FDA Registered</div>
+                        <div class="cert-desc">All MasterMedi products are manufactured in FDA-registered facilities, meeting the highest standards for safety and quality control.</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M3 21h18"/><path d="M8.5 13L6 21"/><path d="M15.5 13L18 21"/></svg>
+                        </div>
+                        <div class="cert-title">ADA Recognized</div>
+                        <div class="cert-desc">Our toothpaste formulations carry the American Dental Association Seal of Acceptance for proven efficacy and safety.</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <div class="cert-title">Clinical Studies</div>
+                        <div class="cert-desc">Independent clinical trials validate the effectiveness of our tongue scrapers in reducing oral bacteria by up to 75% in a single use.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. REVIEWS -->
+            <section class="reviews-section">
+                <div class="reviews-header">
+                    <div class="reviews-big-score">4.8</div>
+                    <div class="reviews-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="reviews-count">4,200+ verified reviews</div>
+                </div>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="review-text">"I've tried every tongue scraper on Amazon. This is the only one that doesn't bend, doesn't gag me, and actually works. Worth every penny."</div>
+                        <div class="review-author">Sarah M.</div>
+                        <div class="review-verified">&#10003; Verified Buyer</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="review-text">"My dentist actually recommended this brand. The toothpaste is incredible and the copper scraper feels so premium. Obsessed with my morning routine now."</div>
+                        <div class="review-author">James K.</div>
+                        <div class="review-verified">&#10003; Verified Buyer</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="review-text">"Bought the bundle for my whole family. The quality is restaurant-grade (if that's a thing for oral care). Incredible packaging too."</div>
+                        <div class="review-author">Priya R.</div>
+                        <div class="review-verified">&#10003; Verified Buyer</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. NEWSLETTER + FOOTER -->
+            <section class="newsletter">
+                <h2 class="newsletter-title">Join the MasterMedi Family</h2>
+                <p class="newsletter-sub">Get 10% off your first order plus tips for a healthier smile.</p>
+                <div class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email">
+                    <button class="btn-subscribe">Subscribe</button>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <div class="footer-logo">MasterMedi</div>
+                        <p>Medical-grade oral care rooted in Ayurvedic tradition. FDA registered. Clinically tested. Trusted by millions.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Shop</h4>
+                        <a href="#">Tongue Scrapers</a>
+                        <a href="#">Toothpaste</a>
+                        <a href="#">Oil Pulling</a>
+                        <a href="#">Bundles</a>
+                        <a href="#">Gift Sets</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Learn</h4>
+                        <a href="#">Our Story</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Clinical Studies</a>
+                        <a href="#">Oral Care Guide</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="#">Contact Us</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Shipping Info</a>
+                        <a href="#">Returns</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Refund Policy</a>
+                        <a href="#">Accessibility</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-copyright">&copy; 2026 MasterMedi. All rights reserved.</div>
+                    <div class="footer-badges">
+                        <span class="footer-badge">FDA</span>
+                        <span class="footer-badge">ADA</span>
+                        <span class="footer-badge">GMP</span>
+                    </div>
+                    <div class="payment-icons">
+                        <span class="payment-icon">VISA</span>
+                        <span class="payment-icon">MC</span>
+                        <span class="payment-icon">AMEX</span>
+                        <span class="payment-icon">PYPL</span>
+                        <span class="payment-icon">SHOP</span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- End .mockup-container -->
+
+    </div>
+    <!-- End .browser-chrome -->
+
+    <!-- ============================================================
+         DISCLAIMER
+         ============================================================ -->
+    <div class="mockup-disclaimer">
+        Mockup Disclaimer: Direction B &mdash; Clean Clinical style. Same content, different visual treatment.
+    </div>
+
+</body>
+</html>

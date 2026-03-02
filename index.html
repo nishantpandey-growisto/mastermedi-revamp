@@ -224,9 +224,9 @@
             <thead><tr><th>#</th><th>Ask</th><th>Status</th></tr></thead>
             <tbody>
               <tr><td>1</td><td><strong>Proposed architecture</strong> &mdash; Homepage, Regimen Hub, Regimen pages, Collection pages, PDP template</td><td><span class="impl-badge badge-inbuilt">See Our Approach</span></td></tr>
-              <tr><td>2</td><td><strong>2&ndash;3 layout directions</strong> that balance Shopify practicality with Marvis-like vibe</td><td><span class="impl-badge badge-custom">In Progress</span></td></tr>
+              <tr><td>2</td><td><strong>2&ndash;3 layout directions</strong> that balance Shopify practicality with Marvis-like vibe</td><td><span class="impl-badge badge-inbuilt">See Our Approach</span></td></tr>
               <tr><td>3</td><td><strong>Performance plan</strong> &mdash; Core Web Vitals, limiting apps/scripts, media strategy</td><td><span class="impl-badge badge-inbuilt">See Our Approach</span></td></tr>
-              <tr><td>4</td><td><strong>5&ndash;10 reference websites</strong> (Apple UX + Regimen shopping + Premium playful copy)</td><td><span class="impl-badge badge-custom">In Progress</span></td></tr>
+              <tr><td>4</td><td><strong>5&ndash;10 reference websites</strong> (Apple UX + Regimen shopping + Premium playful copy)</td><td><span class="impl-badge badge-inbuilt">See Our Approach</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -385,21 +385,22 @@
 
         <div class="feature-table-wrap">
           <table class="feature-table">
-            <thead><tr><th>Component</th><th>Launch</th><th>Phase 2</th><th>Hours</th></tr></thead>
+            <thead><tr><th>Component</th><th>Status</th><th>Notes</th></tr></thead>
             <tbody>
-              <tr><td><strong>Routine Builder</strong> (3-step guided selector)</td><td><span class="impl-badge badge-inbuilt">&#10003; Launch</span></td><td></td><td>24-32 hrs <em>(already in scope)</em></td></tr>
-              <tr><td><strong>"Oral Regimen" nav menu</strong></td><td><span class="impl-badge badge-inbuilt">&#10003; Launch</span></td><td></td><td>+2 hrs</td></tr>
-              <tr><td><strong>Regimen badges</strong> on product cards + PDP</td><td><span class="impl-badge badge-inbuilt">&#10003; Launch</span></td><td></td><td>+4-6 hrs</td></tr>
-              <tr><td><strong>Regimen Hub page</strong> (5-step overview)</td><td><span class="impl-badge badge-custom">Scope TBD</span></td><td></td><td>+8-12 hrs</td></tr>
-              <tr><td><strong>2 Step landing pages</strong> (Steps 2 &amp; 3)</td><td><span class="impl-badge badge-custom">Scope TBD</span></td><td></td><td>+12-16 hrs</td></tr>
-              <tr><td><strong>3 remaining Step pages</strong> (Steps 1, 4, 5)</td><td></td><td><span class="impl-badge badge-phase2">Phase 2</span></td><td>When products launch</td></tr>
-              <tr><td><strong>Full quiz funnel</strong> (The Ordinary / FoB level)</td><td></td><td><span class="impl-badge badge-phase2">Phase 2</span></td><td>When catalog grows to 25+ SKUs</td></tr>
+              <tr><td><strong>Routine Builder</strong> (guided selector &mdash; "choose goal &rarr; choose products &rarr; add routine to cart")</td><td><span class="impl-badge badge-inbuilt">&#10003; Launch</span></td><td>Core conversion driver &mdash; turns browsers into routine buyers</td></tr>
+              <tr><td><strong>"Oral Regimen" nav menu</strong></td><td><span class="impl-badge badge-inbuilt">&#10003; Launch</span></td><td>Dedicated nav entry exposing the 5-step system</td></tr>
+              <tr><td><strong>Regimen badges</strong> on product cards + PDP</td><td><span class="impl-badge badge-inbuilt">&#10003; Launch</span></td><td>"Step 2 of 5" context on every product touchpoint</td></tr>
+              <tr><td><strong>Regimen Hub page</strong> (/pages/oral-regimen)</td><td><span class="impl-badge badge-inbuilt">&#10003; Launch</span></td><td>5-step visual overview &mdash; the anchor page for all regimen navigation</td></tr>
+              <tr><td><strong>Step 2: Tongue Scraping</strong> landing page</td><td><span class="impl-badge badge-inbuilt">&#10003; Launch</span></td><td>Education + products for this step</td></tr>
+              <tr><td><strong>Step 3: Paste &amp; Brush</strong> landing page</td><td><span class="impl-badge badge-inbuilt">&#10003; Launch</span></td><td>Education + products for this step</td></tr>
+              <tr><td><strong>Steps 1, 4, 5</strong> landing pages</td><td><span class="impl-badge badge-inbuilt">&#10003; Launch</span></td><td>"Coming Soon" pages with educational content &mdash; ready for products when they launch</td></tr>
+              <tr><td><strong>Quiz funnel</strong> (goal-based product recommender)</td><td><span class="impl-badge badge-inbuilt">&#10003; Launch</span></td><td>Simplified for current catalog (10 SKUs) &mdash; upgradeable as catalog grows</td></tr>
             </tbody>
           </table>
         </div>
 
         <div class="callout mt-16">
-          <strong>Why not a full quiz now?</strong> The Ordinary's Regimen Builder and Function of Beauty's Hair Quiz serve catalogs of 50-200+ products. With 10 products, a multi-step quiz with branching logic would feel over-engineered. Our 3-step guided selector ("choose goal → choose scraper → choose toothpaste → add routine to cart") is the right tool for the current catalog. We'll upgrade to a quiz when the catalog grows.
+          <strong>Smart scaling:</strong> The quiz and "Coming Soon" step pages are built with the same reusable Shopify section templates. When new products launch (oil pulling, floss, mouthwash), activating a step page is a 30-minute content update &mdash; no developer needed.
         </div>
       </div>
 
@@ -500,39 +501,644 @@
 
       <!-- ── Overall Scope Summary ── -->
       <div class="section-card">
-        <h2 class="section-title">5. Scope Impact Summary</h2>
+        <h2 class="section-title">5. Unified Project Scope</h2>
 
-        <div class="metric-grid col-3">
-          <div class="metric-card" style="border-left:4px solid #367588">
-            <div class="metric-value" style="font-size:1.3rem;">~70%</div>
-            <div class="metric-label">Already in plan</div>
-          </div>
-          <div class="metric-card" style="border-left:4px solid #C4953A">
-            <div class="metric-value" style="font-size:1.3rem;">+32-46 hrs</div>
-            <div class="metric-label">Regimen expansion (if added)</div>
-          </div>
-          <div class="metric-card" style="border-left:4px solid #7A9A7A">
-            <div class="metric-value" style="font-size:1.3rem;">Phase 2</div>
-            <div class="metric-label">Quiz funnel + 3 step pages</div>
-          </div>
-        </div>
+        <p style="margin-bottom:16px;">Everything below is included in the launch plan &mdash; one project, one timeline, one deliverable.</p>
 
-        <div class="feature-table-wrap mt-16">
+        <div class="feature-table-wrap">
           <table class="feature-table">
-            <thead><tr><th>Category</th><th>Items</th><th>Verdict</th></tr></thead>
+            <thead><tr><th>Area</th><th>What's Included</th><th>Status</th></tr></thead>
             <tbody>
-              <tr style="background:#f0f7f4;"><td><strong>No scope change</strong></td><td>Speed plan, design system, PDP structure, routine builder, metafields, micro-interactions</td><td><span class="impl-badge badge-inbuilt">&#10003; Covered</span></td></tr>
-              <tr style="background:#f0f7f4;"><td><strong>Minor additions</strong> (absorbable)</td><td>Regimen badges, nav restructure, PDP routine context badge</td><td><span class="impl-badge badge-inbuilt">+6-8 hrs</span></td></tr>
-              <tr style="background:#fef7ed;"><td><strong>Scope discussion</strong></td><td>Regimen Hub page, 2 Step landing pages, reference website doc</td><td><span class="impl-badge badge-custom">+26-38 hrs</span></td></tr>
-              <tr style="background:#fff5f5;"><td><strong>Not recommended now</strong></td><td>Full quiz funnel, 3 empty-step pages, parallax animations</td><td><span class="impl-badge badge-phase2">Phase 2</span></td></tr>
-              <tr><td><strong>Client responsibility</strong></td><td>All copywriting (Marvis-style headlines, microcopy, descriptions, CTAs), brand assets (rebrand in progress)</td><td><span class="impl-badge badge-custom">Your team</span></td></tr>
+              <tr style="background:#f0f7f4;"><td><strong>Store Foundation</strong></td><td>Shapes theme setup, design system, responsive layouts, performance optimization, Core Web Vitals targets</td><td><span class="impl-badge badge-inbuilt">&#10003; In Plan</span></td></tr>
+              <tr style="background:#f0f7f4;"><td><strong>Homepage</strong></td><td>Hero, routine teaser, best sellers, trust strip, brand story, reviews, newsletter &mdash; 12 sections total</td><td><span class="impl-badge badge-inbuilt">&#10003; In Plan</span></td></tr>
+              <tr style="background:#f0f7f4;"><td><strong>Product Pages (PDP)</strong></td><td>Metafield-driven template with 10 sections: gallery, variant selector, routine badge, clinical studies, ingredients, comparison, reviews, FAQ, cross-sell, recently viewed</td><td><span class="impl-badge badge-inbuilt">&#10003; In Plan</span></td></tr>
+              <tr style="background:#f0f7f4;"><td><strong>Collection Pages</strong></td><td>Filtered grids, regimen context, quick-add, sort/filter</td><td><span class="impl-badge badge-inbuilt">&#10003; In Plan</span></td></tr>
+              <tr style="background:#f0f7f4;"><td><strong>Regimen Hub</strong></td><td>/pages/oral-regimen &mdash; 5-step visual overview, step cards, bundle CTA, educational content</td><td><span class="impl-badge badge-inbuilt">&#10003; In Plan</span></td></tr>
+              <tr style="background:#f0f7f4;"><td><strong>5 Step Landing Pages</strong></td><td>Steps 2 &amp; 3 fully active with products. Steps 1, 4, 5 as "Coming Soon" with educational content &mdash; product-ready when SKUs launch</td><td><span class="impl-badge badge-inbuilt">&#10003; In Plan</span></td></tr>
+              <tr style="background:#f0f7f4;"><td><strong>Routine Builder / Quiz</strong></td><td>Goal-based product recommender (&ldquo;What's your oral care goal?&rdquo; &rarr; personalized routine &rarr; add to cart). Designed for current 10-SKU catalog, upgradeable as catalog grows.</td><td><span class="impl-badge badge-inbuilt">&#10003; In Plan</span></td></tr>
+              <tr style="background:#f0f7f4;"><td><strong>Regimen Badges &amp; Nav</strong></td><td>"Step 2 of 5" badges on product cards + PDP, dedicated "Oral Regimen" nav menu</td><td><span class="impl-badge badge-inbuilt">&#10003; In Plan</span></td></tr>
+              <tr style="background:#f0f7f4;"><td><strong>Cart &amp; Checkout</strong></td><td>Slide-out cart, cross-sell, free shipping bar, trust badges, express checkout</td><td><span class="impl-badge badge-inbuilt">&#10003; In Plan</span></td></tr>
+              <tr style="background:#f0f7f4;"><td><strong>Static Pages</strong></td><td>About Us, Contact, FAQ, Shipping &amp; Returns, Our Story</td><td><span class="impl-badge badge-inbuilt">&#10003; In Plan</span></td></tr>
+              <tr style="background:#f0f7f4;"><td><strong>Analytics &amp; Tracking</strong></td><td>GA4 ecommerce events, Meta Pixel, GTM setup</td><td><span class="impl-badge badge-inbuilt">&#10003; In Plan</span></td></tr>
+              <tr style="background:#f0f7f4;"><td><strong>App Integrations</strong></td><td>Reviews (Judge.me), Email (Klaviyo), Search (Shopify native), Upsell &mdash; 8-10 apps total within 400KB JS budget</td><td><span class="impl-badge badge-inbuilt">&#10003; In Plan</span></td></tr>
+              <tr><td><strong>Client Responsibility</strong></td><td>All copywriting (Marvis-style headlines, microcopy, descriptions, CTAs), brand assets (rebrand in progress), product photography</td><td><span class="impl-badge badge-custom">Your Team</span></td></tr>
             </tbody>
           </table>
         </div>
 
         <div class="callout mt-16">
-          <strong>Next step:</strong> Let's discuss on a call whether the Regimen Hub + Step pages should go into this project scope (adjusting timeline + commercials) or be handled as a fast follow-up after launch. Either way works &mdash; we just need to align.
+          <strong>Built to scale:</strong> Every page template uses reusable Shopify sections. When new products launch, activating a "Coming Soon" step page is a 30-minute content update in Shopify Editor &mdash; no developer needed. The quiz funnel auto-adapts as products are added.
         </div>
+      </div>
+
+      <!-- ── Reference Websites ── -->
+      <div class="section-card">
+        <h2 class="section-title">6. Reference Websites &mdash; What We&rsquo;re Drawing From</h2>
+        <p class="text-muted mb-16">8 Shopify stores that match the three pillars Anshul described: <strong>Apple-like guided UX</strong>, <strong>routine/regimen-led shopping</strong>, and <strong>premium + playful copy</strong>. Every store below runs on Shopify &mdash; what they do is replicable on Shapes/Pipeline.</p>
+
+        <div class="callout info mb-24">
+          <strong>How to read this section:</strong> Each reference is tagged with the specific element we&rsquo;ll adapt for MasterMedi. &ldquo;What we&rsquo;ll take&rdquo; = concrete features going into the build. &ldquo;What we won&rsquo;t&rdquo; = elements that don&rsquo;t fit MasterMedi&rsquo;s catalog size, brand tone, or budget.
+        </div>
+
+        <!-- Ref 1: Quip -->
+        <div class="section-card" style="margin:0 0 20px 0;border-left:4px solid #367588;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+            <div>
+              <h3 style="margin-bottom:2px;">1. Quip &mdash; getquip.com</h3>
+              <p class="text-muted" style="font-size:12px;margin:0;">Shopify Plus &bull; Oral Care &bull; US-based</p>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="impl-badge badge-inbuilt">Guided UX</span>
+              <span class="impl-badge badge-inbuilt">Regimen</span>
+              <span class="impl-badge badge-custom">Copy System</span>
+            </div>
+          </div>
+          <p style="margin:12px 0 8px;font-size:13px;"><strong>Why it matters:</strong> Closest parallel to MasterMedi &mdash; oral care brand that turned a commodity (toothbrush + paste) into a premium subscription routine. Their &ldquo;Build Your Set&rdquo; configurator is the gold standard for guided product selection.</p>
+          <div class="feature-table-wrap mt-8">
+            <table class="feature-table" style="font-size:12px;">
+              <thead><tr><th style="width:50%">What we&rsquo;ll adapt for MasterMedi</th><th style="width:50%">What we won&rsquo;t replicate</th></tr></thead>
+              <tbody>
+                <tr><td>&bull; Step-by-step &ldquo;Build Your Routine&rdquo; flow on homepage<br>&bull; Clean product cards with one clear CTA per card<br>&bull; &ldquo;How it works&rdquo; 3-step visual sequence<br>&bull; Subscription-first pricing display</td>
+                <td>&bull; Full bundle configurator (too complex for 10 SKUs)<br>&bull; Refill cadence selector (MasterMedi doesn&rsquo;t ship refills yet)<br>&bull; Heavy JS quiz engine (budget; Phase 2 candidate)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ref 2: Hismile -->
+        <div class="section-card" style="margin:0 0 20px 0;border-left:4px solid #C06B3A;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+            <div>
+              <h3 style="margin-bottom:2px;">2. Hismile &mdash; hismileteeth.com</h3>
+              <p class="text-muted" style="font-size:12px;margin:0;">Shopify &bull; Oral Care &bull; AU-based, global</p>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="impl-badge badge-custom">Guided UX</span>
+              <span class="impl-badge badge-inbuilt">Regimen</span>
+              <span class="impl-badge badge-inbuilt">Copy System</span>
+            </div>
+          </div>
+          <p style="margin:12px 0 8px;font-size:13px;"><strong>Why it matters:</strong> Social-first oral care brand (huge on TikTok, like MasterMedi) that drives 80%+ of orders as bundles. Proves that a small-catalog oral care brand can command premium pricing through playful, bold copy and bundle-first architecture.</p>
+          <div class="feature-table-wrap mt-8">
+            <table class="feature-table" style="font-size:12px;">
+              <thead><tr><th style="width:50%">What we&rsquo;ll adapt for MasterMedi</th><th style="width:50%">What we won&rsquo;t replicate</th></tr></thead>
+              <tbody>
+                <tr><td>&bull; Bundle-first homepage layout (kits before individual products)<br>&bull; Bold color-blocked sections with product-color accents<br>&bull; &ldquo;Shop by Goal&rdquo; category navigation<br>&bull; TikTok/social proof integration in hero</td>
+                <td>&bull; Massive influencer gallery (MasterMedi&rsquo;s social presence is earlier-stage)<br>&bull; Flavour-driven product matrix (MasterMedi&rsquo;s range is function-driven)<br>&bull; Pop-up sale countdown timers (doesn&rsquo;t fit heritage premium tone)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ref 3: Bite -->
+        <div class="section-card" style="margin:0 0 20px 0;border-left:4px solid #7A9A7A;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+            <div>
+              <h3 style="margin-bottom:2px;">3. Bite &mdash; bitetoothpastebits.com</h3>
+              <p class="text-muted" style="font-size:12px;margin:0;">Shopify &bull; Oral Care &bull; US-based</p>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="impl-badge badge-inbuilt">Guided UX</span>
+              <span class="impl-badge badge-inbuilt">Regimen</span>
+              <span class="impl-badge badge-inbuilt">Copy System</span>
+            </div>
+          </div>
+          <p style="margin:12px 0 8px;font-size:13px;"><strong>Why it matters:</strong> Premium oral care with a sustainability story &mdash; proves that &ldquo;ingredient-first&rdquo; storytelling converts in oral care. Their PDP is a masterclass in trust-building: clinical proof + ingredient transparency + playful copy, all on one page.</p>
+          <div class="feature-table-wrap mt-8">
+            <table class="feature-table" style="font-size:12px;">
+              <thead><tr><th style="width:50%">What we&rsquo;ll adapt for MasterMedi</th><th style="width:50%">What we won&rsquo;t replicate</th></tr></thead>
+              <tbody>
+                <tr><td>&bull; Ingredient transparency section with iconography on PDP<br>&bull; &ldquo;What&rsquo;s NOT in it&rdquo; comparison (fits Ayurvedic positioning)<br>&bull; Subscription as default option with easy toggle<br>&bull; Clean, confident micro-copy (&ldquo;plastic-free, dentist-approved&rdquo; style)</td>
+                <td>&bull; Sustainability as primary brand pillar (MasterMedi leads with heritage/Ayurveda)<br>&bull; Minimal product photography (MasterMedi&rsquo;s gold-foil packaging needs to shine)<br>&bull; Carbon-neutral shipping badge (not relevant)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ref 4: SNOW -->
+        <div class="section-card" style="margin:0 0 20px 0;border-left:4px solid #1a1a2e;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+            <div>
+              <h3 style="margin-bottom:2px;">4. SNOW &mdash; trysnow.com</h3>
+              <p class="text-muted" style="font-size:12px;margin:0;">Shopify &bull; Oral Care / Whitening &bull; US-based</p>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="impl-badge badge-inbuilt">Guided UX</span>
+              <span class="impl-badge badge-custom">Regimen</span>
+              <span class="impl-badge badge-inbuilt">Copy System</span>
+            </div>
+          </div>
+          <p style="margin:12px 0 8px;font-size:13px;"><strong>Why it matters:</strong> Tech-forward oral care brand that commands $150+ price points. Demonstrates how clinical credibility + editorial product photography elevates perceived value. Their &ldquo;before/after&rdquo; social proof system is conversion gold.</p>
+          <div class="feature-table-wrap mt-8">
+            <table class="feature-table" style="font-size:12px;">
+              <thead><tr><th style="width:50%">What we&rsquo;ll adapt for MasterMedi</th><th style="width:50%">What we won&rsquo;t replicate</th></tr></thead>
+              <tbody>
+                <tr><td>&bull; Clinical credibility section (&ldquo;FDA registered, dentist-recommended&rdquo;)<br>&bull; Before/after photo gallery as social proof<br>&bull; Premium unboxing-style product photography layout<br>&bull; Celebrity/influencer trust strip</td>
+                <td>&bull; Dark/black theme (doesn&rsquo;t fit MasterMedi&rsquo;s warm palette)<br>&bull; Tech-gadget positioning (MasterMedi is Ayurvedic heritage)<br>&bull; Quiz-to-product recommendation engine (Phase 2)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ref 5: Humanrace -->
+        <div class="section-card" style="margin:0 0 20px 0;border-left:4px solid #C4953A;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+            <div>
+              <h3 style="margin-bottom:2px;">5. Humanrace &mdash; humanrace.com</h3>
+              <p class="text-muted" style="font-size:12px;margin:0;">Shopify &bull; Skincare/Bodycare &bull; US-based (Pharrell Williams)</p>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="impl-badge badge-inbuilt">Guided UX</span>
+              <span class="impl-badge badge-inbuilt">Regimen</span>
+              <span class="impl-badge badge-custom">Copy System</span>
+            </div>
+          </div>
+          <p style="margin:12px 0 8px;font-size:13px;"><strong>Why it matters:</strong> The best example of a 3-step routine system on Shopify. Their entire site architecture revolves around &ldquo;Step 1 &rarr; Step 2 &rarr; Step 3&rdquo; &mdash; exactly the mental model MasterMedi needs for its 5-step oral care routine (Scrape &rarr; Oil Pull &rarr; Brush &rarr; Floss &rarr; Rinse).</p>
+          <div class="feature-table-wrap mt-8">
+            <table class="feature-table" style="font-size:12px;">
+              <thead><tr><th style="width:50%">What we&rsquo;ll adapt for MasterMedi</th><th style="width:50%">What we won&rsquo;t replicate</th></tr></thead>
+              <tbody>
+                <tr><td>&bull; Step-numbered product navigation (Step 1, Step 2&hellip;)<br>&bull; &ldquo;The Routine&rdquo; as a dedicated page/collection<br>&bull; Minimal product cards with step context<br>&bull; Clean whitespace-heavy layout with product-first hero</td>
+                <td>&bull; Ultra-minimalist photography (MasterMedi&rsquo;s gold-foil packaging needs richer staging)<br>&bull; Celebrity founder narrative (different brand story)<br>&bull; Extremely limited product range (only 6 SKUs &mdash; MasterMedi will have ~16-20)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ref 6: Huel -->
+        <div class="section-card" style="margin:0 0 20px 0;border-left:4px solid #367588;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+            <div>
+              <h3 style="margin-bottom:2px;">6. Huel &mdash; huel.com</h3>
+              <p class="text-muted" style="font-size:12px;margin:0;">Shopify &bull; Nutrition/Health &bull; UK-based, global</p>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="impl-badge badge-inbuilt">Guided UX</span>
+              <span class="impl-badge badge-custom">Regimen</span>
+              <span class="impl-badge badge-inbuilt">Copy System</span>
+            </div>
+          </div>
+          <p style="margin:12px 0 8px;font-size:13px;"><strong>Why it matters:</strong> Goal-based navigation done right. Instead of browsing by product type, Huel lets you shop by goal (&ldquo;Lose weight&rdquo;, &ldquo;Build muscle&rdquo;, &ldquo;Save time&rdquo;). This maps directly to MasterMedi&rsquo;s opportunity: &ldquo;Whiter teeth&rdquo;, &ldquo;Fresher breath&rdquo;, &ldquo;Healthier gums&rdquo;, &ldquo;Complete routine&rdquo;.</p>
+          <div class="feature-table-wrap mt-8">
+            <table class="feature-table" style="font-size:12px;">
+              <thead><tr><th style="width:50%">What we&rsquo;ll adapt for MasterMedi</th><th style="width:50%">What we won&rsquo;t replicate</th></tr></thead>
+              <tbody>
+                <tr><td>&bull; Goal-based mega menu navigation<br>&bull; &ldquo;Not sure where to start?&rdquo; guided entry point<br>&bull; Nutritional comparison tables across products<br>&bull; Clean data-driven product pages with expandable specs</td>
+                <td>&bull; Complex subscription management portal (over-engineered for MasterMedi&rsquo;s size)<br>&bull; Heavy product matrix (50+ SKUs &mdash; MasterMedi has 10-20)<br>&bull; B2B/office ordering flow</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ref 7: Drunk Elephant -->
+        <div class="section-card" style="margin:0 0 20px 0;border-left:4px solid #e35d34;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+            <div>
+              <h3 style="margin-bottom:2px;">7. Drunk Elephant &mdash; drunkelephant.com</h3>
+              <p class="text-muted" style="font-size:12px;margin:0;">Shopify &bull; Skincare &bull; US-based (LVMH)</p>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="impl-badge badge-custom">Guided UX</span>
+              <span class="impl-badge badge-inbuilt">Regimen</span>
+              <span class="impl-badge badge-inbuilt">Copy System</span>
+            </div>
+          </div>
+          <p style="margin:12px 0 8px;font-size:13px;"><strong>Why it matters:</strong> The &ldquo;Smoothie&rdquo; routine builder is the most playful regimen feature in e-commerce &mdash; users mix products into a personalized routine. Their copy is bold, irreverent, and educational simultaneously. This is the tone MasterMedi can aspire to: serious ingredients, playful delivery.</p>
+          <div class="feature-table-wrap mt-8">
+            <table class="feature-table" style="font-size:12px;">
+              <thead><tr><th style="width:50%">What we&rsquo;ll adapt for MasterMedi</th><th style="width:50%">What we won&rsquo;t replicate</th></tr></thead>
+              <tbody>
+                <tr><td>&bull; Playful-yet-educational copy system (&ldquo;Suspicious 6&rdquo; = ingredients to avoid)<br>&bull; Color-coded product categorization by function<br>&bull; &ldquo;The Littles&rdquo; sampling/trial kit concept<br>&bull; Ingredient philosophy as a dedicated page</td>
+                <td>&bull; Full interactive &ldquo;Smoothie&rdquo; mixer tool (too complex; Phase 2)<br>&bull; 30+ SKU catalog navigation patterns<br>&bull; LVMH-level product photography budget</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ref 8: Glossier -->
+        <div class="section-card" style="margin:0 0 20px 0;border-left:4px solid #b8dbd9;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+            <div>
+              <h3 style="margin-bottom:2px;">8. Glossier &mdash; glossier.com</h3>
+              <p class="text-muted" style="font-size:12px;margin:0;">Shopify Plus &bull; Beauty/Skincare &bull; US-based</p>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="impl-badge badge-inbuilt">Guided UX</span>
+              <span class="impl-badge badge-inbuilt">Regimen</span>
+              <span class="impl-badge badge-inbuilt">Copy System</span>
+            </div>
+          </div>
+          <p style="margin:12px 0 8px;font-size:13px;"><strong>Why it matters:</strong> The blueprint for community-driven, routine-first beauty e-commerce on Shopify. Glossier&rsquo;s &ldquo;The Routine&rdquo; sets feature builds product context around daily use. Their minimal, confident design language proves premium doesn&rsquo;t require visual complexity.</p>
+          <div class="feature-table-wrap mt-8">
+            <table class="feature-table" style="font-size:12px;">
+              <thead><tr><th style="width:50%">What we&rsquo;ll adapt for MasterMedi</th><th style="width:50%">What we won&rsquo;t replicate</th></tr></thead>
+              <tbody>
+                <tr><td>&bull; &ldquo;The Routine&rdquo; / &ldquo;The Set&rdquo; collection pages<br>&bull; Community reviews with photos integrated into PDP<br>&bull; Ultra-clean product grid with generous whitespace<br>&bull; Soft pastel brand palette execution (similar to MasterMedi&rsquo;s direction)</td>
+                <td>&bull; Editorial blog-heavy content strategy (MasterMedi should start simpler)<br>&bull; Physical retail integration (popup stores etc.)<br>&bull; Full shade/variant finder (not applicable to oral care)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Summary: What's Replicable -->
+        <div class="section-card" style="margin:0;background:#f8f5f0;border:1px solid #C4953A40;">
+          <h3 style="margin-bottom:12px;color:#C06B3A;">What&rsquo;s Replicable on Shopify + Shapes Theme</h3>
+          <div class="metric-grid col-2" style="margin-bottom:16px;">
+            <div>
+              <h4 style="font-size:13px;margin-bottom:8px;color:#367588;">Fully replicable (Launch scope)</h4>
+              <ul style="font-size:12px;line-height:1.7;margin:0;padding-left:18px;">
+                <li>Step-numbered routine navigation (Humanrace model)</li>
+                <li>Bundle/kit-first homepage layout (Hismile model)</li>
+                <li>Goal-based category navigation (Huel model)</li>
+                <li>Ingredient transparency sections on PDP (Bite model)</li>
+                <li>Clinical credibility trust strip (SNOW model)</li>
+                <li>&ldquo;The Routine&rdquo; dedicated collection (Glossier model)</li>
+                <li>Playful-yet-educational copy framework (Drunk Elephant model)</li>
+                <li>Clean whitespace-heavy layout (Glossier + Humanrace model)</li>
+                <li>Before/after social proof gallery (SNOW model)</li>
+                <li>&ldquo;How it works&rdquo; 3-step visual (Quip model)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="font-size:13px;margin-bottom:8px;color:#C06B3A;">Phase 2 candidates (post-launch)</h4>
+              <ul style="font-size:12px;line-height:1.7;margin:0;padding-left:18px;">
+                <li>Interactive routine builder/mixer tool (Drunk Elephant &ldquo;Smoothie&rdquo;)</li>
+                <li>Full quiz-to-product recommendation engine (Quip, Huel)</li>
+                <li>Build-your-own bundle configurator (Quip)</li>
+                <li>AI-personalized routine suggestions</li>
+                <li>UGC photo gallery integration (Glossier-level)</li>
+                <li>Advanced subscription management portal</li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout" style="margin:0;">
+            <strong>Bottom line:</strong> Every reference above runs on Shopify. The core UX patterns &mdash; step navigation, routine pages, ingredient storytelling, goal-based browsing &mdash; are all achievable within our Shapes theme + 40-60 hrs customization scope. The interactive tools (quiz, mixer, configurator) are Phase 2 because they require custom JS development beyond theme customization.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Performance & Media Strategy Deep-Dive ── -->
+      <div class="section-card">
+        <h2 class="section-title">7. Performance &amp; Media Strategy &mdash; Deep Dive</h2>
+        <p class="text-muted mb-16">Expanding on the speed targets in Section 1 with specific media guidelines, app governance, and a post-launch monitoring plan.</p>
+
+        <!-- Media Asset Guidelines -->
+        <h3 style="margin-bottom:12px;">Media Asset Specifications</h3>
+        <p style="font-size:13px;margin-bottom:12px;">Every image and video on the site will follow these specs. We&rsquo;ll provide a simple asset guide so your team (or photographer) can deliver files that don&rsquo;t need resizing.</p>
+
+        <div class="feature-table-wrap">
+          <table class="feature-table" style="font-size:12px;">
+            <thead><tr><th>Asset Type</th><th>Format</th><th>Max Size</th><th>Dimensions</th><th>Loading Strategy</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Hero banner</strong> (homepage)</td><td>WebP (JPEG fallback)</td><td>150 KB</td><td>1920&times;800 desktop / 750&times;1000 mobile</td><td>Eager (above fold)</td></tr>
+              <tr><td><strong>Product images</strong> (PDP gallery)</td><td>WebP (PNG fallback for transparency)</td><td>200 KB each</td><td>1200&times;1200 square</td><td>First image eager; rest lazy</td></tr>
+              <tr><td><strong>Product cards</strong> (collection grid)</td><td>WebP</td><td>80 KB</td><td>600&times;600 square</td><td>Lazy + responsive srcset</td></tr>
+              <tr><td><strong>Category tiles</strong></td><td>WebP</td><td>100 KB</td><td>800&times;600</td><td>Lazy</td></tr>
+              <tr><td><strong>Trust badges / icons</strong></td><td>SVG (preferred) or WebP</td><td>10 KB</td><td>Any (vector)</td><td>Inline SVG or eager</td></tr>
+              <tr><td><strong>Logo</strong></td><td>SVG</td><td>15 KB</td><td>Vector</td><td>Inline</td></tr>
+              <tr><td><strong>Brand story / lifestyle</strong></td><td>WebP</td><td>150 KB</td><td>1200&times;800</td><td>Lazy</td></tr>
+              <tr><td><strong>Video (product demo)</strong></td><td>YouTube embed (facade)</td><td>0 KB initial</td><td>16:9</td><td>Click-to-load facade pattern</td></tr>
+              <tr><td><strong>Video (hero)</strong></td><td>MP4 (Shopify CDN) or YouTube facade</td><td>2 MB (if self-hosted)</td><td>1920&times;1080</td><td>Poster image first; video loads on interaction</td></tr>
+              <tr><td><strong>Before/after photos</strong></td><td>WebP</td><td>100 KB each</td><td>800&times;800</td><td>Lazy</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout mt-16" style="background:#f0f7f4;border-left:4px solid #367588;font-size:.85rem;">
+          <strong>Video strategy:</strong> We use the &ldquo;facade pattern&rdquo; for all YouTube embeds &mdash; the page loads a lightweight poster image (thumbnail), and the actual YouTube iframe only loads when the user clicks Play. This saves ~500KB of JavaScript per video embed on initial page load. For hero video, we&rsquo;ll use Shopify&rsquo;s CDN with a static poster frame.
+        </div>
+
+        <!-- App Governance -->
+        <h3 style="margin-top:24px;margin-bottom:12px;">App &amp; Script Governance</h3>
+        <p style="font-size:13px;margin-bottom:12px;">Every third-party script is a performance tax. Here&rsquo;s our budget and the specific apps we&rsquo;ll allow.</p>
+
+        <div class="feature-table-wrap">
+          <table class="feature-table" style="font-size:12px;">
+            <thead><tr><th>Category</th><th>Recommended App</th><th>JS Weight</th><th>Load Strategy</th><th>Priority</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Reviews</strong></td><td>Judge.me</td><td>~45 KB</td><td>Deferred</td><td>Launch</td></tr>
+              <tr><td><strong>Email / SMS</strong></td><td>Klaviyo</td><td>~80 KB</td><td>Deferred (load after 3s)</td><td>Launch</td></tr>
+              <tr><td><strong>Analytics</strong></td><td>GA4 via GTM</td><td>~70 KB</td><td>Async, non-blocking</td><td>Launch</td></tr>
+              <tr><td><strong>Social pixel</strong></td><td>TikTok Pixel (via GTM)</td><td>~30 KB</td><td>Async via GTM</td><td>Launch</td></tr>
+              <tr><td><strong>Chat / Support</strong></td><td>Tidio or Gorgias</td><td>~120 KB</td><td>Load on scroll / after 5s</td><td>Launch</td></tr>
+              <tr><td><strong>Subscription</strong></td><td>Recharge or Loop</td><td>~50 KB</td><td>Load on PDP only</td><td>Launch (if subscription ready)</td></tr>
+              <tr><td><strong>Upsell / Cross-sell</strong></td><td>Rebuy or Theme inbuilt</td><td>~40 KB</td><td>Deferred</td><td>Launch (prefer theme inbuilt)</td></tr>
+              <tr><td><strong>Announcement bar</strong></td><td>Theme inbuilt</td><td>0 KB (native)</td><td>N/A</td><td>Launch</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="metric-grid col-3 mt-16">
+          <div class="metric-card" style="border-left:4px solid #367588">
+            <div class="metric-value">8-10</div>
+            <div class="metric-label">Max apps at launch</div>
+          </div>
+          <div class="metric-card" style="border-left:4px solid #C4953A">
+            <div class="metric-value">&lt;400 KB</div>
+            <div class="metric-label">Total third-party JS budget</div>
+          </div>
+          <div class="metric-card" style="border-left:4px solid #7A9A7A">
+            <div class="metric-value">&lt;25</div>
+            <div class="metric-label">Total HTTP requests (third-party)</div>
+          </div>
+        </div>
+
+        <div class="callout mt-16" style="background:#fff5f5;border-left:4px solid #ef4444;font-size:.85rem;">
+          <strong>Hard rule:</strong> No app gets installed without checking its JS weight first. We&rsquo;ve seen stores go from PageSpeed 60 to 25 by adding 5 apps carelessly. Every app request goes through a performance review before install.
+        </div>
+
+        <!-- Post-Launch Monitoring Plan -->
+        <h3 style="margin-top:24px;margin-bottom:12px;">Post-Launch Monitoring Plan</h3>
+        <p style="font-size:13px;margin-bottom:12px;">Speed doesn&rsquo;t end at launch. Here&rsquo;s how we&rsquo;ll keep the store fast and catch regressions early.</p>
+
+        <div class="feature-table-wrap">
+          <table class="feature-table" style="font-size:12px;">
+            <thead><tr><th>Timeframe</th><th>What We Monitor</th><th>How</th><th>Alert Threshold</th></tr></thead>
+            <tbody>
+              <tr style="background:#f0f7f4;"><td colspan="4"><strong>Week 1 (Post-Launch &mdash; Intensive)</strong></td></tr>
+              <tr><td>Day 1-2</td><td>PageSpeed scores, Core Web Vitals, checkout completion rate</td><td>Manual PSI runs + GA4 real-time</td><td>Mobile PSI drops below 40; checkout errors &gt; 2%</td></tr>
+              <tr><td>Day 3-7</td><td>Bounce rate by page, LCP by device, cart abandonment rate</td><td>GA4 + GTM custom events</td><td>Bounce &gt; 60% on any top page; LCP &gt; 5s mobile</td></tr>
+              <tr style="background:#fef7ed;"><td colspan="4"><strong>Month 1 (Stabilization)</strong></td></tr>
+              <tr><td>Weekly</td><td>PageSpeed trend, conversion funnel, app JS total</td><td>Automated PageSpeed API + GA4 funnel report</td><td>PSI drops &gt; 10 points from baseline; CVR drops &gt; 20%</td></tr>
+              <tr><td>Weekly</td><td>New app installs impact</td><td>Before/after PSI for every new app</td><td>Any app adding &gt; 80KB JS</td></tr>
+              <tr style="background:#f5f5f5;"><td colspan="4"><strong>Ongoing (Monthly Cadence)</strong></td></tr>
+              <tr><td>Monthly</td><td>Core Web Vitals (CrUX data), PageSpeed, JS bundle size</td><td>Google Search Console CWV report + manual audit</td><td>CWV fails in Search Console; JS total &gt; 500KB</td></tr>
+              <tr><td>Monthly</td><td>Dead app audit &mdash; apps installed but not active</td><td>Manual review of Shopify Admin &rarr; Apps</td><td>Any unused app still loading scripts</td></tr>
+              <tr><td>Quarterly</td><td>Full performance audit vs launch baseline</td><td>PSI + Lighthouse + WebPageTest</td><td>Any metric &gt; 25% worse than launch baseline</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout mt-16" style="background:#f8f5f0;border-left:4px solid #C4953A;font-size:.85rem;">
+          <strong>Our commitment:</strong> We&rsquo;ll deliver a &ldquo;Speed Baseline Report&rdquo; at launch documenting every metric. This becomes the benchmark for all future comparisons. If any new app or change drops PageSpeed by &gt;10 points, we flag it immediately with a fix recommendation.
+        </div>
+
+        <!-- Image Delivery Architecture -->
+        <h3 style="margin-top:24px;margin-bottom:12px;">Image Delivery Architecture</h3>
+        <div style="background:#f8f7f5;border:1px solid var(--color-border);border-radius:8px;padding:20px;font-family:'Courier New',monospace;font-size:.8rem;line-height:1.8;overflow-x:auto;">
+          <strong>How images flow from your camera to the customer&rsquo;s screen:</strong><br><br>
+          Photographer &rarr; <strong>Raw files</strong> (4000&times;4000+ JPEG/PNG)<br>
+          &nbsp;&nbsp;&nbsp;&darr;<br>
+          Growisto &rarr; <strong>Optimize &amp; convert</strong> (resize, compress, WebP conversion)<br>
+          &nbsp;&nbsp;&nbsp;&darr;<br>
+          Shopify CDN &rarr; <strong>Auto-delivers</strong> best format per browser (WebP/AVIF where supported)<br>
+          &nbsp;&nbsp;&nbsp;&darr;<br>
+          Theme code &rarr; <strong>Responsive srcset</strong> (browser picks smallest sufficient size)<br>
+          &nbsp;&nbsp;&nbsp;&darr;<br>
+          Customer sees &rarr; <strong>Crisp image at ~80-150 KB</strong> (vs 500KB-2MB unoptimized)<br><br>
+          <span style="color:#367588;">Result: Same visual quality at 1/5th the file size = faster load = higher conversion</span>
+        </div>
+
+      </div>
+
+      <!-- ── Unified Site Architecture ── -->
+      <div class="section-card">
+        <h2 class="section-title">8. Unified Site Architecture</h2>
+        <p class="text-muted mb-16">A single view of how every page type connects &mdash; from first landing to purchase. This is the &ldquo;proposed architecture&rdquo; Anshul asked for: Homepage, Regimen Hub, Regimen Step pages, Collection pages, and PDP template.</p>
+
+        <!-- Visual Sitemap -->
+        <h3 style="margin-bottom:12px;">Complete Page Map</h3>
+        <div style="background:#f8f7f5;border:1px solid var(--color-border);border-radius:8px;padding:24px;font-family:'Courier New',monospace;font-size:.78rem;line-height:1.9;overflow-x:auto;margin-bottom:20px;">
+          <span style="color:#C06B3A;font-weight:bold;">HOMEPAGE</span> &nbsp;/&nbsp;<br>
+          &nbsp;&nbsp;├── Hero banner + routine teaser<br>
+          &nbsp;&nbsp;├── &ldquo;The 5-Step Oral Routine&rdquo; visual strip <span style="color:#888;">&rarr; links to Hub</span><br>
+          &nbsp;&nbsp;├── Best sellers grid<br>
+          &nbsp;&nbsp;├── Trust / certifications strip<br>
+          &nbsp;&nbsp;├── Brand story section<br>
+          &nbsp;&nbsp;└── &ldquo;Build Your Routine&rdquo; CTA <span style="color:#888;">&rarr; links to Hub</span><br><br>
+
+          <span style="color:#367588;font-weight:bold;">REGIMEN HUB</span> &nbsp;/pages/oral-regimen<br>
+          &nbsp;&nbsp;├── 5-step visual timeline (horizontal on desktop, vertical on mobile)<br>
+          &nbsp;&nbsp;├── Each step card links to its Step page (if active) or shows &ldquo;Coming Soon&rdquo;<br>
+          &nbsp;&nbsp;├── &ldquo;Shop the Complete Routine&rdquo; bundle CTA<br>
+          &nbsp;&nbsp;└── Why this routine matters (educational + trust)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── <span style="color:#367588;font-weight:bold;">STEP 2: TONGUE SCRAPING</span> &nbsp;/pages/step-tongue-scraping<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── Step context hero (&ldquo;Step 2 of 5&rdquo;)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── Why this step (benefits, science, Ayurvedic roots)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── Products for this step <span style="color:#888;">&rarr; embedded collection grid</span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── How to use (visual guide)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── &ldquo;Next step: Paste &amp; Brush &rarr;&rdquo; navigation<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── Links to PDPs below<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── <span style="color:#367588;font-weight:bold;">STEP 3: PASTE &amp; BRUSH</span> &nbsp;/pages/step-paste-brush<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── <em>(Same structure as Step 2)</em><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── <span style="color:#aaa;">STEP 1: OIL PULLING</span> &nbsp;<span style="color:#aaa;">/pages/step-oil-pulling &mdash; Coming Soon</span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── <span style="color:#aaa;">STEP 4: FLOSS</span> &nbsp;<span style="color:#aaa;">/pages/step-floss &mdash; Coming Soon</span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── <span style="color:#aaa;">STEP 5: RINSE</span> &nbsp;<span style="color:#aaa;">/pages/step-rinse &mdash; Coming Soon</span><br><br>
+
+          <span style="color:#C4953A;font-weight:bold;">COLLECTIONS</span> &nbsp;/collections/*<br>
+          &nbsp;&nbsp;├── /collections/tongue-scrapers &nbsp;<span style="color:#888;">(also accessible from Step 2 page)</span><br>
+          &nbsp;&nbsp;├── /collections/toothpaste<br>
+          &nbsp;&nbsp;├── /collections/pulling-oil<br>
+          &nbsp;&nbsp;├── /collections/bundles &nbsp;<span style="color:#888;">(kits &amp; routines)</span><br>
+          &nbsp;&nbsp;└── /collections/all<br><br>
+
+          <span style="color:#C06B3A;font-weight:bold;">PRODUCT PAGES (PDP)</span> &nbsp;/products/*<br>
+          &nbsp;&nbsp;├── 10-section metafield-driven template (see Detailed Plan tab)<br>
+          &nbsp;&nbsp;├── Regimen context badge (&ldquo;Step 2 of 5: Tongue Scraping&rdquo;)<br>
+          &nbsp;&nbsp;└── &ldquo;Complete the Routine&rdquo; cross-sell strip<br><br>
+
+          <span style="color:#555;font-weight:bold;">STATIC PAGES</span><br>
+          &nbsp;&nbsp;├── /pages/our-story &nbsp;(brand heritage + mission)<br>
+          &nbsp;&nbsp;├── /pages/ingredients &nbsp;(Ayurvedic ingredient glossary)<br>
+          &nbsp;&nbsp;├── /blogs/journal &nbsp;(blog)<br>
+          &nbsp;&nbsp;├── /pages/faq<br>
+          &nbsp;&nbsp;└── /pages/contact
+        </div>
+
+        <!-- Regimen Hub Wireframe -->
+        <h3 style="margin-top:24px;margin-bottom:12px;">Regimen Hub Page &mdash; Wireframe</h3>
+        <p style="font-size:13px;margin-bottom:16px;">This is the central &ldquo;lobby&rdquo; of the regimen system. A customer can enter from the homepage, navigation, or any product page&rsquo;s regimen badge.</p>
+
+        <div style="background:#fff;border:2px solid #C4953A40;border-radius:12px;padding:24px;max-width:600px;margin:0 auto 24px;">
+          <!-- Wireframe: Regimen Hub -->
+          <div style="text-align:center;margin-bottom:16px;">
+            <div style="background:#f8f5f0;border:1px dashed #C4953A;border-radius:8px;padding:20px;margin-bottom:16px;">
+              <div style="font-size:11px;color:#888;margin-bottom:4px;">HERO SECTION</div>
+              <div style="font-family:'Georgia',serif;font-size:18px;color:#C06B3A;font-weight:bold;">The MasterMedi 5-Step Oral Routine</div>
+              <div style="font-size:12px;color:#555;margin-top:4px;">Ancient wisdom. Modern science. Your complete oral care system.</div>
+            </div>
+
+            <!-- 5-Step Timeline -->
+            <div style="display:flex;gap:8px;justify-content:center;margin-bottom:20px;flex-wrap:wrap;">
+              <div style="flex:1;min-width:90px;max-width:110px;text-align:center;">
+                <div style="width:40px;height:40px;border-radius:50%;background:#ddd;margin:0 auto 6px;line-height:40px;font-size:14px;color:#888;">1</div>
+                <div style="font-size:10px;color:#aaa;">Oil Pulling</div>
+                <div style="font-size:9px;color:#ccc;">Coming Soon</div>
+              </div>
+              <div style="flex:1;min-width:90px;max-width:110px;text-align:center;">
+                <div style="width:40px;height:40px;border-radius:50%;background:#C06B3A;margin:0 auto 6px;line-height:40px;font-size:14px;color:#fff;font-weight:bold;">2</div>
+                <div style="font-size:10px;color:#333;font-weight:bold;">Tongue Scraping</div>
+                <div style="font-size:9px;color:#367588;">Shop Now &rarr;</div>
+              </div>
+              <div style="flex:1;min-width:90px;max-width:110px;text-align:center;">
+                <div style="width:40px;height:40px;border-radius:50%;background:#C06B3A;margin:0 auto 6px;line-height:40px;font-size:14px;color:#fff;font-weight:bold;">3</div>
+                <div style="font-size:10px;color:#333;font-weight:bold;">Paste &amp; Brush</div>
+                <div style="font-size:9px;color:#367588;">Shop Now &rarr;</div>
+              </div>
+              <div style="flex:1;min-width:90px;max-width:110px;text-align:center;">
+                <div style="width:40px;height:40px;border-radius:50%;background:#ddd;margin:0 auto 6px;line-height:40px;font-size:14px;color:#888;">4</div>
+                <div style="font-size:10px;color:#aaa;">Floss</div>
+                <div style="font-size:9px;color:#ccc;">Coming Soon</div>
+              </div>
+              <div style="flex:1;min-width:90px;max-width:110px;text-align:center;">
+                <div style="width:40px;height:40px;border-radius:50%;background:#ddd;margin:0 auto 6px;line-height:40px;font-size:14px;color:#888;">5</div>
+                <div style="font-size:10px;color:#aaa;">Rinse</div>
+                <div style="font-size:9px;color:#ccc;">Coming Soon</div>
+              </div>
+            </div>
+
+            <!-- Step Detail Cards -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+              <div style="border:1px solid #C4953A40;border-radius:8px;padding:12px;text-align:left;">
+                <div style="font-size:10px;color:#C06B3A;font-weight:bold;">STEP 2</div>
+                <div style="font-size:13px;font-weight:bold;margin:4px 0;">Tongue Scraping</div>
+                <div style="font-size:11px;color:#555;">Remove toxins. Boost taste. Ancient Ayurvedic practice.</div>
+                <div style="background:#ddd;height:80px;border-radius:6px;margin:8px 0;display:flex;align-items:center;justify-content:center;font-size:10px;color:#888;">[Product Image]</div>
+                <div style="font-size:11px;color:#367588;font-weight:bold;">Explore Step 2 &rarr;</div>
+              </div>
+              <div style="border:1px solid #C4953A40;border-radius:8px;padding:12px;text-align:left;">
+                <div style="font-size:10px;color:#C06B3A;font-weight:bold;">STEP 3</div>
+                <div style="font-size:13px;font-weight:bold;margin:4px 0;">Paste &amp; Brush</div>
+                <div style="font-size:11px;color:#555;">Ayurvedic formulas. No fluoride. No SLS. Pure ingredients.</div>
+                <div style="background:#ddd;height:80px;border-radius:6px;margin:8px 0;display:flex;align-items:center;justify-content:center;font-size:10px;color:#888;">[Product Image]</div>
+                <div style="font-size:11px;color:#367588;font-weight:bold;">Explore Step 3 &rarr;</div>
+              </div>
+            </div>
+
+            <!-- Bundle CTA -->
+            <div style="background:#f8f5f0;border:1px dashed #C4953A;border-radius:8px;padding:16px;margin-bottom:12px;">
+              <div style="font-size:11px;color:#888;margin-bottom:4px;">BUNDLE CTA</div>
+              <div style="font-size:14px;font-weight:bold;color:#C06B3A;">Shop the Complete Routine</div>
+              <div style="font-size:11px;color:#555;">Get Steps 2 + 3 together and save 15%</div>
+              <div style="display:inline-block;background:#C06B3A;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;margin-top:8px;">Add Routine to Cart &mdash; $XX</div>
+            </div>
+
+            <!-- Educational Footer -->
+            <div style="border:1px dashed #ddd;border-radius:8px;padding:12px;">
+              <div style="font-size:11px;color:#888;margin-bottom:4px;">EDUCATIONAL SECTION</div>
+              <div style="font-size:12px;color:#333;">Why this routine matters &bull; Ayurvedic roots &bull; Clinical evidence &bull; FDA registration badges</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step Landing Page Wireframe -->
+        <h3 style="margin-top:24px;margin-bottom:12px;">Step Landing Page &mdash; Wireframe (e.g. Step 2: Tongue Scraping)</h3>
+        <p style="font-size:13px;margin-bottom:16px;">Each active step gets a dedicated page that combines education + shopping. The page teaches &ldquo;why this step matters&rdquo; and then presents the products that fulfill it.</p>
+
+        <div style="background:#fff;border:2px solid #36758840;border-radius:12px;padding:24px;max-width:600px;margin:0 auto 24px;">
+          <!-- Wireframe: Step Page -->
+          <div style="text-align:center;">
+            <!-- Step Context Bar -->
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:#f0f7f4;border-radius:6px;margin-bottom:16px;font-size:11px;">
+              <span style="color:#888;">&larr; Step 1: Oil Pulling</span>
+              <span style="font-weight:bold;color:#367588;">Step 2 of 5</span>
+              <span style="color:#367588;">Step 3: Paste &amp; Brush &rarr;</span>
+            </div>
+
+            <!-- Hero -->
+            <div style="background:#f8f5f0;border:1px dashed #C4953A;border-radius:8px;padding:20px;margin-bottom:16px;">
+              <div style="font-size:10px;color:#C06B3A;font-weight:bold;">STEP 2 OF THE MASTERMEDI ROUTINE</div>
+              <div style="font-family:'Georgia',serif;font-size:18px;color:#333;font-weight:bold;margin:8px 0;">Tongue Scraping</div>
+              <div style="font-size:12px;color:#555;">&ldquo;Remove what your toothbrush can&rsquo;t reach.&rdquo;</div>
+            </div>
+
+            <!-- Why This Step -->
+            <div style="border:1px dashed #ddd;border-radius:8px;padding:12px;margin-bottom:12px;text-align:left;">
+              <div style="font-size:11px;color:#888;margin-bottom:4px;">WHY THIS STEP</div>
+              <div style="font-size:12px;color:#333;line-height:1.6;">
+                &bull; Removes bacteria causing bad breath<br>
+                &bull; Ayurvedic practice dating back 5,000 years<br>
+                &bull; Recommended by ADA for oral hygiene<br>
+                &bull; [FDA + certification badges here]
+              </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div style="border:1px solid #367588;border-radius:8px;padding:12px;margin-bottom:12px;">
+              <div style="font-size:11px;color:#367588;font-weight:bold;margin-bottom:8px;">PRODUCTS FOR THIS STEP</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                <div style="background:#f5f5f5;border-radius:6px;padding:8px;text-align:center;">
+                  <div style="background:#ddd;height:60px;border-radius:4px;margin-bottom:4px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#888;">[Product]</div>
+                  <div style="font-size:10px;font-weight:bold;">Copper Scraper</div>
+                  <div style="font-size:10px;color:#367588;">$14.99</div>
+                </div>
+                <div style="background:#f5f5f5;border-radius:6px;padding:8px;text-align:center;">
+                  <div style="background:#ddd;height:60px;border-radius:4px;margin-bottom:4px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#888;">[Product]</div>
+                  <div style="font-size:10px;font-weight:bold;">Stainless Scraper</div>
+                  <div style="font-size:10px;color:#367588;">$12.99</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- How To Use -->
+            <div style="border:1px dashed #ddd;border-radius:8px;padding:12px;margin-bottom:12px;">
+              <div style="font-size:11px;color:#888;margin-bottom:4px;">HOW TO USE (VISUAL GUIDE)</div>
+              <div style="display:flex;gap:8px;justify-content:center;">
+                <div style="text-align:center;">
+                  <div style="width:36px;height:36px;border-radius:50%;background:#f0f7f4;line-height:36px;margin:0 auto 4px;font-size:12px;color:#367588;font-weight:bold;">1</div>
+                  <div style="font-size:9px;">Extend tongue</div>
+                </div>
+                <div style="text-align:center;">
+                  <div style="width:36px;height:36px;border-radius:50%;background:#f0f7f4;line-height:36px;margin:0 auto 4px;font-size:12px;color:#367588;font-weight:bold;">2</div>
+                  <div style="font-size:9px;">Place scraper</div>
+                </div>
+                <div style="text-align:center;">
+                  <div style="width:36px;height:36px;border-radius:50%;background:#f0f7f4;line-height:36px;margin:0 auto 4px;font-size:12px;color:#367588;font-weight:bold;">3</div>
+                  <div style="font-size:9px;">Pull forward</div>
+                </div>
+                <div style="text-align:center;">
+                  <div style="width:36px;height:36px;border-radius:50%;background:#f0f7f4;line-height:36px;margin:0 auto 4px;font-size:12px;color:#367588;font-weight:bold;">4</div>
+                  <div style="font-size:9px;">Rinse &amp; repeat</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Next Step CTA -->
+            <div style="background:#f0f7f4;border-radius:8px;padding:12px;">
+              <div style="font-size:12px;color:#333;">Ready for the next step?</div>
+              <div style="font-size:13px;font-weight:bold;color:#367588;margin-top:4px;">Step 3: Paste &amp; Brush &rarr;</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- How Pages Connect -->
+        <h3 style="margin-top:24px;margin-bottom:12px;">How Pages Connect (User Journeys)</h3>
+        <div class="feature-table-wrap">
+          <table class="feature-table" style="font-size:12px;">
+            <thead><tr><th>Entry Point</th><th>Journey</th><th>Exit Point</th></tr></thead>
+            <tbody>
+              <tr><td>TikTok ad &rarr; Homepage</td><td>Hero CTA &rarr; Regimen Hub &rarr; Step 2 page &rarr; PDP</td><td>Add to Cart &rarr; Checkout</td></tr>
+              <tr><td>Google &ldquo;tongue scraper&rdquo;</td><td>PDP (direct) &rarr; regimen badge &ldquo;Step 2 of 5&rdquo; &rarr; Hub</td><td>Add Routine to Cart</td></tr>
+              <tr><td>Nav menu &rarr; Oral Regimen</td><td>Hub &rarr; Step 3 page &rarr; PDP</td><td>Add to Cart</td></tr>
+              <tr><td>Nav menu &rarr; Shop &rarr; Collection</td><td>Collection grid &rarr; PDP &rarr; regimen cross-sell</td><td>Add to Cart + &ldquo;Complete Routine&rdquo;</td></tr>
+              <tr><td>Returning customer (email)</td><td>Homepage &rarr; Best Sellers &rarr; PDP</td><td>Quick Add &rarr; Checkout</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Implementation Notes -->
+        <div class="callout mt-16" style="background:#f8f5f0;border-left:4px solid #C4953A;">
+          <strong>Shopify implementation:</strong> The Regimen Hub and Step pages will be built as <strong>Shopify pages with custom sections</strong> (not custom code). This means your team can update copy, swap images, and add new steps without touching code. When Steps 1, 4, and 5 products launch, you duplicate a Step template, update the content, and publish &mdash; 30 minutes of work, no developer needed.
+        </div>
+
+        <div class="feature-table-wrap mt-16">
+          <table class="feature-table" style="font-size:12px;">
+            <thead><tr><th>Page Type</th><th>Shopify Implementation</th><th>Editable by Client?</th><th>Hours</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Homepage</strong></td><td>Theme sections (Shapes built-in + custom)</td><td>Yes &mdash; Shopify Editor</td><td>Included in base scope</td></tr>
+              <tr><td><strong>Regimen Hub</strong></td><td>Custom page template with reusable sections</td><td>Yes &mdash; Shopify Editor</td><td>+8-12 hrs</td></tr>
+              <tr><td><strong>Step Pages (x2)</strong></td><td>Custom page template (duplicate for each step)</td><td>Yes &mdash; Shopify Editor</td><td>+12-16 hrs (both)</td></tr>
+              <tr><td><strong>Collection Pages</strong></td><td>Theme default + regimen badge (metafield)</td><td>Yes &mdash; Shopify Editor</td><td>+2 hrs badge work</td></tr>
+              <tr><td><strong>PDP Template</strong></td><td>10-section metafield-driven (see Tab 4)</td><td>Yes &mdash; via metafields</td><td>Included in base scope</td></tr>
+              <tr><td><strong>Future Step Pages (x3)</strong></td><td>Duplicate existing Step template</td><td>Yes &mdash; Shopify Editor</td><td>~30 min each (your team)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
       </div>
 
     </section>
@@ -906,41 +1512,287 @@
           </div>
         </div>
       </div>
+
+      <!-- ── Alternative Layout Directions ── -->
+      <div class="section-card" style="border:2px solid #367588;border-radius:12px;">
+        <h2 class="section-title">4.6 Layout Directions &mdash; 3 Options for Discussion</h2>
+        <p class="text-muted mb-16">All three directions use the same Heritage Premium brand assets (colors, logo, packaging photography). What differs is the <strong>layout rhythm, whitespace, and visual hierarchy</strong> &mdash; how the brand shows up on the page.</p>
+
+        <div class="callout info mb-24">
+          <strong>How to evaluate:</strong> These are layout philosophies, not final designs. Pick the direction that feels right for MasterMedi&rsquo;s positioning, and we&rsquo;ll build the full mockup in that direction. You can also mix elements (e.g., Direction A&rsquo;s homepage + Direction B&rsquo;s PDP).
+        </div>
+
+        <!-- Direction A: Heritage Editorial -->
+        <div class="section-card" style="margin:0 0 24px;border-left:4px solid #C06B3A;">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+            <h3 style="margin:0;color:#C06B3A;">Direction A: Heritage Editorial</h3>
+            <span class="impl-badge badge-custom" style="font-size:11px;">Current Direction (Recommended)</span>
+          </div>
+          <p style="font-size:13px;margin-bottom:12px;"><strong>Think:</strong> Marvis meets Diptyque. Classical luxury packaging centered on a digital stage. Scrollwork borders, serif typography, gold foil details.</p>
+
+          <!-- Mini Visual Preview -->
+          <div style="background:#FFFDF8;border:1px solid #C4953A40;border-radius:10px;padding:20px;margin-bottom:16px;">
+            <div style="text-align:center;margin-bottom:16px;">
+              <div style="font-family:'Cormorant SC',serif;font-size:11px;letter-spacing:0.15em;color:#C4953A;text-transform:uppercase;">MasterMedi</div>
+              <div style="width:60px;height:1px;background:#C4953A;margin:8px auto;"></div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#5C2E0E;font-weight:500;line-height:1.2;">Ancient Wisdom,<br>Modern Science.</div>
+              <div style="font-family:'Inter',sans-serif;font-size:11px;color:#8B7355;margin-top:8px;">The 5-Step Oral Care Ritual</div>
+              <div style="display:inline-block;background:#5C2E0E;color:#F5E6D0;font-family:'Cormorant SC',serif;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:8px 20px;border-radius:0;margin-top:12px;">Discover Your Routine</div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;">
+              <div style="background:#F5E6D0;border-radius:6px;padding:12px;text-align:center;">
+                <div style="font-family:'Cormorant SC',serif;font-size:9px;letter-spacing:0.1em;color:#C06B3A;">STEP 2</div>
+                <div style="font-size:10px;color:#5C2E0E;font-weight:600;margin:4px 0;">Tongue Scraping</div>
+                <div style="background:#ddd;height:50px;border-radius:4px;margin:4px 0;"></div>
+                <div style="font-size:10px;color:#C06B3A;">$14.99</div>
+              </div>
+              <div style="background:#F5E6D0;border-radius:6px;padding:12px;text-align:center;">
+                <div style="font-family:'Cormorant SC',serif;font-size:9px;letter-spacing:0.1em;color:#C06B3A;">STEP 3</div>
+                <div style="font-size:10px;color:#5C2E0E;font-weight:600;margin:4px 0;">Herbal Paste</div>
+                <div style="background:#ddd;height:50px;border-radius:4px;margin:4px 0;"></div>
+                <div style="font-size:10px;color:#C06B3A;">$18.99</div>
+              </div>
+              <div style="background:#F5E6D0;border-radius:6px;padding:12px;text-align:center;">
+                <div style="font-family:'Cormorant SC',serif;font-size:9px;letter-spacing:0.1em;color:#C06B3A;">BUNDLE</div>
+                <div style="font-size:10px;color:#5C2E0E;font-weight:600;margin:4px 0;">The Full Ritual</div>
+                <div style="background:#ddd;height:50px;border-radius:4px;margin:4px 0;"></div>
+                <div style="font-size:10px;color:#C06B3A;">$29.99</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-table-wrap">
+            <table class="feature-table" style="font-size:12px;">
+              <thead><tr><th>Aspect</th><th>Approach</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Layout rhythm</strong></td><td>Generous vertical spacing. Full-width hero, centered content blocks, alternating left/right product features. &ldquo;Museum gallery&rdquo; pacing.</td></tr>
+                <tr><td><strong>Typography</strong></td><td>Cormorant Garamond (serif) for all headlines. Cormorant SC for labels/CTAs. Inter for body. Large type sizes, tight line-height.</td></tr>
+                <tr><td><strong>Color usage</strong></td><td>Cream (#F5E6D0) backgrounds dominate. Terracotta for CTAs. Gold for accents/badges. Deep brown text. No white sections.</td></tr>
+                <tr><td><strong>Product display</strong></td><td>Products as art objects &mdash; large hero images, packaging detail zoom, marble/linen textured backgrounds.</td></tr>
+                <tr><td><strong>Mobile behavior</strong></td><td>Single column, full-width images, generous touch targets, sticky CTA bar at bottom.</td></tr>
+                <tr><td><strong>Best for</strong></td><td>Positioning MasterMedi as a luxury Ayurvedic brand. Premium pricing justification. Heritage storytelling.</td></tr>
+                <tr><td><strong>Reference</strong></td><td>Marvis + Diptyque + TWG Tea (classical luxury packaging brands)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Direction B: Clean Clinical -->
+        <div class="section-card" style="margin:0 0 24px;border-left:4px solid #367588;">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+            <h3 style="margin:0;color:#367588;">Direction B: Clean Clinical</h3>
+            <span class="impl-badge badge-inbuilt" style="font-size:11px;">Alternative</span>
+          </div>
+          <p style="font-size:13px;margin-bottom:12px;"><strong>Think:</strong> Quip meets Glossier. Bright, airy, science-forward. Clean whites, generous whitespace, clinical credibility front and center. Sans-serif dominant.</p>
+
+          <!-- Mini Visual Preview -->
+          <div style="background:#FFFFFF;border:1px solid #E5E7EB;border-radius:10px;padding:20px;margin-bottom:16px;">
+            <div style="text-align:center;margin-bottom:16px;">
+              <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:0.15em;color:#888;text-transform:uppercase;font-weight:600;">MasterMedi</div>
+              <div style="font-family:'Inter',sans-serif;font-size:22px;color:#1a1a1a;font-weight:700;line-height:1.3;margin-top:8px;">Your Complete<br>Oral Care System.</div>
+              <div style="font-family:'Inter',sans-serif;font-size:11px;color:#666;margin-top:8px;">FDA Registered &bull; Ayurvedic &bull; Clinically Tested</div>
+              <div style="display:inline-block;background:#1a1a1a;color:#fff;font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;padding:10px 24px;border-radius:24px;margin-top:12px;">Shop the Routine</div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;">
+              <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:12px;text-align:center;">
+                <div style="font-family:'Inter',sans-serif;font-size:9px;color:#367588;font-weight:600;letter-spacing:0.05em;">STEP 2</div>
+                <div style="font-size:11px;color:#1a1a1a;font-weight:600;margin:4px 0;">Tongue Scraper</div>
+                <div style="background:#E5E7EB;height:50px;border-radius:6px;margin:4px 0;"></div>
+                <div style="font-size:11px;color:#1a1a1a;font-weight:600;">$14.99</div>
+              </div>
+              <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:12px;text-align:center;">
+                <div style="font-family:'Inter',sans-serif;font-size:9px;color:#367588;font-weight:600;letter-spacing:0.05em;">STEP 3</div>
+                <div style="font-size:11px;color:#1a1a1a;font-weight:600;margin:4px 0;">Herbal Paste</div>
+                <div style="background:#E5E7EB;height:50px;border-radius:6px;margin:4px 0;"></div>
+                <div style="font-size:11px;color:#1a1a1a;font-weight:600;">$18.99</div>
+              </div>
+              <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:12px;text-align:center;">
+                <div style="font-family:'Inter',sans-serif;font-size:9px;color:#367588;font-weight:600;letter-spacing:0.05em;">BUNDLE</div>
+                <div style="font-size:11px;color:#1a1a1a;font-weight:600;margin:4px 0;">Full Routine</div>
+                <div style="background:#E5E7EB;height:50px;border-radius:6px;margin:4px 0;"></div>
+                <div style="font-size:11px;color:#1a1a1a;font-weight:600;">$29.99</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-table-wrap">
+            <table class="feature-table" style="font-size:12px;">
+              <thead><tr><th>Aspect</th><th>Approach</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Layout rhythm</strong></td><td>Tight, grid-based. White backgrounds dominate. Cards with subtle borders. Structured but breathable. &ldquo;Apple product page&rdquo; pacing.</td></tr>
+                <tr><td><strong>Typography</strong></td><td>Inter (sans-serif) for everything. Bold headlines, regular body. Clean and modern. Cormorant only for decorative accents.</td></tr>
+                <tr><td><strong>Color usage</strong></td><td>White (#fff) base. Black text. Teal (#367588) for interactive elements. Brand terracotta used sparingly (badges, hover). Neutral grays.</td></tr>
+                <tr><td><strong>Product display</strong></td><td>Products on clean white/light gray backgrounds. Emphasis on product, not staging. Clinical photography style.</td></tr>
+                <tr><td><strong>Mobile behavior</strong></td><td>Compact cards, pill-shaped CTAs, bottom sheet cart, rounded corners everywhere. Feels like a health app.</td></tr>
+                <tr><td><strong>Best for</strong></td><td>Building clinical trust first. FDA/ADA credibility. Younger TikTok audience who values &ldquo;clean&rdquo; brands. Easier to maintain.</td></tr>
+                <tr><td><strong>Reference</strong></td><td>Quip + Glossier + Hims/Hers (modern DTC health brands)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Direction C: Warm Botanical -->
+        <div class="section-card" style="margin:0 0 24px;border-left:4px solid #7A9A7A;">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+            <h3 style="margin:0;color:#7A9A7A;">Direction C: Warm Botanical</h3>
+            <span class="impl-badge badge-inbuilt" style="font-size:11px;">Alternative</span>
+          </div>
+          <p style="font-size:13px;margin-bottom:12px;"><strong>Think:</strong> Humanrace meets Bite meets Aesop. Warm earth tones, editorial photography with botanical/natural props, ingredient-forward storytelling. The &ldquo;apothecary&rdquo; vibe.</p>
+
+          <!-- Mini Visual Preview -->
+          <div style="background:#FAF7F2;border:1px solid #D4C5A9;border-radius:10px;padding:20px;margin-bottom:16px;">
+            <div style="text-align:center;margin-bottom:16px;">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:0.12em;color:#7A9A7A;text-transform:uppercase;font-weight:600;">MasterMedi</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#3D1F0A;font-weight:400;line-height:1.3;margin-top:8px;">Rooted in Nature.<br>Backed by Science.</div>
+              <div style="font-family:'Inter',sans-serif;font-size:11px;color:#8B7355;margin-top:8px;">Ayurvedic oral care, reimagined for modern life.</div>
+              <div style="display:inline-block;background:#7A9A7A;color:#fff;font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;padding:10px 24px;border-radius:4px;margin-top:12px;">Explore the Ritual</div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;">
+              <div style="background:#F2EDE4;border-radius:8px;padding:12px;text-align:center;">
+                <div style="font-family:'Inter',sans-serif;font-size:9px;color:#7A9A7A;font-weight:600;letter-spacing:0.05em;">STEP 2</div>
+                <div style="font-size:10px;color:#3D1F0A;font-weight:600;margin:4px 0;">Tongue Scraping</div>
+                <div style="background:#D4C5A9;height:50px;border-radius:6px;margin:4px 0;"></div>
+                <div style="font-size:10px;color:#3D1F0A;">$14.99</div>
+              </div>
+              <div style="background:#F2EDE4;border-radius:8px;padding:12px;text-align:center;">
+                <div style="font-family:'Inter',sans-serif;font-size:9px;color:#7A9A7A;font-weight:600;letter-spacing:0.05em;">STEP 3</div>
+                <div style="font-size:10px;color:#3D1F0A;font-weight:600;margin:4px 0;">Herbal Paste</div>
+                <div style="background:#D4C5A9;height:50px;border-radius:6px;margin:4px 0;"></div>
+                <div style="font-size:10px;color:#3D1F0A;">$18.99</div>
+              </div>
+              <div style="background:#F2EDE4;border-radius:8px;padding:12px;text-align:center;">
+                <div style="font-family:'Inter',sans-serif;font-size:9px;color:#7A9A7A;font-weight:600;letter-spacing:0.05em;">BUNDLE</div>
+                <div style="font-size:10px;color:#3D1F0A;font-weight:600;margin:4px 0;">Full Ritual</div>
+                <div style="background:#D4C5A9;height:50px;border-radius:6px;margin:4px 0;"></div>
+                <div style="font-size:10px;color:#3D1F0A;">$29.99</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-table-wrap">
+            <table class="feature-table" style="font-size:12px;">
+              <thead><tr><th>Aspect</th><th>Approach</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Layout rhythm</strong></td><td>Magazine-editorial flow. Full-bleed botanical photography alternating with product sections. Ingredient stories woven between product blocks. &ldquo;Coffee table book&rdquo; pacing.</td></tr>
+                <tr><td><strong>Typography</strong></td><td>Cormorant Garamond for headlines (lighter weight, more airy). Inter for body. Generous line-height. Less uppercase, more sentence case.</td></tr>
+                <tr><td><strong>Color usage</strong></td><td>Warm linen (#FAF7F2) base. Earth tones (olive, sage, terracotta) as accents. Sage green (#7A9A7A) for CTAs. Gold for subtle highlights. No stark white or black.</td></tr>
+                <tr><td><strong>Product display</strong></td><td>Products styled with natural props &mdash; herbs, copper bowls, linen cloths, wooden surfaces. &ldquo;Apothecary counter&rdquo; vibe. Lifestyle-forward.</td></tr>
+                <tr><td><strong>Mobile behavior</strong></td><td>Full-width editorial images, pull-quote style text breaks, soft rounded corners (4px), earthy CTA buttons.</td></tr>
+                <tr><td><strong>Best for</strong></td><td>Storytelling-first brands. Ingredient/Ayurvedic education. Customers who buy into philosophy before product. Higher perceived artisan value.</td></tr>
+                <tr><td><strong>Reference</strong></td><td>Humanrace + Bite + Aesop + Vintner&rsquo;s Daughter (nature-meets-premium brands)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Comparison Matrix -->
+        <div class="section-card" style="margin:0 0 16px;background:#f8f7f5;">
+          <h3 style="margin-bottom:12px;">Side-by-Side Comparison</h3>
+          <div class="feature-table-wrap">
+            <table class="feature-table" style="font-size:12px;">
+              <thead>
+                <tr>
+                  <th>Dimension</th>
+                  <th style="color:#C06B3A;">A: Heritage Editorial</th>
+                  <th style="color:#367588;">B: Clean Clinical</th>
+                  <th style="color:#7A9A7A;">C: Warm Botanical</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>First impression</strong></td><td>&ldquo;This is luxury&rdquo;</td><td>&ldquo;This is trustworthy&rdquo;</td><td>&ldquo;This is natural&rdquo;</td></tr>
+                <tr><td><strong>Feels like</strong></td><td>Walking into a boutique</td><td>Walking into a clinic</td><td>Walking into an apothecary</td></tr>
+                <tr><td><strong>Primary font</strong></td><td>Cormorant Garamond (serif)</td><td>Inter (sans-serif)</td><td>Mix of both</td></tr>
+                <tr><td><strong>Background</strong></td><td>Warm cream (#F5E6D0)</td><td>White (#FFFFFF)</td><td>Linen (#FAF7F2)</td></tr>
+                <tr><td><strong>CTA style</strong></td><td>Square, uppercase, deep brown</td><td>Pill-shaped, black, modern</td><td>Soft corners, sage green</td></tr>
+                <tr><td><strong>Product photos</strong></td><td>Styled on marble/linen</td><td>Clean white cutout</td><td>Styled with botanicals</td></tr>
+                <tr><td><strong>Packaging showcase</strong></td><td>&#9733;&#9733;&#9733;&#9733;&#9733; (hero-level)</td><td>&#9733;&#9733;&#9733; (functional)</td><td>&#9733;&#9733;&#9733;&#9733; (lifestyle context)</td></tr>
+                <tr><td><strong>Clinical trust</strong></td><td>&#9733;&#9733;&#9733; (subtle)</td><td>&#9733;&#9733;&#9733;&#9733;&#9733; (front and center)</td><td>&#9733;&#9733;&#9733;&#9733; (woven into story)</td></tr>
+                <tr><td><strong>Ayurvedic story</strong></td><td>&#9733;&#9733;&#9733;&#9733; (heritage angle)</td><td>&#9733;&#9733; (mentioned, not styled)</td><td>&#9733;&#9733;&#9733;&#9733;&#9733; (core identity)</td></tr>
+                <tr><td><strong>Ease of maintenance</strong></td><td>&#9733;&#9733;&#9733; (custom styling)</td><td>&#9733;&#9733;&#9733;&#9733;&#9733; (closest to default theme)</td><td>&#9733;&#9733;&#9733;&#9733; (moderate customization)</td></tr>
+                <tr><td><strong>Implementation cost</strong></td><td>Highest (most custom CSS)</td><td>Lowest (closest to Shapes defaults)</td><td>Medium</td></tr>
+                <tr><td><strong>TikTok audience fit</strong></td><td>&#9733;&#9733;&#9733; (premium may feel distant)</td><td>&#9733;&#9733;&#9733;&#9733;&#9733; (clean, modern, familiar)</td><td>&#9733;&#9733;&#9733;&#9733; (warm, inviting, shareable)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="callout" style="background:#f0f7f4;border-left:4px solid #367588;">
+          <strong>Our recommendation:</strong> Direction A (Heritage Editorial) is our primary recommendation because it makes the most of MasterMedi&rsquo;s stunning new packaging &mdash; the gold foil, deer medallion, and Victorian scrollwork deserve a stage that celebrates them. However, if the TikTok audience skews younger and more casual, Direction C (Warm Botanical) is a strong alternative that still honors the Ayurvedic story without feeling too &ldquo;luxury for luxury&rsquo;s sake.&rdquo;<br><br>
+          Direction B (Clean Clinical) is the safest bet if speed-to-market and ease of maintenance are the top priorities &mdash; it requires the least customization.
+        </div>
+
+      </div>
+
       </div><!-- /subtab-de-design -->
 
       <div class="subtab-content" id="subtab-de-mockups">
-      <!-- ── Visual Mockups ── -->
+      <!-- ── Visual Mockups — 3 Directions ── -->
       <div class="section-card">
-        <h2 class="section-title">Visual Mockups</h2>
-        <p>Interactive homepage and product page mockups built with MasterMedi's actual products and brand direction. Scroll through each mockup below, or open full-size in a new tab.</p>
+        <h2 class="section-title">Visual Mockups &mdash; 3 Directions</h2>
+        <p>Each direction below uses <strong>the same 12 homepage sections and the same product content</strong> &mdash; only the visual treatment changes. Scroll through each mockup, or open full-size in a new tab. Pick the direction that feels right, or mix elements across directions.</p>
       </div>
 
-      <!-- Design Direction Overview -->
-      <div class="section-card">
-        <h3 class="section-title" style="font-size:1.15rem;">Design Direction</h3>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;">
-          <div style="display:flex;align-items:center;gap:8px;"><span style="display:inline-block;width:28px;height:28px;border-radius:6px;background:#1A1A1A;border:1px solid #ccc;"></span><span style="font-size:.85rem;">Rich Black</span></div>
-          <div style="display:flex;align-items:center;gap:8px;"><span style="display:inline-block;width:28px;height:28px;border-radius:6px;background:#F2D4C4;border:1px solid #ccc;"></span><span style="font-size:.85rem;">Soft Peach</span></div>
-          <div style="display:flex;align-items:center;gap:8px;"><span style="display:inline-block;width:28px;height:28px;border-radius:6px;background:#FAF7F2;border:1px solid #ccc;"></span><span style="font-size:.85rem;">Warm Cream</span></div>
-          <div style="display:flex;align-items:center;gap:8px;"><span style="display:inline-block;width:28px;height:28px;border-radius:6px;background:#8FA88F;border:1px solid #ccc;"></span><span style="font-size:.85rem;">Sage Green</span></div>
-          <div style="display:flex;align-items:center;gap:8px;"><span style="display:inline-block;width:28px;height:28px;border-radius:6px;background:#D4AF8A;border:1px solid #ccc;"></span><span style="font-size:.85rem;">Light Gold</span></div>
+      <!-- ── Direction A: Heritage Editorial ── -->
+      <div class="section-card" style="border-left:4px solid #C06B3A;">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <h3 class="section-title" style="font-size:1.15rem;margin:0;color:#C06B3A;">Direction A: Heritage Editorial</h3>
+          <span class="impl-badge badge-inbuilt">RECOMMENDED</span>
         </div>
-        <p style="font-size:.9rem;color:#555;">Fonts: <strong style="font-family:'Cormorant Garamond',serif;">Cormorant Garamond</strong> (headlines) &middot; <strong style="font-family:'Cormorant SC',serif;">Cormorant SC</strong> (labels) &middot; <strong style="font-family:'Inter',sans-serif;">Inter</strong> (body)</p>
-      </div>
-
-      <!-- Homepage Mockup -->
-      <div class="section-card">
-        <h3 class="section-title" style="font-size:1.15rem;">Homepage Mockup</h3>
-        <p style="margin-bottom:12px;">Full-page homepage mockup with 12 sections. <a href="homepage.html" target="_blank" style="color:#367588;">Open Full-Size &rarr;</a></p>
+        <p style="font-size:.9rem;color:#555;margin-bottom:8px;"><strong>Think:</strong> Marvis meets Diptyque. Serif typography, warm cream backgrounds, scrollwork details, gold foil accents.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
+          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#C06B3A;"></span><span style="font-size:.8rem;">Terracotta</span></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#C4953A;"></span><span style="font-size:.8rem;">Gold</span></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#F5E6D0;"></span><span style="font-size:.8rem;">Cream</span></div>
+          <span style="font-size:.8rem;color:#888;">| Cormorant Garamond + Inter</span>
+        </div>
+        <p style="margin-bottom:12px;"><a href="homepage.html" target="_blank" style="color:#367588;">Open Full-Size &rarr;</a></p>
         <div style="border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;">
           <iframe src="homepage.html" style="width:100%;height:700px;border:none;" loading="lazy"></iframe>
         </div>
       </div>
 
-      <!-- PDP Mockup -->
+      <!-- ── Direction B: Clean Clinical ── -->
+      <div class="section-card" style="border-left:4px solid #367588;">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <h3 class="section-title" style="font-size:1.15rem;margin:0;color:#367588;">Direction B: Clean Clinical</h3>
+          <span class="impl-badge badge-custom">ALTERNATIVE</span>
+        </div>
+        <p style="font-size:.9rem;color:#555;margin-bottom:8px;"><strong>Think:</strong> Quip meets Glossier. All sans-serif, white backgrounds, black pill buttons, Apple product-page pacing.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
+          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#1A1A1A;"></span><span style="font-size:.8rem;">Black</span></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#367588;"></span><span style="font-size:.8rem;">Teal</span></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#FFFFFF;border:1px solid #ddd;"></span><span style="font-size:.8rem;">White</span></div>
+          <span style="font-size:.8rem;color:#888;">| Inter only</span>
+        </div>
+        <p style="margin-bottom:12px;"><a href="homepage-clinical.html" target="_blank" style="color:#367588;">Open Full-Size &rarr;</a></p>
+        <div style="border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;">
+          <iframe src="homepage-clinical.html" style="width:100%;height:700px;border:none;" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- ── Direction C: Warm Botanical ── -->
+      <div class="section-card" style="border-left:4px solid #7A9A7A;">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <h3 class="section-title" style="font-size:1.15rem;margin:0;color:#7A9A7A;">Direction C: Warm Botanical</h3>
+          <span class="impl-badge badge-custom">ALTERNATIVE</span>
+        </div>
+        <p style="font-size:.9rem;color:#555;margin-bottom:8px;"><strong>Think:</strong> Humanrace meets Aesop. Sage green, linen backgrounds, apothecary vibe, ingredient stories, editorial flow.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
+          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#7A9A7A;"></span><span style="font-size:.8rem;">Sage</span></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#B8836A;"></span><span style="font-size:.8rem;">Terracotta</span></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:20px;height:20px;border-radius:4px;background:#FAF7F2;border:1px solid #ddd;"></span><span style="font-size:.8rem;">Linen</span></div>
+          <span style="font-size:.8rem;color:#888;">| Cormorant Garamond (italic) + Inter</span>
+        </div>
+        <p style="margin-bottom:12px;"><a href="homepage-botanical.html" target="_blank" style="color:#367588;">Open Full-Size &rarr;</a></p>
+        <div style="border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;">
+          <iframe src="homepage-botanical.html" style="width:100%;height:700px;border:none;" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- ── PDP Mockup (Heritage Editorial) ── -->
       <div class="section-card">
-        <h3 class="section-title" style="font-size:1.15rem;">Product Page (PDP) Mockup</h3>
-        <p style="margin-bottom:12px;">Full product detail page with 10 sections. <a href="pdp.html" target="_blank" style="color:#367588;">Open Full-Size &rarr;</a></p>
+        <h3 class="section-title" style="font-size:1.15rem;">Product Page (PDP) Mockup &mdash; Heritage Editorial</h3>
+        <p style="margin-bottom:12px;">Full product detail page with 10 sections. PDP mockups for other directions will follow once homepage direction is chosen. <a href="pdp.html" target="_blank" style="color:#367588;">Open Full-Size &rarr;</a></p>
         <div style="border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;">
           <iframe src="pdp.html" style="width:100%;height:700px;border:none;" loading="lazy"></iframe>
         </div>

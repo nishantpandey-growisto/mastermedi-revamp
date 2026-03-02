@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MasterMedi — Homepage Mockup C: Warm Botanical | Growisto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Cormorant+SC:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ═══════════════════════════════════════════
+       RESET & BASE
+       ═══════════════════════════════════════════ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #e8e2da;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #3D3027;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ═══════════════════════════════════════════
+       MOCKUP LABEL
+       ═══════════════════════════════════════════ */
+    .mockup-label {
+      text-align: center;
+      font-size: 13px;
+      color: #8b7560;
+      margin-bottom: 24px;
+      font-family: 'Cormorant SC', 'Cormorant Garamond', serif;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      line-height: 1.6;
+    }
+
+    .mockup-label strong {
+      color: #5C7A5C;
+      font-weight: 500;
+    }
+
+    /* ═══════════════════════════════════════════
+       BROWSER CHROME
+       ═══════════════════════════════════════════ */
+    .browser-chrome {
+      max-width: 1280px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow:
+        0 25px 60px rgba(61, 48, 39, 0.15),
+        0 8px 20px rgba(61, 48, 39, 0.08);
+    }
+
+    .browser-topbar {
+      background: #f0ece6;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid rgba(61, 48, 39, 0.08);
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .browser-dots span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .browser-dots span:nth-child(1) { background: #ee6a5f; }
+    .browser-dots span:nth-child(2) { background: #f5bf4f; }
+    .browser-dots span:nth-child(3) { background: #62c554; }
+
+    .browser-url {
+      flex: 1;
+      text-align: center;
+      background: rgba(61, 48, 39, 0.06);
+      border-radius: 8px;
+      padding: 7px 16px;
+      font-size: 13px;
+      color: #6B5E50;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    /* ═══════════════════════════════════════════
+       MOCKUP CONTAINER
+       ═══════════════════════════════════════════ */
+    .mockup-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #FAF7F2;
+      overflow: hidden;
+    }
+
+    /* ═══════════════════════════════════════════
+       SHARED STYLES
+       ═══════════════════════════════════════════ */
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(122, 154, 122, 0.4);
+      margin: 0;
+    }
+
+    .section-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 16px;
+      color: #7A9A7A;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+      margin-bottom: 12px;
+    }
+
+    .section-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 38px;
+      color: #3D3027;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .section-heading em {
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .btn-sage {
+      display: inline-block;
+      background: #5C7A5C;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 14px 32px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: background 0.3s ease;
+    }
+
+    .btn-sage:hover {
+      background: #4a6a4a;
+    }
+
+    .btn-sage-outline {
+      display: inline-block;
+      background: transparent;
+      color: #5C7A5C;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 13px 32px;
+      border-radius: 8px;
+      border: 1.5px solid #7A9A7A;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: all 0.3s ease;
+    }
+
+    .btn-sage-outline:hover {
+      background: #7A9A7A;
+      color: #ffffff;
+    }
+
+    .btn-terracotta {
+      display: inline-block;
+      background: #B8836A;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 14px 32px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: background 0.3s ease;
+    }
+
+    .btn-terracotta:hover {
+      background: #a37259;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 1: ANNOUNCEMENT BAR
+       ═══════════════════════════════════════════ */
+    .bt-announce {
+      background: #FAF7F2;
+      border-bottom: 1px solid rgba(122, 154, 122, 0.25);
+      padding: 12px 20px;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: #5C7A5C;
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+    }
+
+    .bt-announce span {
+      opacity: 0.5;
+      margin: 0 6px;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 2: HEADER
+       ═══════════════════════════════════════════ */
+    .bt-header {
+      padding: 28px 40px 20px;
+      text-align: center;
+      background: #FAF7F2;
+    }
+
+    .bt-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 28px;
+      color: #3D3027;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .bt-nav {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 10px;
+    }
+
+    .bt-nav a {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #6B5E50;
+      transition: color 0.2s ease;
+      padding-bottom: 2px;
+    }
+
+    .bt-nav a:hover {
+      color: #5C7A5C;
+    }
+
+    .bt-header-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 12px;
+    }
+
+    .bt-header-icons span {
+      font-size: 16px;
+      color: #6B5E50;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .bt-header-icons span:hover {
+      opacity: 1;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 3: USP BAR
+       ═══════════════════════════════════════════ */
+    .bt-usp-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 18px 40px;
+      background: #f5f2ec;
+      border-top: 1px solid rgba(122, 154, 122, 0.2);
+      border-bottom: 1px solid rgba(122, 154, 122, 0.2);
+    }
+
+    .bt-usp-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #6B5E50;
+      letter-spacing: 0.04em;
+    }
+
+    .bt-usp-icon {
+      color: #7A9A7A;
+      font-size: 14px;
+    }
+
+    .bt-usp-dot {
+      color: rgba(122, 154, 122, 0.4);
+      font-size: 8px;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 4: HERO
+       ═══════════════════════════════════════════ */
+    .bt-hero {
+      background: #e8ede8;
+      padding: 80px 60px 0;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .bt-hero .section-label {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #5C7A5C;
+    }
+
+    .bt-hero-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 52px;
+      color: #3D3027;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bt-hero-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      color: #6B5E50;
+      line-height: 1.7;
+      max-width: 500px;
+      margin: 0 auto 36px;
+    }
+
+    .bt-hero-img {
+      margin-top: 48px;
+      border-radius: 16px 16px 0 0;
+      overflow: hidden;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bt-hero-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 5: CATEGORIES
+       ═══════════════════════════════════════════ */
+    .bt-categories {
+      padding: 72px 48px;
+      background: #FAF7F2;
+      text-align: center;
+    }
+
+    .bt-cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .bt-cat-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 3 / 4;
+    }
+
+    .bt-cat-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .bt-cat-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .bt-cat-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px 16px;
+      background: linear-gradient(transparent, rgba(61, 48, 39, 0.7));
+    }
+
+    .bt-cat-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+    }
+
+    .bt-cat-count {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-top: 4px;
+      font-weight: 400;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 6: BEST SELLERS
+       ═══════════════════════════════════════════ */
+    .bt-bestsellers {
+      padding: 72px 48px;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .bt-product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .bt-product-card {
+      background: #FAF7F2;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: left;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .bt-product-card:hover {
+      box-shadow: 0 8px 30px rgba(61, 48, 39, 0.1);
+    }
+
+    .bt-product-img-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .bt-product-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(122, 154, 122, 0.9);
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.04em;
+    }
+
+    .bt-product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .bt-product-card:hover .bt-product-img-wrap img {
+      transform: scale(1.04);
+    }
+
+    .bt-product-info {
+      padding: 24px;
+    }
+
+    .bt-product-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: #3D3027;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .bt-product-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #6B5E50;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .bt-product-stars {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .bt-stars-icons {
+      color: #B8836A;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .bt-stars-count {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #9a8d7f;
+    }
+
+    .bt-product-price {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .bt-price-current {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #3D3027;
+    }
+
+    .bt-price-original {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #9a8d7f;
+      text-decoration: line-through;
+    }
+
+    .bt-price-save {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #7A9A7A;
+      font-weight: 500;
+    }
+
+    .bt-product-atc {
+      width: 100%;
+      background: #5C7A5C;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.06em;
+      transition: background 0.3s ease;
+    }
+
+    .bt-product-atc:hover {
+      background: #4a6a4a;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 7: INGREDIENT SPOTLIGHT
+       ═══════════════════════════════════════════ */
+    .bt-ingredients {
+      padding: 72px 48px;
+      background: #FAF7F2;
+      text-align: center;
+    }
+
+    .bt-ingredient-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .bt-ingredient-card {
+      padding: 40px 28px;
+      text-align: center;
+    }
+
+    .bt-ingredient-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(122, 154, 122, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 28px;
+    }
+
+    .bt-ingredient-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: #3D3027;
+      margin-bottom: 8px;
+    }
+
+    .bt-ingredient-latin {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: #7A9A7A;
+      margin-bottom: 16px;
+      letter-spacing: 0.04em;
+    }
+
+    .bt-ingredient-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #6B5E50;
+      line-height: 1.7;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 8: ROUTINE BUILDER
+       ═══════════════════════════════════════════ */
+    .bt-routine {
+      padding: 72px 48px;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .bt-routine-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 40px;
+      margin-bottom: 48px;
+    }
+
+    .bt-step-card {
+      background: #FAF7F2;
+      border-radius: 12px;
+      padding: 32px 24px;
+      position: relative;
+      text-align: center;
+    }
+
+    .bt-step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #7A9A7A;
+      color: #ffffff;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .bt-step-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 3px solid rgba(122, 154, 122, 0.2);
+    }
+
+    .bt-step-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #3D3027;
+      margin-bottom: 4px;
+    }
+
+    .bt-step-product {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #6B5E50;
+      margin-bottom: 8px;
+    }
+
+    .bt-step-options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    .bt-step-option {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(122, 154, 122, 0.35);
+      color: #6B5E50;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .bt-step-option.active {
+      background: #7A9A7A;
+      color: #ffffff;
+      border-color: #7A9A7A;
+    }
+
+    .bt-routine-summary {
+      background: #f5f2ec;
+      border-radius: 12px;
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .bt-routine-total-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: #3D3027;
+    }
+
+    .bt-routine-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 500;
+      color: #3D3027;
+    }
+
+    .bt-routine-save {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #7A9A7A;
+      font-weight: 500;
+      background: rgba(122, 154, 122, 0.1);
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 9: BRAND STORY
+       ═══════════════════════════════════════════ */
+    .bt-story {
+      padding: 72px 48px;
+      background: #FAF7F2;
+    }
+
+    .bt-story-layout {
+      position: relative;
+    }
+
+    .bt-story-img {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      max-height: 420px;
+    }
+
+    .bt-story-img img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .bt-story-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 48px;
+      max-width: 600px;
+      margin: -60px auto 0;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 12px 40px rgba(61, 48, 39, 0.08);
+      text-align: center;
+    }
+
+    .bt-story-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 400;
+      color: #3D3027;
+      margin-bottom: 20px;
+      line-height: 1.25;
+    }
+
+    .bt-story-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #6B5E50;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .bt-story-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #B8836A;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      transition: color 0.2s;
+    }
+
+    .bt-story-link:hover {
+      color: #a37259;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 10: CERTIFICATIONS
+       ═══════════════════════════════════════════ */
+    .bt-certs {
+      padding: 72px 48px;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .bt-cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .bt-cert-card {
+      border: 1px solid rgba(122, 154, 122, 0.3);
+      border-radius: 12px;
+      padding: 36px 24px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bt-cert-card:hover {
+      border-color: #7A9A7A;
+      box-shadow: 0 4px 20px rgba(122, 154, 122, 0.1);
+    }
+
+    .bt-cert-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .bt-cert-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: #3D3027;
+      margin-bottom: 10px;
+    }
+
+    .bt-cert-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #6B5E50;
+      line-height: 1.7;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 11: REVIEWS
+       ═══════════════════════════════════════════ */
+    .bt-reviews {
+      padding: 72px 48px;
+      background: #FAF7F2;
+      text-align: center;
+    }
+
+    .bt-reviews-hero {
+      margin-bottom: 12px;
+    }
+
+    .bt-reviews-score {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 64px;
+      font-weight: 300;
+      color: #3D3027;
+      line-height: 1;
+    }
+
+    .bt-reviews-stars {
+      font-size: 22px;
+      color: #B8836A;
+      letter-spacing: 3px;
+      margin: 8px 0;
+    }
+
+    .bt-reviews-count {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #9a8d7f;
+      margin-bottom: 40px;
+    }
+
+    .bt-review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .bt-review-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 32px 24px;
+      text-align: left;
+    }
+
+    .bt-review-stars {
+      color: #B8836A;
+      font-size: 13px;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .bt-review-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #6B5E50;
+      line-height: 1.7;
+      margin-bottom: 18px;
+      font-style: normal;
+    }
+
+    .bt-review-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: #3D3027;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .bt-review-author {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: #7A9A7A;
+    }
+
+    .bt-review-verified {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: #9a8d7f;
+      font-style: normal;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 12: NEWSLETTER + FOOTER
+       ═══════════════════════════════════════════ */
+    .bt-newsletter {
+      background: #5C7A5C;
+      padding: 64px 48px;
+      text-align: center;
+    }
+
+    .bt-newsletter-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 38px;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .bt-newsletter-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .bt-newsletter-form {
+      display: flex;
+      max-width: 480px;
+      margin: 0 auto;
+      gap: 12px;
+    }
+
+    .bt-newsletter-input {
+      flex: 1;
+      padding: 14px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .bt-newsletter-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .bt-newsletter-input:focus {
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .bt-newsletter-btn {
+      background: #B8836A;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 14px 28px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: background 0.3s;
+      white-space: nowrap;
+    }
+
+    .bt-newsletter-btn:hover {
+      background: #a37259;
+    }
+
+    /* Footer */
+    .bt-footer {
+      background: #3D3027;
+      padding: 60px 48px 32px;
+      color: #d9d0c5;
+    }
+
+    .bt-footer-logo {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: #FAF7F2;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    .bt-footer-columns {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+
+    .bt-footer-col h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #FAF7F2;
+      margin-bottom: 18px;
+      letter-spacing: 0.06em;
+    }
+
+    .bt-footer-col a {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #b0a595;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+
+    .bt-footer-col a:hover {
+      color: #FAF7F2;
+    }
+
+    .bt-footer-bottom {
+      border-top: 1px solid rgba(250, 247, 242, 0.1);
+      padding-top: 28px;
+      text-align: center;
+    }
+
+    .bt-footer-trust {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .bt-footer-trust-item {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: #9a8d7f;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.04em;
+    }
+
+    .bt-footer-trust-icon {
+      color: #7A9A7A;
+    }
+
+    .bt-footer-payments {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .bt-payment-icon {
+      background: rgba(250, 247, 242, 0.08);
+      border-radius: 4px;
+      padding: 6px 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: #9a8d7f;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .bt-footer-copy {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #7a6f62;
+    }
+
+    /* ═══════════════════════════════════════════
+       MOCKUP DISCLAIMER
+       ═══════════════════════════════════════════ */
+    .mockup-disclaimer {
+      text-align: center;
+      padding: 32px 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #9a8d7f;
+      line-height: 1.6;
+    }
+
+    .mockup-disclaimer strong {
+      color: #6B5E50;
+      font-weight: 500;
+    }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .bt-cat-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .bt-product-grid,
+      .bt-ingredient-grid,
+      .bt-routine-steps,
+      .bt-cert-grid,
+      .bt-review-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .bt-footer-columns {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .bt-hero-heading {
+        font-size: 38px;
+      }
+      .section-heading {
+        font-size: 30px;
+      }
+      body {
+        padding: 20px 10px;
+      }
+      .bt-hero {
+        padding: 48px 28px 0;
+      }
+      .bt-categories,
+      .bt-bestsellers,
+      .bt-ingredients,
+      .bt-routine,
+      .bt-story,
+      .bt-certs,
+      .bt-reviews,
+      .bt-newsletter {
+        padding: 48px 24px;
+      }
+      .bt-footer {
+        padding: 40px 24px 28px;
+      }
+      .bt-nav {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .bt-usp-bar {
+        gap: 12px;
+      }
+      .bt-routine-summary {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .bt-newsletter-form {
+        flex-direction: column;
+      }
+      .bt-story-card {
+        margin-top: -40px;
+        padding: 32px 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .bt-cat-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .bt-footer-columns {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .bt-hero-heading {
+        font-size: 32px;
+      }
+      .bt-reviews-score {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="mockup-label">
+  <strong>MasterMedi</strong> &mdash; Homepage Mockup C: Warm Botanical &bull; Prepared by Growisto &bull; Feb 2026
+</div>
+
+<!-- ══════════════════════════════════════════════
+     BROWSER CHROME WRAPPER
+     ══════════════════════════════════════════════ -->
+<div class="browser-chrome">
+  <div class="browser-topbar">
+    <div class="browser-dots">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="browser-url">mastermedi.co</div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       MOCKUP CONTAINER
+       ══════════════════════════════════════════ -->
+  <div class="mockup-container">
+
+    <!-- ════════════════════════════════════
+         SECTION 1: ANNOUNCEMENT BAR
+         ════════════════════════════════════ -->
+    <div class="bt-announce">
+      Free US Shipping Over $35 <span>&middot;</span> FDA Registered <span>&middot;</span> 5M+ Units Sold
+    </div>
+
+    <!-- ════════════════════════════════════
+         SECTION 2: HEADER
+         ════════════════════════════════════ -->
+    <header class="bt-header">
+      <div class="bt-logo">MasterMedi</div>
+      <nav class="bt-nav">
+        <a href="#">Shop All</a>
+        <a href="#">Tongue Scrapers</a>
+        <a href="#">Toothpaste</a>
+        <a href="#">Oil Pulling</a>
+        <a href="#">Dental Kits</a>
+        <a href="#">Our Story</a>
+      </nav>
+      <div class="bt-header-icons">
+        <span>&#128269;</span>
+        <span>&#9825;</span>
+        <span>&#128722;</span>
+      </div>
+    </header>
+
+    <div class="section-divider"></div>
+
+    <!-- ════════════════════════════════════
+         SECTION 3: USP BAR
+         ════════════════════════════════════ -->
+    <div class="bt-usp-bar">
+      <div class="bt-usp-item">
+        <span class="bt-usp-icon">&#9733;</span> 4.8 Rating
+      </div>
+      <span class="bt-usp-dot">&#9679;</span>
+      <div class="bt-usp-item">
+        <span class="bt-usp-icon">&#9878;</span> FDA Registered
+      </div>
+      <span class="bt-usp-dot">&#9679;</span>
+      <div class="bt-usp-item">
+        <span class="bt-usp-icon">&#10003;</span> Dentist Recommended
+      </div>
+      <span class="bt-usp-dot">&#9679;</span>
+      <div class="bt-usp-item">
+        <span class="bt-usp-icon">&#9883;</span> Medical Grade
+      </div>
+      <span class="bt-usp-dot">&#9679;</span>
+      <div class="bt-usp-item">
+        <span class="bt-usp-icon">&#10084;</span> 5M+ Sold
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         SECTION 4: HERO
+         ════════════════════════════════════ -->
+    <section class="bt-hero">
+      <div class="section-label" style="font-size: 18px; color: #5C7A5C;">heritage oral care</div>
+      <h1 class="bt-hero-heading">Rooted in Nature.<br>Backed by Science.</h1>
+      <p class="bt-hero-sub">Ayurvedic oral care, reimagined for modern life.</p>
+      <a href="#" class="btn-sage">Explore the Ritual</a>
+      <div class="bt-hero-img">
+        <img src="images/lifestyle-flatlay.jpeg" alt="MasterMedi Oral Care Collection - Botanical Flat Lay">
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ════════════════════════════════════
+         SECTION 5: CATEGORIES
+         ════════════════════════════════════ -->
+    <section class="bt-categories">
+      <div class="section-label">explore our range</div>
+      <h2 class="section-heading">Shop by <em>Category</em></h2>
+      <div class="bt-cat-grid">
+        <div class="bt-cat-card">
+          <img src="images/scraper-with-props.jpeg" alt="Tongue Scrapers">
+          <div class="bt-cat-overlay">
+            <div class="bt-cat-name">Tongue Scrapers</div>
+            <div class="bt-cat-count">6 Products</div>
+          </div>
+        </div>
+        <div class="bt-cat-card">
+          <img src="images/toothpaste-cloud-mint.jpeg" alt="Toothpaste">
+          <div class="bt-cat-overlay">
+            <div class="bt-cat-name">Toothpaste</div>
+            <div class="bt-cat-count">3 Products</div>
+          </div>
+        </div>
+        <div class="bt-cat-card">
+          <img src="images/lifestyle-flatlay.jpeg" alt="Oil Pulling">
+          <div class="bt-cat-overlay">
+            <div class="bt-cat-name">Oil Pulling</div>
+            <div class="bt-cat-count">2 Products</div>
+          </div>
+        </div>
+        <div class="bt-cat-card">
+          <img src="images/tongue-scraper-box.jpeg" alt="Dental Kits">
+          <div class="bt-cat-overlay">
+            <div class="bt-cat-name">Dental Kits</div>
+            <div class="bt-cat-count">3 Products</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ════════════════════════════════════
+         SECTION 6: BEST SELLERS
+         ════════════════════════════════════ -->
+    <section class="bt-bestsellers">
+      <div class="section-label">our favorites</div>
+      <h2 class="section-heading">Best <em>Sellers</em></h2>
+      <div class="bt-product-grid">
+
+        <!-- Product 1: SS Tongue Scraper -->
+        <div class="bt-product-card">
+          <div class="bt-product-img-wrap">
+            <span class="bt-product-badge">Best Seller</span>
+            <img src="images/scraper-with-props.jpeg" alt="Stainless Steel Tongue Scraper">
+          </div>
+          <div class="bt-product-info">
+            <div class="bt-product-name">Stainless Steel Tongue Scraper</div>
+            <div class="bt-product-desc">Medical-grade 304 SS, ergonomic grip, lifetime durability</div>
+            <div class="bt-product-stars">
+              <span class="bt-stars-icons">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="bt-stars-count">(2,847)</span>
+            </div>
+            <div class="bt-product-price">
+              <span class="bt-price-current">$9.99</span>
+              <span class="bt-price-original">$14.99</span>
+              <span class="bt-price-save">Save 33%</span>
+            </div>
+            <button class="bt-product-atc">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product 2: Cloud Mint Toothpaste -->
+        <div class="bt-product-card">
+          <div class="bt-product-img-wrap">
+            <img src="images/toothpaste-cloud-mint.jpeg" alt="Cloud Mint Toothpaste">
+          </div>
+          <div class="bt-product-info">
+            <div class="bt-product-name">Cloud Mint Toothpaste</div>
+            <div class="bt-product-desc">Nano-hydroxyapatite formula, fluoride-free, gentle whitening</div>
+            <div class="bt-product-stars">
+              <span class="bt-stars-icons">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="bt-stars-count">(1,203)</span>
+            </div>
+            <div class="bt-product-price">
+              <span class="bt-price-current">$12.99</span>
+            </div>
+            <button class="bt-product-atc">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product 3: Heritage Copper Scraper -->
+        <div class="bt-product-card">
+          <div class="bt-product-img-wrap">
+            <span class="bt-product-badge">Heritage</span>
+            <img src="images/tongue-scraper-box.jpeg" alt="Heritage Copper Tongue Scraper">
+          </div>
+          <div class="bt-product-info">
+            <div class="bt-product-name">Heritage Copper Scraper</div>
+            <div class="bt-product-desc">Pure copper, antimicrobial Ayurvedic tradition, premium finish</div>
+            <div class="bt-product-stars">
+              <span class="bt-stars-icons">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+              <span class="bt-stars-count">(968)</span>
+            </div>
+            <div class="bt-product-price">
+              <span class="bt-price-current">$11.99</span>
+              <span class="bt-price-original">$16.99</span>
+              <span class="bt-price-save">Save 29%</span>
+            </div>
+            <button class="bt-product-atc">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ════════════════════════════════════
+         SECTION 7: INGREDIENT SPOTLIGHT
+         ════════════════════════════════════ -->
+    <section class="bt-ingredients">
+      <div class="section-label">what goes into our formulas</div>
+      <h2 class="section-heading">Ingredient <em>Spotlight</em></h2>
+      <div class="bt-ingredient-grid">
+
+        <div class="bt-ingredient-card">
+          <div class="bt-ingredient-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7A9A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="bt-ingredient-name">Nano-Hydroxyapatite</div>
+          <div class="bt-ingredient-latin">calcium phosphate mineral</div>
+          <div class="bt-ingredient-desc">Clinically proven enamel repair. A biocompatible mineral that naturally rebuilds and strengthens tooth enamel without fluoride.</div>
+        </div>
+
+        <div class="bt-ingredient-card">
+          <div class="bt-ingredient-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7A9A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+          </div>
+          <div class="bt-ingredient-name">Pure Copper</div>
+          <div class="bt-ingredient-latin">cuprum, Ayurvedic tradition</div>
+          <div class="bt-ingredient-desc">Antimicrobial by nature. Used in Ayurvedic oral care for centuries, copper eliminates bacteria on contact and supports oral microbiome health.</div>
+        </div>
+
+        <div class="bt-ingredient-card">
+          <div class="bt-ingredient-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7A9A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 4 8 8 12z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="bt-ingredient-name">Coconut Oil</div>
+          <div class="bt-ingredient-latin">cocos nucifera, cold-pressed</div>
+          <div class="bt-ingredient-desc">Deep oral detox through the ancient practice of oil pulling. Cold-pressed and unrefined to preserve lauric acid's powerful antimicrobial properties.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ════════════════════════════════════
+         SECTION 8: ROUTINE BUILDER
+         ════════════════════════════════════ -->
+    <section class="bt-routine">
+      <div class="section-label">build your ritual</div>
+      <h2 class="section-heading">The MasterMedi <em>Routine</em></h2>
+      <div class="bt-routine-steps">
+
+        <!-- Step 1 -->
+        <div class="bt-step-card">
+          <div class="bt-step-number">1</div>
+          <img class="bt-step-img" src="images/scraper-with-props.jpeg" alt="Tongue Scraping">
+          <div class="bt-step-name">Scrape</div>
+          <div class="bt-step-product">Tongue Scraper</div>
+          <div class="bt-step-options">
+            <span class="bt-step-option active">Stainless Steel</span>
+            <span class="bt-step-option">Copper</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bt-step-card">
+          <div class="bt-step-number">2</div>
+          <img class="bt-step-img" src="images/toothpaste-cloud-mint.jpeg" alt="Toothpaste">
+          <div class="bt-step-name">Brush</div>
+          <div class="bt-step-product">Nano-HAp Toothpaste</div>
+          <div class="bt-step-options">
+            <span class="bt-step-option active">Cloud Mint</span>
+            <span class="bt-step-option">Charcoal</span>
+            <span class="bt-step-option">Sensitive</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bt-step-card">
+          <div class="bt-step-number">3</div>
+          <img class="bt-step-img" src="images/lifestyle-flatlay.jpeg" alt="Oil Pulling">
+          <div class="bt-step-name">Pull</div>
+          <div class="bt-step-product">Coconut Oil Pulling Sachets</div>
+          <div class="bt-step-options">
+            <span class="bt-step-option active">Original</span>
+            <span class="bt-step-option">Mint</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bt-routine-summary">
+        <span class="bt-routine-total-label">Your Custom Ritual</span>
+        <span class="bt-routine-price">$29.97</span>
+        <span class="bt-routine-save">Save 29%</span>
+        <a href="#" class="btn-sage">Add Ritual to Cart</a>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ════════════════════════════════════
+         SECTION 9: BRAND STORY
+         ════════════════════════════════════ -->
+    <section class="bt-story">
+      <div class="bt-story-layout">
+        <div class="bt-story-img">
+          <img src="images/lifestyle-flatlay.jpeg" alt="MasterMedi Heritage - Brand Story">
+        </div>
+        <div class="bt-story-card">
+          <div class="section-label">our heritage</div>
+          <h2 class="bt-story-heading">A Decade of Oral Care Excellence</h2>
+          <p class="bt-story-text">
+            MasterMedi began in 2015 with a simple belief: oral care should honor ancient wisdom while meeting modern clinical standards. What started as a single stainless steel tongue scraper has grown into a complete oral wellness system trusted by over five million customers worldwide.
+          </p>
+          <p class="bt-story-text">
+            Every product is crafted with medical-grade materials, developed alongside dental professionals, and manufactured in our FDA-registered facility. From Ayurvedic copper scrapers to nano-hydroxyapatite toothpaste, we bridge the gap between tradition and science.
+          </p>
+          <a href="#" class="bt-story-link">Read Our Story &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ════════════════════════════════════
+         SECTION 10: CERTIFICATIONS
+         ════════════════════════════════════ -->
+    <section class="bt-certs">
+      <div class="section-label">trusted by science</div>
+      <h2 class="section-heading">Our <em>Credentials</em></h2>
+      <div class="bt-cert-grid">
+
+        <div class="bt-cert-card">
+          <span class="bt-cert-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#7A9A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </span>
+          <div class="bt-cert-title">FDA Registered</div>
+          <div class="bt-cert-desc">Manufactured in an FDA-registered facility with rigorous quality controls and material traceability on every batch.</div>
+        </div>
+
+        <div class="bt-cert-card">
+          <span class="bt-cert-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#7A9A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </span>
+          <div class="bt-cert-title">ADA Recognized</div>
+          <div class="bt-cert-desc">Meets the American Dental Association's standards for safety and efficacy. Recommended by dental professionals nationwide.</div>
+        </div>
+
+        <div class="bt-cert-card">
+          <span class="bt-cert-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#7A9A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </span>
+          <div class="bt-cert-title">Clinical Studies</div>
+          <div class="bt-cert-desc">Backed by independent clinical trials showing measurable improvements in oral hygiene, tongue cleanliness, and enamel strength.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ════════════════════════════════════
+         SECTION 11: REVIEWS
+         ════════════════════════════════════ -->
+    <section class="bt-reviews">
+      <div class="bt-reviews-hero">
+        <div class="bt-reviews-score">4.8</div>
+        <div class="bt-reviews-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+      </div>
+      <div class="bt-reviews-count">4,200+ verified reviews</div>
+
+      <div class="bt-review-grid">
+
+        <div class="bt-review-card">
+          <div class="bt-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          <div class="bt-review-quote">"The difference in my morning breath is remarkable. I've tried other scrapers but the medical-grade steel on this one just feels right. My dentist even noticed."</div>
+          <div class="bt-review-author">Sarah M.</div>
+          <div class="bt-review-verified">Verified Buyer &middot; Stainless Steel Scraper</div>
+        </div>
+
+        <div class="bt-review-card">
+          <div class="bt-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+          <div class="bt-review-quote">"Finally, a toothpaste that actually works without fluoride. My teeth feel stronger after three weeks and the mint flavor is subtle, not overpowering."</div>
+          <div class="bt-review-author">James K.</div>
+          <div class="bt-review-verified">Verified Buyer &middot; Cloud Mint Toothpaste</div>
+        </div>
+
+        <div class="bt-review-card">
+          <div class="bt-review-stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+          <div class="bt-review-quote">"The whole ritual set is beautiful. Copper scraper feels like a luxury item, and the oil pulling sachets make it so easy. Gift-worthy packaging too."</div>
+          <div class="bt-review-author">Priya L.</div>
+          <div class="bt-review-verified">Verified Buyer &middot; Complete Ritual Kit</div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ════════════════════════════════════
+         SECTION 12: NEWSLETTER + FOOTER
+         ════════════════════════════════════ -->
+    <div class="bt-newsletter">
+      <h2 class="bt-newsletter-heading">Join the Ritual</h2>
+      <p class="bt-newsletter-sub">Oral care insights, new product launches, and exclusive offers. Delivered gently to your inbox.</p>
+      <div class="bt-newsletter-form">
+        <input type="email" class="bt-newsletter-input" placeholder="Your email address">
+        <button class="bt-newsletter-btn">Subscribe</button>
+      </div>
+    </div>
+
+    <footer class="bt-footer">
+      <div class="bt-footer-logo">MasterMedi</div>
+
+      <div class="bt-footer-columns">
+        <div class="bt-footer-col">
+          <h4>Shop</h4>
+          <a href="#">Tongue Scrapers</a>
+          <a href="#">Toothpaste</a>
+          <a href="#">Oil Pulling</a>
+          <a href="#">Dental Kits</a>
+          <a href="#">Gift Sets</a>
+        </div>
+        <div class="bt-footer-col">
+          <h4>Learn</h4>
+          <a href="#">Our Story</a>
+          <a href="#">Ingredients</a>
+          <a href="#">Blog</a>
+          <a href="#">Clinical Studies</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="bt-footer-col">
+          <h4>Support</h4>
+          <a href="#">Contact Us</a>
+          <a href="#">Shipping Info</a>
+          <a href="#">Returns & Refunds</a>
+          <a href="#">Track Order</a>
+          <a href="#">Wholesale</a>
+        </div>
+        <div class="bt-footer-col">
+          <h4>Connect</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">TikTok</a>
+          <a href="#">YouTube</a>
+          <a href="#">Pinterest</a>
+        </div>
+      </div>
+
+      <div class="bt-footer-bottom">
+        <div class="bt-footer-trust">
+          <span class="bt-footer-trust-item"><span class="bt-footer-trust-icon">&#9878;</span> FDA Registered</span>
+          <span class="bt-footer-trust-item"><span class="bt-footer-trust-icon">&#10003;</span> Dentist Approved</span>
+          <span class="bt-footer-trust-item"><span class="bt-footer-trust-icon">&#9733;</span> 4.8/5 Rating</span>
+          <span class="bt-footer-trust-item"><span class="bt-footer-trust-icon">&#128274;</span> Secure Checkout</span>
+          <span class="bt-footer-trust-item"><span class="bt-footer-trust-icon">&#8617;</span> 30-Day Returns</span>
+        </div>
+        <div class="bt-footer-payments">
+          <span class="bt-payment-icon">Visa</span>
+          <span class="bt-payment-icon">Mastercard</span>
+          <span class="bt-payment-icon">Amex</span>
+          <span class="bt-payment-icon">PayPal</span>
+          <span class="bt-payment-icon">Shop Pay</span>
+          <span class="bt-payment-icon">Apple Pay</span>
+        </div>
+        <div class="bt-footer-copy">&copy; 2026 MasterMedi. All rights reserved. Designed with care.</div>
+      </div>
+    </footer>
+
+  </div><!-- end .mockup-container -->
+</div><!-- end .browser-chrome -->
+
+<div class="mockup-disclaimer">
+  <strong>Mockup Disclaimer:</strong> Direction C &mdash; Warm Botanical style. Same content, different visual treatment.<br>
+  Inspired by Humanrace, Aesop, and Bite Toothpaste Bits. All images are from the client's existing store.
+</div>
+
+</body>
+</html>
