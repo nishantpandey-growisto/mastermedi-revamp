@@ -93,6 +93,15 @@
         </div>
       </div>
 
+      <div style="border-top:1px solid rgba(255,255,255,0.1);margin:12px 0;"></div>
+
+      <div class="nav-item" data-tab="presenter">
+        <div class="nav-item-header" onclick="switchTab('presenter')">
+          <span class="nav-icon">&#127908;</span>
+          <span class="nav-label">Presenter Guide</span>
+        </div>
+      </div>
+
     </div>
     <div class="sidebar-footer">
       <p>Prepared by <strong>Growisto</strong></p>
@@ -1156,6 +1165,7 @@
         <div class="subtab-pill active" onclick="switchSubTab('de-theme',this)">Theme</div>
         <div class="subtab-pill" onclick="switchSubTab('de-design',this)">Design Language</div>
         <div class="subtab-pill" onclick="switchSubTab('de-mockups',this)">Visual Mockups</div>
+        <div class="subtab-pill" onclick="switchSubTab('de-references',this)">Reference Analysis</div>
       </div>
 
       <div class="subtab-content active" id="subtab-de-theme">
@@ -2062,6 +2072,256 @@
         </table></div>
       </div>
       </div><!-- /subtab-de-mockups -->
+
+      <!-- ── SUBTAB: Reference Analysis ── -->
+      <div class="subtab-content" id="subtab-de-references">
+      <div class="tab-header">
+        <h2 style="font-size:1.6rem;">Reference Site Analysis</h2>
+        <p>How your shared references map to our plan &mdash; what translates, what doesn&rsquo;t</p>
+      </div>
+
+      <!-- ── Laifen Analysis ── -->
+      <div class="section-card">
+        <h2 class="section-title">Laifen (laifentech.in) &mdash; Your Reference</h2>
+        <p class="mb-16" style="font-style:italic;color:var(--color-text-muted);">You shared Laifen as a design reference. We&rsquo;ve done a full desktop + mobile teardown to map what works for MasterMedi and what doesn&rsquo;t.</p>
+
+        <div class="metric-grid col-3" style="margin-bottom:20px">
+          <div class="metric-card" style="border-left:4px solid #367588">
+            <div class="metric-value" style="font-size:1.3rem;">Partial Fit</div>
+            <div class="metric-label">Good PDP storytelling reference, but not a full design direction for MasterMedi</div>
+          </div>
+          <div class="metric-card" style="border-left:4px solid #7A9A7A">
+            <div class="metric-value" style="font-size:1.3rem;">5 Elements</div>
+            <div class="metric-label">Translate well to MasterMedi</div>
+          </div>
+          <div class="metric-card" style="border-left:4px solid #C06B3A">
+            <div class="metric-value" style="font-size:1.3rem;">6 Elements</div>
+            <div class="metric-label">Don&rsquo;t fit or need adaptation</div>
+          </div>
+        </div>
+
+        <div class="callout info mb-24">
+          <strong>What is Laifen?</strong> A personal care tech brand (electric toothbrushes, hair dryers, shavers) selling in India via Shopify (Dawn theme, heavily customised). Single-hero-product architecture with deep PDP storytelling, dark backgrounds, tech-forward aesthetic.
+        </div>
+      </div>
+
+      <!-- ── Your 5 Asks vs Laifen vs Our Plan ── -->
+      <div class="section-card">
+        <h2 class="section-title">Your 5 Asks vs. Laifen vs. Our Plan</h2>
+        <p class="mb-16 text-muted">How each of your key requirements maps against Laifen&rsquo;s site and what we&rsquo;ve proposed</p>
+
+        <div class="feature-table-wrap">
+          <table class="feature-table">
+            <thead>
+              <tr>
+                <th style="width:18%">Your Ask</th>
+                <th style="width:28%">Laifen&rsquo;s Reality</th>
+                <th style="width:28%">Our Plan</th>
+                <th style="width:13%">Laifen Fit?</th>
+                <th style="width:13%">Our Coverage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Speed + Apple-Style UX</strong></td>
+                <td>Mobile PageSpeed ~34. Heavy hero video, long scroll PDP (~12,000px). Smooth but slow. Not &ldquo;Apple clean&rdquo; &mdash; more &ldquo;Apple Keynote&rdquo; feel.</td>
+                <td>Target 50+ mobile. Shapes theme (highest speed rating). Controlled app stack. Guided buy flow, not long scroll.</td>
+                <td><span class="impl-badge badge-custom" style="background:#C4953A;color:#fff">Partial</span></td>
+                <td><span class="impl-badge badge-inbuilt">Fully Covered</span></td>
+              </tr>
+              <tr>
+                <td><strong>Oral Regimen 1&ndash;5 System</strong></td>
+                <td>Zero concept of &ldquo;regimen&rdquo; or routine. Single-product brand &mdash; no category navigation, no routine builder, no bundle logic.</td>
+                <td>Dedicated Regimen Hub, regimen landing pages, badge system, cross-sell &ldquo;Complete Your Routine&rdquo;, routine context on every PDP.</td>
+                <td><span class="impl-badge" style="background:#C0392B;color:#fff">No Fit</span></td>
+                <td><span class="impl-badge badge-inbuilt">Fully Covered</span></td>
+              </tr>
+              <tr>
+                <td><strong>Marvis-Style Brand Tone</strong></td>
+                <td>Cold, tech-spec tone (&ldquo;66,000 oscillations/min&rdquo;). Zero personality, no wit, no warmth. Premium but clinical-tech, not playful-premium.</td>
+                <td>Heritage Premium voice: &ldquo;Ancient Wisdom, Modern Science&rdquo;. Warm, witty, confident. Marvis-inspired microcopy across all pages.</td>
+                <td><span class="impl-badge" style="background:#C0392B;color:#fff">No Fit</span></td>
+                <td><span class="impl-badge badge-inbuilt">Fully Covered</span></td>
+              </tr>
+              <tr>
+                <td><strong>PDP Storytelling</strong></td>
+                <td><strong>Strong.</strong> Full-bleed feature blocks, dark bg sections, embedded video (Unbox Therapy), ingredient deep-dives, &ldquo;As Seen On&rdquo; press logos, social proof (&ldquo;18M+ people seeing results&rdquo;).</td>
+                <td>All 3 directions include: ingredient storytelling, video embeds, certifications section, heritage narrative, press/trust section. Direction B (Clean Clinical) most closely matches Laifen&rsquo;s block-by-block approach.</td>
+                <td><span class="impl-badge badge-inbuilt" style="background:#7A9A7A;color:#fff">Strong Fit</span></td>
+                <td><span class="impl-badge badge-inbuilt">Fully Covered</span></td>
+              </tr>
+              <tr>
+                <td><strong>Deliverables from Growisto</strong></td>
+                <td>N/A &mdash; Laifen is a finished store, not a proposal reference.</td>
+                <td>Architecture, 3 design directions, performance plan, 10+ reference sites &mdash; all delivered in this SPA.</td>
+                <td><span class="impl-badge" style="background:#888;color:#fff">N/A</span></td>
+                <td><span class="impl-badge badge-inbuilt">Fully Covered</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ── What Translates Well ── -->
+      <div class="section-card">
+        <h2 class="section-title" style="color:#7A9A7A;">What Translates from Laifen to MasterMedi</h2>
+
+        <div class="feature-table-wrap">
+          <table class="feature-table">
+            <thead>
+              <tr><th style="width:8%">#</th><th style="width:25%">Laifen Element</th><th style="width:35%">How It Maps to MasterMedi</th><th style="width:32%">Where in Our Plan</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><strong>PDP Feature-Block Storytelling</strong></td>
+                <td>Full-bleed sections with hero image + benefit text, alternating light/dark backgrounds. Creates a &ldquo;scroll through a story&rdquo; feel.</td>
+                <td>All 3 directions use this. Direction B (&ldquo;Clean Clinical&rdquo;) is closest to Laifen&rsquo;s block approach. See PDP mockups.</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><strong>Sticky Mobile CTA</strong></td>
+                <td>Laifen has a persistent &ldquo;Order Now &mdash; Cash on Delivery&rdquo; bar at bottom on mobile. Ensures buy button is always accessible during the long scroll.</td>
+                <td>Included in all 3 directions. Our sticky bar includes: price + variant + ATC. See PDP wireframes.</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><strong>Video Integration on PDP</strong></td>
+                <td>Laifen embeds a YouTube review (Unbox Therapy) right on the PDP. Video = trust accelerator for premium products.</td>
+                <td>Video embed section included in PDP wireframe. MasterMedi can embed dentist reviews, usage tutorials, or founder story.</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><strong>Trust Badge Grid</strong></td>
+                <td>Laifen uses a 4-icon grid: &ldquo;Fast &amp; Free Delivery&rdquo;, &ldquo;30-Day Guarantee&rdquo;, &ldquo;Official Customer Service&rdquo;, &ldquo;Exclusive Offers&rdquo;.</td>
+                <td>Our plan includes: &ldquo;FDA Registered&rdquo;, &ldquo;GMP Certified&rdquo;, &ldquo;5M+ Units Sold&rdquo;, &ldquo;Free Shipping&rdquo;. Better suited to oral care trust signals.</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><strong>&ldquo;As Seen On&rdquo; Press Logos</strong></td>
+                <td>Laifen shows GQ, Forbes, TIME logos. Simple horizontal strip = instant credibility.</td>
+                <td>Press/media section included in homepage wireframe. MasterMedi should add any press mentions or Amazon &ldquo;Best Seller&rdquo; badges here.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ── What Doesn't Translate ── -->
+      <div class="section-card">
+        <h2 class="section-title" style="color:#C06B3A;">What Doesn&rsquo;t Translate (and Why)</h2>
+
+        <div class="feature-table-wrap">
+          <table class="feature-table">
+            <thead>
+              <tr><th style="width:8%">#</th><th style="width:25%">Laifen Element</th><th style="width:35%">Why It Doesn&rsquo;t Fit MasterMedi</th><th style="width:32%">What We Do Instead</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><strong>Single-Product Architecture</strong></td>
+                <td>Laifen is a 1-hero-product brand. Homepage = product page. No collections, no categories, no &ldquo;shop by&rdquo; navigation. MasterMedi has 10+ SKUs across a 5-step regimen.</td>
+                <td>Full site architecture: Homepage &rarr; Regimen Hub &rarr; Regimen Pages &rarr; Collection Pages &rarr; PDP. See Site Structure tab.</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><strong>Tech-Spec Tone</strong></td>
+                <td>&ldquo;66,000 oscillations/min&rdquo;, &ldquo;10x more effective than manual brushing&rdquo;. Cold, clinical-tech voice. Zero warmth, no personality.</td>
+                <td>Heritage Premium voice. &ldquo;Ancient Wisdom, Modern Science.&rdquo; Marvis-inspired microcopy: witty, warm, confident. See Design Language tab.</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><strong>Dark Background Aesthetic</strong></td>
+                <td>Laifen uses black/dark grey throughout &mdash; suits a tech gadget. MasterMedi&rsquo;s packaging is warm cream, terracotta, gold &mdash; dark BG would clash with brand identity.</td>
+                <td>Warm cream backgrounds, terracotta + gold accents, marble/linen textures. Dark sections used sparingly for contrast only (e.g., testimonial strip).</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><strong>No Regimen / Routine Concept</strong></td>
+                <td>Laifen sells standalone products. No concept of &ldquo;complete your routine&rdquo;, no bundles, no cross-category journey. MasterMedi&rsquo;s entire value proposition is the 5-step regimen.</td>
+                <td>Regimen is the #1 differentiator in our plan. Hub page, step badges, routine builder, cross-sell by regimen step.</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><strong>~12,000px PDP Scroll</strong></td>
+                <td>Laifen&rsquo;s PDP is extremely long &mdash; 15+ sections. Works for a single hero product where the PDP IS the homepage. For MasterMedi with 10+ products, this creates fatigue.</td>
+                <td>Our PDP uses tabbed content (Description / Ingredients / Reviews) + 4&ndash;6 storytelling blocks. Focused, not exhaustive. Sticky nav keeps users oriented.</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><strong>Minimal Footer / No Navigation</strong></td>
+                <td>Laifen has a bare-minimum footer (email subscribe + a few links). No mega menu. Works for 1 product &mdash; not for a brand with 5 regimen categories + 10 products.</td>
+                <td>Full mega navigation: Shop by Regimen, Shop by Category, About, Science. Rich footer with trust badges, certifications, newsletter.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ── Verdict Box ── -->
+      <div class="section-card" style="border-left:5px solid #367588">
+        <h2 class="section-title">Verdict: Partial Reference</h2>
+
+        <div class="callout" style="background:#f0f7f4;border-left:4px solid #367588;">
+          <strong>Laifen is a good PDP storytelling reference, but not a design direction for MasterMedi.</strong><br>
+          Its single-product, tech-focused, dark-background architecture is fundamentally different from what MasterMedi needs: a multi-product, regimen-based, warm-premium shopping system.
+        </div>
+
+        <p class="mt-16 mb-8"><strong>Best use of this reference:</strong></p>
+        <ul style="margin-left:20px;line-height:2;">
+          <li><strong>PDP storytelling blocks</strong> &mdash; adopt the section-by-section narrative approach on MasterMedi&rsquo;s product pages</li>
+          <li><strong>Sticky mobile CTA</strong> &mdash; already in our plan for all 3 directions</li>
+          <li><strong>Video integration</strong> &mdash; embed dentist endorsements or usage demos on PDP</li>
+          <li><strong>Trust badge placement</strong> &mdash; adapt the 4-icon grid with MasterMedi&rsquo;s own trust signals</li>
+        </ul>
+
+        <p class="mt-16 mb-8"><strong>Our Direction B (Clean Clinical) already captures Laifen&rsquo;s strengths while adding what Laifen lacks:</strong></p>
+        <div class="feature-table-wrap">
+          <table class="feature-table">
+            <thead><tr><th>Capability</th><th>Laifen</th><th>Direction B (Clean Clinical)</th></tr></thead>
+            <tbody>
+              <tr><td>PDP storytelling blocks</td><td>&#10003;</td><td>&#10003;</td></tr>
+              <tr><td>Sticky mobile CTA</td><td>&#10003;</td><td>&#10003;</td></tr>
+              <tr><td>Video integration</td><td>&#10003;</td><td>&#10003;</td></tr>
+              <tr><td>Trust badge grid</td><td>&#10003;</td><td>&#10003;</td></tr>
+              <tr><td>Press/media logos</td><td>&#10003;</td><td>&#10003;</td></tr>
+              <tr style="background:#f0f7f4"><td>Regimen system</td><td>&#10007;</td><td>&#10003;</td></tr>
+              <tr style="background:#f0f7f4"><td>Multi-product navigation</td><td>&#10007;</td><td>&#10003;</td></tr>
+              <tr style="background:#f0f7f4"><td>Warm premium tone</td><td>&#10007;</td><td>&#10003;</td></tr>
+              <tr style="background:#f0f7f4"><td>Routine builder / cross-sell</td><td>&#10007;</td><td>&#10003;</td></tr>
+              <tr style="background:#f0f7f4"><td>Brand-matched aesthetics</td><td>&#10007;</td><td>&#10003;</td></tr>
+              <tr style="background:#f0f7f4"><td>Collection pages</td><td>&#10007;</td><td>&#10003;</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout mt-16" style="background:#fef7ed;border-left:4px solid #C4953A;font-size:.85rem;">
+          <strong>&#9432; Bottom line:</strong> Think of Laifen as a &ldquo;PDP mood board&rdquo; &mdash; how to make a product page feel like a brand story, not a spec sheet. But for site architecture, tone, navigation, and the regimen shopping system, our plan goes significantly beyond what Laifen offers.
+        </div>
+      </div>
+
+      <!-- ── Other References Quick Map ── -->
+      <div class="section-card">
+        <h2 class="section-title">All Your References &mdash; Quick Map</h2>
+        <p class="mb-16 text-muted">Where each reference you&rsquo;ve shared fits into our plan</p>
+
+        <div class="feature-table-wrap">
+          <table class="feature-table">
+            <thead><tr><th>Reference</th><th>What You Liked</th><th>How We&rsquo;ve Used It</th><th>Best Seen In</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Apple &ldquo;Buy Mac&rdquo;</strong></td><td>Guided buying flow, clean steps</td><td>Regimen-based buying system, step-by-step variant selection on PDP</td><td>Site Architecture + PDP wireframes</td></tr>
+              <tr><td><strong>Marvis</strong></td><td>Premium + playful tone, packaging-led design</td><td>Entire design language: voice, color, typography, layout philosophy</td><td>Design Language tab + all 3 mockup directions</td></tr>
+              <tr><td><strong>Aurezzi</strong></td><td>Clean &amp; premium website</td><td>Minimal grid layouts, generous whitespace, serif/sans pairing</td><td>Direction A (Heritage Editorial)</td></tr>
+              <tr><td><strong>Laifen</strong></td><td>PDP storytelling, sticky CTA</td><td>Section-by-section PDP narrative, sticky mobile CTA, video embed</td><td>PDP wireframes + Direction B (Clean Clinical)</td></tr>
+              <tr><td><strong>The Ordinary</strong></td><td>Regimen builder</td><td>Regimen Hub architecture, badge system, &ldquo;Complete Your Routine&rdquo;</td><td>Site Architecture + Features tab</td></tr>
+              <tr><td><strong>The INKEY List</strong></td><td>Recipe / routine quiz</td><td>Quiz-based regimen recommender (Phase 2 feature)</td><td>Features tab (Phase 2)</td></tr>
+              <tr><td><strong>Oatly / Innocent / Surreal</strong></td><td>Witty, human brand voice</td><td>Microcopy guidelines + tone-of-voice framework</td><td>Design Language tab</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      </div><!-- /subtab-de-references -->
 
     </section>
 
@@ -3691,6 +3951,216 @@
         </div>
       </div>
       </div><!-- /subtab-del-investment -->
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+         TAB 6: PRESENTER GUIDE (Internal — Walkthrough Script)
+         ════════════════════════════════════════════════════════ -->
+    <section class="tab-content" id="tab-presenter">
+      <div class="tab-header">
+        <h1>Presenter Guide</h1>
+        <p>Internal walkthrough script &mdash; how to present this SPA to convert the lead</p>
+      </div>
+
+      <div class="callout" style="background:#fef7ed;border-left:4px solid #C4953A;">
+        <strong>&#9432; This tab is for you (the presenter), not the client.</strong> Use it as your script during the walkthrough call. You can share the SPA screen and walk tab-by-tab using the flow below.
+      </div>
+
+      <!-- ── Pre-Call Checklist ── -->
+      <div class="section-card">
+        <h2 class="section-title">Pre-Call Checklist (5 min before)</h2>
+        <ul style="margin-left:20px;line-height:2.2;">
+          <li>&#9744; Open the SPA in your browser, enter password, have it ready on Tab 1</li>
+          <li>&#9744; Open Laifen (<code>laifentech.in</code>) in a separate tab &mdash; you&rsquo;ll reference it during the walkthrough</li>
+          <li>&#9744; Open MasterMedi&rsquo;s current site (<code>mastermedi.com</code>) in another tab</li>
+          <li>&#9744; Have Anshul&rsquo;s requirements PDF open for quick reference</li>
+          <li>&#9744; Confirm screen share works on your call platform</li>
+          <li>&#9744; Target call duration: <strong>35&ndash;45 minutes</strong></li>
+        </ul>
+      </div>
+
+      <!-- ── Opening (2 min) ── -->
+      <div class="section-card" style="border-left:5px solid #367588">
+        <h2 class="section-title">Opening (2 minutes)</h2>
+        <div class="callout" style="background:#f0f7f4;border-left:4px solid #367588;font-size:.9rem;">
+          <strong>Script:</strong> &ldquo;Hi Anshul, thanks for taking the time. We&rsquo;ve put together a complete revamp plan based on everything you shared &mdash; your requirements doc, your questionnaire answers, and the Laifen reference you sent. Rather than a generic proposal, this is a interactive plan you can explore yourself. Let me walk you through it.&rdquo;
+        </div>
+        <p class="mt-12"><strong>Goal:</strong> Set the frame &mdash; this isn&rsquo;t a slide deck, it&rsquo;s a living plan he can revisit.</p>
+      </div>
+
+      <!-- ── Tab 1: Your Vision (5 min) ── -->
+      <div class="section-card" style="border-left:5px solid #C06B3A">
+        <h2 class="section-title">Tab 1: Your Vision (5 minutes)</h2>
+        <p class="mb-12"><strong>What to do:</strong> Screen share the SPA. Start on &ldquo;Your Vision&rdquo; tab.</p>
+        <div class="callout" style="background:#fef7ed;border-left:4px solid #C06B3A;font-size:.9rem;">
+          <strong>Script:</strong> &ldquo;Before we show you our solution, we want to make sure we&rsquo;ve understood your vision correctly. This tab mirrors back exactly what you told us.&rdquo;
+        </div>
+        <p class="mt-12 mb-8"><strong>Key moves:</strong></p>
+        <ul style="margin-left:20px;line-height:2;">
+          <li>Scroll through each of the 6 sections quickly &mdash; don&rsquo;t read them out loud</li>
+          <li><strong>Pause on Section 2 (Regimen System)</strong> &mdash; confirm the product mapping: &ldquo;We&rsquo;ve mapped your 5-step regimen with 7 products at launch and 3 future categories. Is this right?&rdquo;</li>
+          <li><strong>Pause on Section 6 (Questionnaire)</strong> &mdash; &ldquo;This is from your Feb 26 questionnaire. Anything changed since then?&rdquo;</li>
+          <li><strong>Purpose:</strong> Build trust by showing you actually read and understood their input. Get any corrections NOW before presenting the solution.</li>
+        </ul>
+        <div class="callout info" style="font-size:.85rem;">
+          <strong>Conversion tip:</strong> If he corrects something, say: &ldquo;Great catch &mdash; we&rsquo;ll update this in the plan.&rdquo; Makes it feel collaborative, not a pitch.
+        </div>
+      </div>
+
+      <!-- ── Tab 2: Our Approach (5 min) ── -->
+      <div class="section-card" style="border-left:5px solid #7A9A7A">
+        <h2 class="section-title">Tab 2: Our Approach (5 minutes)</h2>
+        <div class="callout" style="background:#f0f7f4;border-left:4px solid #7A9A7A;font-size:.9rem;">
+          <strong>Script:</strong> &ldquo;Now here&rsquo;s how we translate your vision into Shopify reality. We&rsquo;ve mapped every one of your requirements to specific deliverables.&rdquo;
+        </div>
+        <p class="mt-12 mb-8"><strong>Key moves:</strong></p>
+        <ul style="margin-left:20px;line-height:2;">
+          <li>Walk through each approach section &mdash; highlight the <strong>green &ldquo;Fully Aligned&rdquo;</strong> labels</li>
+          <li><strong>Spend extra time on Speed section</strong> &mdash; show the competitor PageSpeed table. &ldquo;Your current site is 32 mobile. Marvis is 28. We&rsquo;re targeting 50+. We&rsquo;ll be the fastest premium oral care site in the category.&rdquo;</li>
+          <li><strong>Address the ~70% coverage callout</strong> honestly: &ldquo;About 70% of what you asked for is in our plan. The remaining 30% is content + copywriting work that your team handles. We&rsquo;ll give you the framework and templates.&rdquo;</li>
+          <li><strong>Purpose:</strong> Show competence + honesty. The 70% transparency builds more trust than claiming 100%.</li>
+        </ul>
+      </div>
+
+      <!-- ── Tab 3: Design & Experience (12 min) ── -->
+      <div class="section-card" style="border-left:5px solid #C4953A">
+        <h2 class="section-title">Tab 3: Design &amp; Experience (12 minutes) &mdash; THE KEY TAB</h2>
+        <div class="callout" style="background:#fef7ed;border-left:4px solid #C4953A;">
+          <strong>&#9888; This is where you win or lose the deal.</strong> Spend the most time here. The mockups are your strongest conversion tool.
+        </div>
+
+        <p class="mt-16 mb-8"><strong>3a. Theme subtab (2 min):</strong></p>
+        <ul style="margin-left:20px;line-height:2;">
+          <li>Show 4 theme cards. Point to Shapes as the recommendation.</li>
+          <li>&ldquo;We evaluated 4 themes against your specific needs. Shapes won because [feature score table]. It&rsquo;s the fastest theme in its class and has the most inbuilt features for a small catalog brand.&rdquo;</li>
+        </ul>
+
+        <p class="mt-16 mb-8"><strong>3b. Design Language subtab (3 min):</strong></p>
+        <ul style="margin-left:20px;line-height:2;">
+          <li>Show the color palette &mdash; &ldquo;These are extracted from your actual packaging. Not generic colors &mdash; your brand.&rdquo;</li>
+          <li>Show the typography &mdash; &ldquo;Cormorant Garamond for headlines gives that heritage Marvis feel, Inter for body text keeps it modern and readable.&rdquo;</li>
+          <li>Don&rsquo;t dwell here &mdash; move to mockups.</li>
+        </ul>
+
+        <p class="mt-16 mb-8"><strong>3c. Visual Mockups subtab (5 min) &mdash; &#9733; MAIN EVENT:</strong></p>
+        <ul style="margin-left:20px;line-height:2;">
+          <li>Switch to each direction tab. For each one:</li>
+          <li><strong>Direction A (Heritage Editorial):</strong> &ldquo;This is the most Marvis-like option. Baroque scrollwork, stamp badges, editorial layout.&rdquo;</li>
+          <li><strong>Direction B (Clean Clinical):</strong> &ldquo;This one is closest to what you liked about Laifen &mdash; clean blocks, feature storytelling, clinical trust &mdash; but with your warm brand aesthetic instead of Laifen&rsquo;s cold tech look.&rdquo;</li>
+          <li><strong>Direction C (Warm Botanical):</strong> &ldquo;This is the softest approach &mdash; nature-inspired, wellness-focused. Works well if you want to emphasize the Ayurvedic angle.&rdquo;</li>
+          <li><strong>Ask:</strong> &ldquo;Which direction resonates most? Or would you like to mix elements from two?&rdquo;</li>
+        </ul>
+        <div class="callout info" style="font-size:.85rem;">
+          <strong>Conversion tip:</strong> Don&rsquo;t ask &ldquo;do you like any of these?&rdquo; (yes/no). Ask &ldquo;which one speaks to you most?&rdquo; (assumes he likes at least one). If he says &ldquo;I like the aesthetic of A but the layout of B&rdquo; &mdash; that&rsquo;s a win. Say: &ldquo;That&rsquo;s exactly what we expected &mdash; the final design will be a hybrid tailored to your preference.&rdquo;
+        </div>
+
+        <p class="mt-16 mb-8"><strong>3d. Reference Analysis subtab (2 min):</strong></p>
+        <ul style="margin-left:20px;line-height:2;">
+          <li>Click to the Reference Analysis subtab.</li>
+          <li>&ldquo;You shared Laifen as a reference. We did a full teardown &mdash; here&rsquo;s what translates to MasterMedi and what doesn&rsquo;t.&rdquo;</li>
+          <li>Show the comparison table &mdash; highlight the green rows (things our plan adds that Laifen lacks).</li>
+          <li>Key line: &ldquo;Laifen is a great PDP storytelling reference. But for your regimen system, brand tone, and multi-product architecture, our plan goes significantly beyond.&rdquo;</li>
+          <li>Show the All References Quick Map at the bottom &mdash; &ldquo;Every reference you shared is mapped into our plan.&rdquo;</li>
+        </ul>
+      </div>
+
+      <!-- ── Tab 4: Detailed Plan (5 min) ── -->
+      <div class="section-card" style="border-left:5px solid #367588">
+        <h2 class="section-title">Tab 4: Detailed Plan (5 minutes)</h2>
+        <div class="callout" style="background:#f0f7f4;border-left:4px solid #367588;font-size:.9rem;">
+          <strong>Script:</strong> &ldquo;Let me show you the engineering plan behind those designs.&rdquo;
+        </div>
+        <p class="mt-12 mb-8"><strong>Key moves:</strong></p>
+        <ul style="margin-left:20px;line-height:2;">
+          <li><strong>Features subtab:</strong> Quickly scan the feature list. Don&rsquo;t go line by line &mdash; highlight: &ldquo;52 features total, 38 are inbuilt with the theme, 14 need custom work.&rdquo;</li>
+          <li><strong>Site Structure subtab:</strong> Show the page hierarchy. &ldquo;This is your full site map &mdash; every page we&rsquo;ll build.&rdquo;</li>
+          <li><strong>Wireframes subtab:</strong> &ldquo;These are the detailed wireframes for each page type &mdash; you can review these at your own pace.&rdquo;</li>
+          <li><strong>Apps subtab:</strong> &ldquo;Minimal app stack &mdash; 5 apps total to keep speed fast.&rdquo;</li>
+          <li><strong>Purpose:</strong> Show depth and engineering rigor without boring him. He&rsquo;ll review details later.</li>
+        </ul>
+      </div>
+
+      <!-- ── Tab 5: Delivery (5 min) ── -->
+      <div class="section-card" style="border-left:5px solid #C06B3A">
+        <h2 class="section-title">Tab 5: Delivery &amp; Commercials (5 minutes)</h2>
+        <div class="callout" style="background:#fef7ed;border-left:4px solid #C06B3A;">
+          <strong>&#9888; Save this for last. Don&rsquo;t rush to pricing.</strong> The design and plan tabs build value first.
+        </div>
+        <p class="mt-12 mb-8"><strong>Key moves:</strong></p>
+        <ul style="margin-left:20px;line-height:2;">
+          <li><strong>Responsibilities subtab:</strong> &ldquo;Here&rsquo;s what we own vs what we need from your side. The split is clear.&rdquo;</li>
+          <li><strong>Content Scope:</strong> &ldquo;You&rsquo;ll need to provide product photography, copy, and brand assets. We&rsquo;ll give you templates and a content checklist.&rdquo;</li>
+          <li><strong>Costs subtab:</strong> Show the total. Don&rsquo;t apologize for the price. Say: &ldquo;This covers everything we&rsquo;ve shown you &mdash; architecture, design, development, customization, app setup, speed optimization, and testing.&rdquo;</li>
+          <li><strong>Timeline:</strong> &ldquo;4&ndash;5 weeks from kickoff to launch. Week 1 is design finalization, Week 2-3 is development, Week 4 is testing and content.&rdquo;</li>
+          <li><strong>Investment:</strong> Show the ROI projection if available.</li>
+        </ul>
+      </div>
+
+      <!-- ── Closing (3 min) ── -->
+      <div class="section-card" style="border-left:5px solid #7A9A7A">
+        <h2 class="section-title">Closing &amp; Next Steps (3 minutes)</h2>
+        <div class="callout" style="background:#f0f7f4;border-left:4px solid #7A9A7A;font-size:.9rem;">
+          <strong>Script:</strong> &ldquo;So that&rsquo;s the complete plan. You have access to this SPA &mdash; you can explore every tab, share it with your team, and come back with questions. What I&rsquo;d like to understand is: which design direction resonates most, and are we aligned on the scope?&rdquo;
+        </div>
+        <p class="mt-12 mb-8"><strong>Closing questions (ask exactly 2):</strong></p>
+        <ol style="margin-left:20px;line-height:2.2;">
+          <li>&ldquo;Which design direction do you want us to develop further &mdash; A, B, C, or a mix?&rdquo;</li>
+          <li>&ldquo;If the scope and pricing look right, what&rsquo;s your ideal timeline to kick off?&rdquo;</li>
+        </ol>
+        <div class="callout info" style="font-size:.85rem;">
+          <strong>Conversion tip:</strong> The second question assumes intent. If he answers with a date, you&rsquo;re in. If he says &ldquo;I need to discuss with my team&rdquo;, ask: &ldquo;Great &mdash; when should we connect again after you&rsquo;ve had a chance to review?&rdquo; Always get the next meeting booked before hanging up.
+        </div>
+      </div>
+
+      <!-- ── Objection Handling ── -->
+      <div class="section-card">
+        <h2 class="section-title">Common Objections &amp; Responses</h2>
+
+        <div class="feature-table-wrap">
+          <table class="feature-table">
+            <thead><tr><th style="width:30%">Objection</th><th style="width:70%">Response</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>&ldquo;It&rsquo;s expensive&rdquo;</strong></td>
+                <td>&ldquo;I understand. Let me put it in context: your current site has a 32 mobile PageSpeed and no regimen system. Every month without these fixes is costing you conversions. Our plan pays for itself within 1.5 months based on conservative conversion lift estimates. Would it help to see the ROI math?&rdquo;</td>
+              </tr>
+              <tr>
+                <td><strong>&ldquo;I want to see more mockup detail&rdquo;</strong></td>
+                <td>&ldquo;Absolutely. Once you pick a direction, we&rsquo;ll develop a full pixel-perfect mockup of the homepage + PDP in that direction before we write a single line of code. That&rsquo;s included in the project.&rdquo;</td>
+              </tr>
+              <tr>
+                <td><strong>&ldquo;Can you do it faster?&rdquo;</strong></td>
+                <td>&ldquo;The build itself takes 3 weeks. What usually stretches timelines is content delivery from your side &mdash; photography, product copy, ingredient lists. If those are ready at kickoff, we can hit 4 weeks.&rdquo;</td>
+              </tr>
+              <tr>
+                <td><strong>&ldquo;I liked Laifen&rsquo;s design more&rdquo;</strong></td>
+                <td>&ldquo;Laifen looks great for a single-product tech brand. But your brand has 10+ products, a 5-step regimen, and warm packaging aesthetics. A dark, tech-spec approach would actually clash with your brand. Direction B gives you the same storytelling power with your brand&rsquo;s DNA. Let me show you the comparison.&rdquo; [Switch to Reference Analysis subtab]</td>
+              </tr>
+              <tr>
+                <td><strong>&ldquo;I need to think about it&rdquo;</strong></td>
+                <td>&ldquo;Of course. The SPA is yours to explore &mdash; share it with your team, go through each tab. Can we reconnect on [suggest date 3&ndash;5 days out] to answer any questions?&rdquo;</td>
+              </tr>
+              <tr>
+                <td><strong>&ldquo;Can I get a discount?&rdquo;</strong></td>
+                <td>&ldquo;Our pricing reflects the scope we&rsquo;ve outlined. If budget is a constraint, we can look at phasing &mdash; launch with core pages first, add Phase 2 features (quiz, subscription, India store) later. That way you start generating ROI sooner.&rdquo;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ── Post-Call Actions ── -->
+      <div class="section-card">
+        <h2 class="section-title">Post-Call Actions</h2>
+        <ul style="margin-left:20px;line-height:2.2;">
+          <li>&#9744; Send a follow-up message within 2 hours: &ldquo;Thanks for the call, Anshul. Here&rsquo;s the SPA link again: [URL] / Password: mastermedi2026. Let me know which direction you&rsquo;d like to go with.&rdquo;</li>
+          <li>&#9744; If he picked a direction: immediately start the high-fidelity mockup &mdash; send within 48 hours to maintain momentum</li>
+          <li>&#9744; If he needs time: follow up in 3 days, not sooner</li>
+          <li>&#9744; If he has team members to involve: offer a second call with the team &mdash; &ldquo;Happy to walk your team through the same plan.&rdquo;</li>
+          <li>&#9744; Update client status in Growisto&rsquo;s tracker</li>
+        </ul>
+      </div>
+
     </section>
 
   </main>
